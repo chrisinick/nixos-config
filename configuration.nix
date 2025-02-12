@@ -90,12 +90,38 @@
   nixpkgs.config.allowUnfree = true;
 
   # Enabled programs
+  programs.dconf.enable = true;
   programs.firefox.enable = true;
+  programs.thunderbird.enable = true;
+  programs.vim = {
+    enable = true;
+    defaultEditor = true;
+  };
 
   # Packages installed in system profile
   environment.systemPackages = with pkgs; [
+    hunspell
+    hunspellDicts.en_US
+    hunspellDicts.de_DE
     wget
-    vim
+    plocate
+    syncthing
+    papers
+    clapper
+    amberol
+    metadata-cleaner
+    tor-browser
+    libreoffice-fresh
+    obsidian
+    zed-editor
+    signal-desktop
+    fractal
+    freetube
+    foliate
+    komikku
+    gnome-podcasts
+    shortwave
+    blanket
   ];
 
   # Excluded packages
@@ -111,7 +137,6 @@
     gedit
     gnome-connections
     gnome-photos
-    gnome-text-editor
     gnome-tour
     snapshot
     simple-scan
@@ -145,7 +170,7 @@
     gc = {
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 15d";
+      options = "--delete-older-than 14d";
     };
   };
 
