@@ -29,3 +29,7 @@
 - zed
 - osbidian
 
+## License
+
+This configuration is licensed under the [GPLv3](https://github.com/chrisinick/ideapad-mode/blob/master/LICENSE.txt) License.
+
