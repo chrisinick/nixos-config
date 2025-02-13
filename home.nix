@@ -8,6 +8,17 @@
   ];
 
   home.file = {
+    ".config/autostart/sort-app-grid.desktop" = {
+      text = ''
+        [Desktop Entry]
+        Name=SortAppGrid
+        Type=Application
+        Comment=Sorts the Gnome app grid alphabetically
+        Exec=${pkgs.bash}/bin/bash -c "gsettings set org.gnome.shell app-picker-layout "[]""
+        Terminal=false
+        X-GNOME-Autostart-enabled=true
+      '';
+    };
   };
 
   home.sessionVariables = {
@@ -19,6 +30,12 @@
     enable = true;
     settings = {
 
+      # Power
+      "org/gnome/settings-daemon/plugins/power" = {
+        sleep-inactive-ac-type = "nothing";
+      };
+      "org/gnome/desktop/session".idle-delay = lib.hm.gvariant.mkUint32 0;
+
       # Interface
       "org/gnome/desktop/interface" = {
         clock-format = "24h";
@@ -26,8 +43,8 @@
         color-scheme = "prefer-light";
         enable-hot-corners = false;
         show-battery-percentage = true;
-        text-scaling-factor = 1.125;
-        
+        text-scaling-factor = 1.20;
+        gtk-theme = "adw-gtk3";
       };
       "org/gnome/desktop/calendar".show-weekdate = true;
       "org/gnome/desktop/datetime".automatic-timezone = true;
@@ -38,6 +55,7 @@
         picture-uri = "file:///home/chris/Bilder/wallpapers/snow_forest.jpg";
         picture-uri-dark = "file:///home/chris/Bilder/wallpapers/snow_forest.jpg";
       };
+      "org/gnome/desktop/screensaver".picture-uri = "file:///home/chris/Bilder/wallpapers/snow_forest.jpg";
 
       # Default apps
       "org/gnome/desktop/default-applications/office/calendar".exec = "evolution -c calendar";
@@ -60,6 +78,12 @@
         remember-recent-files = false;
         remove-old-temp-files = true;
         remove-old-trash-files = true;
+      };
+
+      # Printing
+      "org/gnome/desktop/lockdown" = {
+        disable-print-setup = true;
+        disable-printing = true;
       };
 
       # Sound
@@ -147,6 +171,37 @@
       init = { defaultBranch = "main"; };
       push = { autoSetupRemote = true; };
     };
+  };
+
+  programs.vim = {
+    enable = true;
+    plugins = [ pkgs.vimPlugins.vim-wayland-clipboard ];
+    settings = {
+      copyindent = true;
+      expandtab = true;
+      hidden = true;
+      ignorecase = true;
+      number = true;
+      relativenumber = true;
+      shiftwidth = 4;
+      smartcase = true;
+    };
+    extraConfig = ''
+      set nocompatible
+      set nobackup
+      syntax enable
+      set laststatus=2
+      set shortmess+=I
+      set backspace=indent,eol,start
+      set incsearch
+      nmap Q <Nop>
+      set noerrorbells visualbell t_vb=
+      set mouse+=a
+      filetype plugin indent on
+      if has("clipboard")
+        set clipboard=unnamedplus
+      endif
+    '';
   };
 
   home.stateVersion = "24.11";

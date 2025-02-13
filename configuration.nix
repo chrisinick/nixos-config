@@ -98,14 +98,24 @@
     enable = true;
     defaultEditor = true;
   };
+  programs.bash = {
+    interactiveShellInit = ''
+      ${pkgs.fastfetch}/bin/fastfetch
+      set -o vi
+    '';
+  };
+
 
   # Packages installed in system profile
   environment.systemPackages = with pkgs; [
     hunspell
     hunspellDicts.en_US
     hunspellDicts.de_DE
+    wl-clipboard
+    adw-gtk3
     wget
     ghostty
+    fastfetch
     syncthing
     papers
     clapper
