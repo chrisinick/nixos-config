@@ -83,8 +83,9 @@
     };
   };
 
-  # Session variables
+  # Environment variables
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.QT_QPA_PLATFORM = "wayland";
 
   # Nix packages configuration
   nixpkgs.config.allowUnfree = true;
@@ -104,7 +105,7 @@
     hunspellDicts.en_US
     hunspellDicts.de_DE
     wget
-    plocate
+    ghostty
     syncthing
     papers
     clapper
@@ -137,6 +138,7 @@
     gedit
     gnome-connections
     gnome-photos
+    gnome-text-editor
     gnome-tour
     snapshot
     simple-scan
