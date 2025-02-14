@@ -105,7 +105,7 @@ in {
         favorite-apps = [
           "firefox.desktop"
           "thunderbird.desktop"
-          "ghostty.desktop"
+          "com.mitchellh.ghostty.desktop"
           "org.gnome.Nautilus.desktop"
           "startcenter.desktop"
           "obsidian.desktop"
