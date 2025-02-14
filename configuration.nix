@@ -128,7 +128,7 @@
     # Nix
     nixd
     nil
-    alejandra
+    nixfmt-rfc-style
 
     # Important
     adw-gtk3

@@ -279,7 +279,7 @@ in {
     extraPackages = with pkgs; [
       nixd
       nil
-      alejandra
+      nixfmt-rfc-style
     ];
     extensions = [
       "html"
@@ -340,11 +340,6 @@ in {
             check = {command = "clippy";};
           };
         };
-        #nixd = {
-        #binary = {
-        #path = "/run/current-system/sw/bin/nixd";
-        #};
-        #};
       };
       languages = {
         Nix = {
@@ -354,7 +349,7 @@ in {
           ];
           formatter = {
             external = {
-              command = "alejandra";
+              command = "nixfmt";
             };
           };
         };
