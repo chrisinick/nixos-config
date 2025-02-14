@@ -111,19 +111,29 @@
 
   # Packages installed in system profile
   environment.systemPackages = with pkgs; [
+    # System
     hunspell
     hunspellDicts.en_US
     hunspellDicts.de_DE
     wl-clipboard
+
+    # Rust
+    gcc
+    rustc
+    cargo
+    rustfmt
+    clippy
+    rust-analyzer
+
+    # Important
     adw-gtk3
     wget
+    alejandra
     syncthing
     ghostty
     syncthing
-    alejandra
-    rustc
-    cargo
-    rust-analyzer
+
+    # Apps
     papers
     clapper
     amberol
