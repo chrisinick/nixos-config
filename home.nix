@@ -295,7 +295,6 @@ in
       "git-firefly"
       "basher"
       "nix"
-      "adwaita-pastel-theme"
     ];
     userSettings = {
       telemetry = {
