@@ -1,11 +1,14 @@
-{ config, lib, pkgs, inputs, ... }:
-
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
-    ];
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default
+  ];
 
   # systemd-boot EFI boot loader
   boot.loader = {
@@ -14,7 +17,7 @@
       configurationLimit = 4;
     };
     efi.canTouchEfiVariables = true;
-    timeout = 4;
+    timeout = 2;
   };
 
   # Network
@@ -45,12 +48,14 @@
   services.xserver = {
     enable = true;
     desktopManager.gnome.enable = true;
-    displayManager.gdm.enable = true;
+    displayManager.gdm = {
+      enable = true;
+      autoSuspend = false;
+    };
 
     # Keymap in X11 and Wayland
     xkb.layout = "de";
     xkb.options = "caps:escape";
-
   };
   services.displayManager.defaultSession = "gnome";
   programs.xwayland.enable = true;
@@ -73,11 +78,11 @@
   # User account (don't forget to set a password with ‘passwd’)
   users.users.chris = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "audio" ];
+    extraGroups = ["wheel" "video" "audio"];
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {inherit inputs;};
     users = {
       chris = import ./home.nix;
     };
@@ -100,11 +105,9 @@
   };
   programs.bash = {
     interactiveShellInit = ''
-      ${pkgs.fastfetch}/bin/fastfetch
       set -o vi
     '';
   };
-
 
   # Packages installed in system profile
   environment.systemPackages = with pkgs; [
@@ -114,9 +117,10 @@
     wl-clipboard
     adw-gtk3
     wget
-    ghostty
-    fastfetch
     syncthing
+    ghostty
+    syncthing
+    alejandra
     papers
     clapper
     amberol
@@ -142,13 +146,13 @@
     epiphany
     evince
     geary
+    gnome-console
     gnome-maps
     gnome-music
     gnome-weather
     gedit
     gnome-connections
     gnome-photos
-    gnome-text-editor
     gnome-tour
     snapshot
     simple-scan
@@ -162,19 +166,19 @@
 
   # Automatic updates
   # system.autoUpgrade = {
-    # enable = true;
-    # flake = "github:nixos/nixpkgs?ref=nixos-TODO";
-    # flags = [
-      # "--update-input"
-      # "nixpkgs"
-      # "--commit-lock-file"
-    # ];
-    # dates = "daily";
-    # randomizedDelaySec = "45min";
+  # enable = true;
+  # flake = "github:nixos/nixpkgs?ref=nixos-TODO";
+  # flags = [
+  # "--update-input"
+  # "nixpkgs"
+  # "--commit-lock-file"
+  # ];
+  # dates = "daily";
+  # randomizedDelaySec = "45min";
   # };
 
   # Nix settings
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Maintenance automation
   nix = {
@@ -184,6 +188,15 @@
       dates = "weekly";
       options = "--delete-older-than 14d";
     };
+  };
+
+  # Syncthing
+  services.syncthing = {
+    enable = true;
+    group = "users";
+    user = "chris";
+    dataDir = "/home/chris";
+    configDir = "/home/chris/.config/syncthing";
   };
 
   # Some programs need SUID wrappers, can be configured further or are started in user sessions.
@@ -205,6 +218,4 @@
   # networking.firewall.enable = false;
 
   system.stateVersion = "24.11";
-
 }
-

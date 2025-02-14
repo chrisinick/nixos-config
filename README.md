@@ -24,12 +24,12 @@
 
 ## TODO
 
-- syncthing
-- ghostty
 - zed
 - osbidian
 
 ## License
 
 This configuration is licensed under the [GPLv3](https://github.com/chrisinick/ideapad-mode/blob/master/LICENSE.txt) License.
+
+The nixbu.sh script is based on [No Boilerplate's rebuild script](https://github.com/0atman/noboilerplate/blob/main/scripts/38-nixos.md#dont-use-nix-env).
 

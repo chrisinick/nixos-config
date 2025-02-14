@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   home.username = "chris";
   home.homeDirectory = "/home/chris";
 
@@ -29,7 +32,6 @@
   dconf = {
     enable = true;
     settings = {
-
       # Power
       "org/gnome/settings-daemon/plugins/power" = {
         sleep-inactive-ac-type = "nothing";
@@ -62,9 +64,8 @@
       "org/gnome/desktop/default-applications/office/calendar".needs-term = false;
       "org/gnome/desktop/default-applications/office/tasks".exec = "evolution -c tasks";
       "org/gnome/desktop/default-applications/office/tasks".needs-term = false;
-      "org/gnome/desktop/default-applications/terminal".exec = "gnome-terminal";
-      "org/gnome/desktop/default-applications/terminal".exec-arg = "-x";
-
+      "org/gnome/desktop/default-applications/terminal".exec = "ghostty";
+      "org/gnome/desktop/default-applications/terminal".exec-arg = "";
 
       # Peripherals
       "org/gnome/desktop/peripherals/mouse" = {
@@ -102,11 +103,12 @@
         favorite-apps = [
           "firefox.desktop"
           "thunderbird.desktop"
-          "org.gnome.Console.desktop"
+          "ghostty.desktop"
           "org.gnome.Nautilus.desktop"
           "startcenter.desktop"
           "obsidian.desktop"
           "dev.zed.Zed.desktop"
+          "org.gnome.TextEditor.desktop"
         ];
         last-selected-power-profile = "performance";
         automatic-location = false;
@@ -167,15 +169,15 @@
     userName = "Christoph";
     userEmail = "72564159+chrisinick@users.noreply.github.com";
     extraConfig = {
-      core = { editor = "vim"; };
-      init = { defaultBranch = "main"; };
-      push = { autoSetupRemote = true; };
+      core = {editor = "vim";};
+      init = {defaultBranch = "main";};
+      push = {autoSetupRemote = true;};
     };
   };
 
   programs.vim = {
     enable = true;
-    plugins = [ pkgs.vimPlugins.vim-wayland-clipboard ];
+    plugins = [pkgs.vimPlugins.vim-wayland-clipboard];
     settings = {
       copyindent = true;
       expandtab = true;
@@ -204,6 +206,41 @@
     '';
   };
 
-  home.stateVersion = "24.11";
+  programs.freetube = {
+    enable = true;
+    settings = {
+      barColor = false;
+      checkForUpdates = false;
+      defaultQuality = "1440";
+      defaultViewingMode = "theatre";
+      displayVideoPlayButton = false;
+      expandSideBar = true;
+      hideHeaderLogo = true;
+      hideLabelsSideBar = false;
+      mainColor = "Blue";
+      region = "DE";
+      rememberSearchHistory = false;
+      sponsorBlockSelfPromo = {
+        color = "Yellow";
+        skip = "autoSkip";
+      };
+      uiScale = 120;
+      unsubscriptionPopupStatus = true;
+      useRssFeeds = true;
+      useSponsorBlock = true;
+    };
+  };
 
+  programs.ghostty = {
+    enable = true;
+    installVimSyntax = true;
+    # Not working right now
+    # settings = {
+    # cursor-style = "block";
+    # shell-integration-features = "no-cursor";
+    # theme = "Adwaita";
+    # };
+  };
+
+  home.stateVersion = "24.11";
 }
