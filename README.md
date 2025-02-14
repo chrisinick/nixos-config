@@ -49,6 +49,10 @@ sudo nixos-rebuild switch --flake .#default
 - extensions
 - settings
 
+### Zed Editor
+
+- Install and select Adwaita theme
+
 ## TODO
 
 - latex
