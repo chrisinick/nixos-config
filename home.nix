@@ -267,12 +267,11 @@ in {
   programs.ghostty = {
     enable = true;
     installVimSyntax = true;
-    # Not working right now
-    # settings = {
-    # cursor-style = "block";
-    # shell-integration-features = "no-cursor";
-    # theme = "Adwaita";
-    # };
+    settings = {
+      cursor-style = "block";
+      shell-integration-features = "no-cursor";
+      theme = "Adwaita";
+    };
   };
 
   programs.zed-editor = {
