@@ -34,6 +34,7 @@ in {
         tar -I 'xz -T0' -cf "$FILE.tar.xz" "$FILE"
         notify-send "Compression complete" "Compressed $FILE using multithreading."
       '';
+      executable = true;
     };
 
     # Nautilus context menu: Decompress mulithreaded
@@ -52,6 +53,7 @@ in {
             exit 1
         fi
       '';
+      executable = true;
     };
   };
 
