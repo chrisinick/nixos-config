@@ -6,7 +6,7 @@
 
 - f2fs, no swap
 - systemd-boot, wayland, pipewire
-- gnome, libadwaita light
+- gnome, libadwaita
 - basic bash, git, vim settings
 - rust
 - ghostty, zed, obsidian
@@ -45,13 +45,9 @@ sudo nixos-rebuild switch --flake .#default
 
 ### Thunderbird
 
-- email accounts
-- extensions
-- settings
-
-### Zed Editor
-
-- Install and select Adwaita theme
+- Set up email accounts
+- Install extension
+- Configure settings
 
 ## TODO
 

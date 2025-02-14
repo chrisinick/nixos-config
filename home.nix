@@ -87,7 +87,7 @@ in
       "org/gnome/desktop/datetime".automatic-timezone = true;
       "org/gnome/mutter".center-new-windows = true;
 
-      # Wallpaper TODO
+      # Wallpaper
       "org/gnome/desktop/background" = {
         picture-uri = wallpaper-uri;
         picture-uri-dark = wallpaper-uri;
