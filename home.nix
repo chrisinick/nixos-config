@@ -345,6 +345,11 @@ in
             };
           };
         };
+        package-version-server = {
+          binary = {
+            path = "/run/current-system/sw/bin/package-version-server";
+          };
+        };
       };
       languages = {
         Nix = {
