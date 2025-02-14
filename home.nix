@@ -315,6 +315,8 @@ in {
         use_multiline_find = true;
         use_smartcase_find = true;
       };
+      load_direnv = "shell_hook";
+      base_keymap = "VSCode";
       assistant = {
         default_model = {
           provider = "zed.dev";
@@ -325,7 +327,7 @@ in {
       lsp = {
         rust-analyzer = {
           binary = {
-            path = "/run/current-system/sw/bin/rust-analyzer";
+            path_lookup = true;
           };
           initialization_options = {
             check = {command = "clippy";};
