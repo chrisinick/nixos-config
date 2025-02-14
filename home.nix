@@ -340,7 +340,7 @@ in {
             check = {command = "clippy";};
           };
         };
-        nix = {
+        nixd = {
           binary = {
             path = "/run/current-system/sw/bin/nixd";
           };
