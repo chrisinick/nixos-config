@@ -298,8 +298,8 @@ in {
       };
       theme = {
         mode = "system";
-        light = "One Light";
-        dark = "One Dark";
+        light = "Ayu Light";
+        dark = "Ayu Dark";
       };
       ui_font_size = 20;
       ui_font_weight = 500;
