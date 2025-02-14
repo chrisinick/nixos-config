@@ -329,7 +329,7 @@ in {
       lsp = {
         rust-analyzer = {
           binary = {
-            path_lookup = true;
+            path = "/run/current-system/sw/bin/rust-analyzer";
           };
           initialization_options = {
             check = {command = "clippy";};
@@ -337,7 +337,7 @@ in {
         };
         nix = {
           binary = {
-            path_lookup = true;
+            path = "/run/current-system/sw/bin/nixd";
           };
         };
       };
