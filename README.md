@@ -41,6 +41,7 @@ sudo nixos-rebuild switch --flake .#default
 - Dynamic workspaces
 - Workspaces only on primary screen
 - Select refresh rate
+- Set default apps
 
 ## TODO
 
