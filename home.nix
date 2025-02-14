@@ -281,6 +281,7 @@ in {
       "toml"
       "git-firefly"
       "basher"
+      "nix"
     ];
     userSettings = {
       telemetry = {
@@ -331,6 +332,11 @@ in {
           };
           initialization_options = {
             check = {command = "clippy";};
+          };
+        };
+        nix = {
+          binary = {
+            path_lookup = true;
           };
         };
       };
