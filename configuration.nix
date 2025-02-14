@@ -125,10 +125,13 @@
     clippy
     rust-analyzer
 
+    # Nix
+    nixd
+    alejandra
+
     # Important
     adw-gtk3
     wget
-    alejandra
     syncthing
     ghostty
     syncthing
@@ -192,6 +195,7 @@
 
   # Nix settings
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
   # Maintenance automation
   nix = {
