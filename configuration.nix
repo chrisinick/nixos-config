@@ -123,6 +123,7 @@
     wl-clipboard
 
     # Rust
+    pkg-config
     gcc
     rustc
     cargo
