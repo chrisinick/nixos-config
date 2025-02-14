@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 alejandra . &>/dev/null
 git diff -U0 *.nix
