@@ -281,6 +281,7 @@ in {
       "toml"
       "git-firefly"
       "basher"
+      "adwaita-pastel-theme"
     ];
     userSettings = {
       telemetry = {
@@ -298,6 +299,8 @@ in {
       };
       theme = {
         mode = "system";
+        light = "Adwaita Pastel Light";
+        dark = "Adwaita Pastel Dark";
       };
       ui_font_size = 20;
       buffer_font_size = 20;
