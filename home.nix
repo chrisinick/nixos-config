@@ -312,8 +312,8 @@ in
       };
       theme = {
         mode = "system";
-        light = "One Light";
-        dark = "One Dark";
+        light = "Adwaita Pastel Light";
+        dark = "Adwaita Pastel Dark";
       };
       ui_font_size = 20;
       ui_font_weight = 500;
