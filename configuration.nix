@@ -4,7 +4,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
@@ -78,11 +79,15 @@
   # User account (don't forget to set a password with ‘passwd’)
   users.users.chris = {
     isNormalUser = true;
-    extraGroups = ["wheel" "video" "audio"];
+    extraGroups = [
+      "wheel"
+      "video"
+      "audio"
+    ];
   };
 
   home-manager = {
-    extraSpecialArgs = {inherit inputs;};
+    extraSpecialArgs = { inherit inputs; };
     users = {
       chris = import ./home.nix;
     };
@@ -195,8 +200,11 @@
   # };
 
   # Nix settings
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
   # Maintenance automation
   nix = {

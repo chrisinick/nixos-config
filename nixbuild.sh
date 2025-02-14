@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-#alejandra .
+nixfmt .
 git diff -U0 *.nix
 echo "NixOS rebuilding..."
 sudo nixos-rebuild switch --flake .#default
