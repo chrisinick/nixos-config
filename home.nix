@@ -3,7 +3,9 @@
   lib,
   pkgs,
   ...
-}: {
+}: let
+  wallpaper-uri = "file:///home/chris/vault/sync/bilder/wallpapers/snow_forest.jpg";
+in {
   home.username = "chris";
   home.homeDirectory = "/home/chris";
 
@@ -54,10 +56,10 @@
 
       # Wallpaper TODO
       "org/gnome/desktop/background" = {
-        picture-uri = "file:///home/chris/Bilder/wallpapers/snow_forest.jpg";
-        picture-uri-dark = "file:///home/chris/Bilder/wallpapers/snow_forest.jpg";
+        picture-uri = wallpaper-uri;
+        picture-uri-dark = wallpaper-uri;
       };
-      "org/gnome/desktop/screensaver".picture-uri = "file:///home/chris/Bilder/wallpapers/snow_forest.jpg";
+      "org/gnome/desktop/screensaver".picture-uri = wallpaper-uri;
 
       # Default apps
       "org/gnome/desktop/default-applications/office/calendar".exec = "evolution -c calendar";
