@@ -299,8 +299,8 @@ in {
       theme = {
         mode = "system";
       };
-      ui_font_size = 32;
-      buffer_font_size = 32;
+      ui_font_size = 20;
+      buffer_font_size = 20;
       inlay_hints = {
         enabled = true;
       };
