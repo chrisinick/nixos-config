@@ -341,18 +341,6 @@ in {
           };
         };
       };
-      languages = {
-        nix = {
-          formatter = {
-            command = "alejandra";
-            args = [];
-          };
-          language_server = {
-            command = "nixd";
-            args = [];
-          };
-        };
-      };
     };
   };
 
