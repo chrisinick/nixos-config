@@ -276,6 +276,12 @@ in {
 
   programs.zed-editor = {
     enable = true;
+    extensions = [
+      "html"
+      "toml"
+      "git-firefly"
+      "basher"
+    ];
     userSettings = {
       telemetry = {
         metrics = false;

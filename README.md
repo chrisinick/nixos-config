@@ -43,11 +43,18 @@ sudo nixos-rebuild switch --flake .#default
 - Select refresh rate
 - Set default apps
 
+### Thunderbird
+
+- email accounts
+- extensions
+- settings
+
 ## TODO
 
-- thunderbird
-- zed
+- latex
+- vpn
 - osbidian
+- refactor configs
 
 ## License
 
