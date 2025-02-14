@@ -309,6 +309,7 @@ in {
       inlay_hints = {
         enabled = true;
       };
+      format_on_save = true;
       vim_mode = true;
       vim = {
         toggle_relative_line_numbers = true;
@@ -337,6 +338,14 @@ in {
         nix = {
           binary = {
             path_lookup = true;
+          };
+        };
+      };
+      languages = {
+        nix = {
+          formatter = {
+            command = "alejandra";
+            args = [];
           };
         };
       };
