@@ -121,6 +121,8 @@
     ghostty
     syncthing
     alejandra
+    rustc
+    cargo
     papers
     clapper
     amberol
