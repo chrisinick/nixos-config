@@ -275,5 +275,62 @@ in {
     # };
   };
 
+  programs.zed-editor = {
+    enable = true;
+    extensions = [
+      "html"
+      "toml"
+      "git-firefly"
+      "basher"
+      "adwaita-pastel-theme"
+    ];
+    userSettings = {
+      telemetry = {
+        metrics = false;
+        diagnostics = false;
+      };
+      features = {
+        copilot = false;
+      };
+      journal = {
+        hour_format = "hour24";
+      };
+      calls = {
+        mute_on_join = true;
+      };
+      theme = {
+        mode = "system";
+        light = "Adwaita Pastel Light";
+        dark = "Adwaita Pastel Dark";
+      };
+      ui_font_size = 20;
+      buffer_font_size = 20;
+      inlay_hints = {
+        enabled = true;
+      };
+      vim_mode = true;
+      vim = {
+        toggle_relative_line_numbers = true;
+        use_system_clipboard = "always";
+        use_multiline_find = true;
+        use_smartcase_find = true;
+      };
+      assistant = {
+        default_model = {
+          provider = "zed.dev";
+          model = "claude-3-5-sonnet-latest";
+        };
+        version = "2";
+      };
+      lsp = {
+        rust-analyzer = {
+          initialization_options = {
+            check = {command = "clippy";};
+          };
+        };
+      };
+    };
+  };
+
   home.stateVersion = "24.11";
 }

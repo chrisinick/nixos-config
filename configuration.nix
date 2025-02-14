@@ -123,6 +123,7 @@
     alejandra
     rustc
     cargo
+    rust-analyzer
     papers
     clapper
     amberol
