@@ -11,6 +11,26 @@
 - rust
 - ghostty, zed, obsidian
 
+## Important commands
+
+### Collect garbage
+
+```bash
+sudo nix-collect-garbage -d
+```
+
+### Update
+
+```bash
+nix flake update
+```
+
+### Rebuild
+
+```bash
+sudo nixos-rebuild switch --flake .#default
+```
+
 ## Must be done manually still
 
 ### Gnome settings
@@ -24,6 +44,7 @@
 
 ## TODO
 
+- thunderbird
 - zed
 - osbidian
 
@@ -31,5 +52,5 @@
 
 This configuration is licensed under the [GPLv3](https://github.com/chrisinick/ideapad-mode/blob/master/LICENSE.txt) License.
 
-The nixbu.sh script is based on [No Boilerplate's rebuild script](https://github.com/0atman/noboilerplate/blob/main/scripts/38-nixos.md#dont-use-nix-env).
+The nixbuild.sh script is based on [No Boilerplate's rebuild script](https://github.com/0atman/noboilerplate/blob/main/scripts/38-nixos.md#dont-use-nix-env).
 
