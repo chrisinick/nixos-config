@@ -309,7 +309,7 @@ in {
       inlay_hints = {
         enabled = true;
       };
-      format_on_save = true;
+      format_on_save = "on";
       vim_mode = true;
       vim = {
         toggle_relative_line_numbers = true;
@@ -345,6 +345,10 @@ in {
         nix = {
           formatter = {
             command = "alejandra";
+            args = [];
+          };
+          language_server = {
+            command = "nixd";
             args = [];
           };
         };
