@@ -310,11 +310,6 @@ in
       calls = {
         mute_on_join = true;
       };
-      theme = {
-        mode = "system";
-        light = "Adwaita Pastel Light";
-        dark = "Adwaita Pastel Dark";
-      };
       ui_font_size = 20;
       ui_font_weight = 500;
       buffer_font_size = 20;
