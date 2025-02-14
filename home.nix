@@ -77,7 +77,6 @@ in
       "org/gnome/desktop/interface" = {
         clock-format = "24h";
         clock-show-weekday = true;
-        color-scheme = "default";
         enable-hot-corners = false;
         show-battery-percentage = true;
         text-scaling-factor = 1.20;
