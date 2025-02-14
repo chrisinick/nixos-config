@@ -121,6 +121,7 @@
     hunspellDicts.en_US
     hunspellDicts.de_DE
     wl-clipboard
+    openssl
 
     # Rust
     pkg-config
