@@ -127,6 +127,7 @@
 
     # Nix
     nixd
+    nil
     alejandra
 
     # Important

@@ -276,6 +276,11 @@ in {
 
   programs.zed-editor = {
     enable = true;
+    extraPackages = with pkgs; [
+      nixd
+      nil
+      alejandra
+    ];
     extensions = [
       "html"
       "toml"
@@ -335,9 +340,17 @@ in {
             check = {command = "clippy";};
           };
         };
-        nix = {
-          binary = {
-            path = "/run/current-system/sw/bin/nixd";
+      };
+      languages = {
+        Nix = {
+          language_servers = [
+            "nil"
+            "!nixd"
+          ];
+          formatter = {
+            external = {
+              command = "alejandra";
+            };
           };
         };
       };
