@@ -278,7 +278,7 @@ in
     settings = {
       cursor-style = "block";
       shell-integration-features = "no-cursor";
-      theme = "Adwaita";
+      theme = "dark:Adwaita Dark,light:Adwaita";
     };
   };
 
