@@ -129,6 +129,7 @@
     rustfmt
     clippy
     rust-analyzer
+    package-version-server
 
     # Nix
     nixd
