@@ -117,7 +117,6 @@
   # Packages installed in system profile
   environment.systemPackages = with pkgs; [
     # System
-    xsettingsd
     hunspell
     hunspellDicts.en_US
     hunspellDicts.de_DE
