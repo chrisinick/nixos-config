@@ -96,7 +96,6 @@
   programs.dconf.enable = true;
   programs.git.enable = true;
   programs.firefox.enable = true;
-  programs.chromium.enable = true;
   programs.thunderbird.enable = true;
   programs.vim = {
     enable = true;
