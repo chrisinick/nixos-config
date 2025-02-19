@@ -30,7 +30,17 @@ nix flake update
 sudo nixos-rebuild switch --flake .
 ```
 
-## Must be done manually still
+### Nix flake templates
+
+```bash
+nix flake show templates
+```
+
+```bash
+nix flake init -t templates#full
+```
+
+## Must be configured manually still
 
 ### Gnome settings
 
@@ -41,12 +51,6 @@ sudo nixos-rebuild switch --flake .
 - Workspaces only on primary screen
 - Select refresh rate
 - Set default apps
-
-### Thunderbird
-
-- Set up email accounts
-- Install extension
-- Configure settings
 
 ## License
 
