@@ -5,10 +5,6 @@
   ...
 }:
 {
-  home.sessionPath = [
-    "/home/chris/scripts"
-  ];
-
   home.file = {
     # Sort Gnome app grid
     ".config/autostart/sort-app-grid.desktop" = {
