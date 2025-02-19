@@ -6,7 +6,7 @@
 }:
 {
   home.sessionPath = [
-    "$HOME/scripts"
+    "/home/chris/scripts"
   ];
 
   home.file = {
