@@ -106,6 +106,10 @@
       set -o vi
     '';
   };
+  programs.nautilus-open-any-terminal = {
+    enable = true;
+    terminal = "ghostty";
+  };
 
   # Packages installed in system profile
   environment.systemPackages = with pkgs; [

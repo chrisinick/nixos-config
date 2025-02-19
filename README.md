@@ -1,6 +1,6 @@
 # nixos-config
 
-**My NixOS configuration (wip)**
+**My NixOS configuration**
 
 ## Properties
 
@@ -8,7 +8,6 @@
 - systemd-boot, wayland, pipewire
 - gnome, libadwaita
 - basic bash, git, vim settings
-- rust
 - ghostty, zed, obsidian
 
 ## Important commands
@@ -48,12 +47,6 @@ sudo nixos-rebuild switch --flake .
 - Set up email accounts
 - Install extension
 - Configure settings
-
-## TODO
-
-- vpn
-- rust
-- latex
 
 ## License
 

@@ -19,7 +19,6 @@
 
   home.sessionVariables = {
     EDITOR = "vim";
-    PATH = "$HOME/scripts:$PATH";
   };
 
   programs.home-manager.enable = true;
