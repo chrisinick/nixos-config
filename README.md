@@ -51,11 +51,9 @@ sudo nixos-rebuild switch --flake .
 
 ## TODO
 
-- latex
 - vpn
-- osbidian
-- refactor configs
-- rewrite script (stage and unstage)
+- rust
+- latex
 
 ## License
 
