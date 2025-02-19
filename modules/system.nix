@@ -157,7 +157,6 @@
     obsidian
     zed-editor
     signal-desktop
-    fractal
     freetube
     foliate
     komikku
