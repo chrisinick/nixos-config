@@ -136,6 +136,9 @@
     ghostty
     syncthing
 
+    # University
+    openconnect
+
     # CLI
     wget
     glow
