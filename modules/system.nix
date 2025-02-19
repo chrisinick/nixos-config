@@ -159,6 +159,7 @@
     signal-desktop
     freetube
     foliate
+    hypnotix
     komikku
     gnome-podcasts
     shortwave
