@@ -6,11 +6,6 @@
   ...
 }:
 {
-  imports = [
-    ./hardware-configuration.nix
-    inputs.home-manager.nixosModules.default
-  ];
-
   # systemd-boot EFI boot loader
   boot.loader = {
     systemd-boot = {
@@ -20,17 +15,6 @@
     efi.canTouchEfiVariables = true;
     timeout = 2;
   };
-
-  # Network
-  networking.hostName = "chris-desktop";
-  systemd.network = {
-    enable = true;
-    networks."10-wired" = {
-      matchConfig.Name = "en*";
-      networkConfig.DHCP = "yes";
-    };
-  };
-  services.resolved.enable = true;
 
   # Time zone
   time.timeZone = "Europe/Berlin";
@@ -89,7 +73,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      chris = import ../home-manager/home.nix;
+      chris = import ../home;
     };
   };
 
@@ -192,19 +176,6 @@
     xterm
   ];
 
-  # Automatic updates
-  # system.autoUpgrade = {
-  # enable = true;
-  # flake = "github:nixos/nixpkgs?ref=nixos-TODO";
-  # flags = [
-  # "--update-input"
-  # "nixpkgs"
-  # "--commit-lock-file"
-  # ];
-  # dates = "daily";
-  # randomizedDelaySec = "45min";
-  # };
-
   # Nix settings
   nix.settings.experimental-features = [
     "nix-command"
@@ -256,6 +227,4 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-
-  system.stateVersion = "24.11";
 }

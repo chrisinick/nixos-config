@@ -21,7 +21,7 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./nixos/configuration.nix
+          ./hosts/chris-desktop
           inputs.home-manager.nixosModules.default
         ];
       };
