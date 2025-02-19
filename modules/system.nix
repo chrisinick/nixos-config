@@ -29,6 +29,16 @@
   # Hardware settings
   hardware.graphics.enable = true;
 
+  # Network
+  systemd.network = {
+    enable = true;
+    networks."10-wired" = {
+      matchConfig.Name = "en*";
+      networkConfig.DHCP = "yes";
+    };
+  };
+  services.resolved.enable = true;
+
   # X11, Wayland, Gnome
   services.xserver = {
     enable = true;
@@ -57,9 +67,6 @@
   # CUPS for printing
   # services.printing.enable = true;
 
-  # Touchpad support (enabled default in most desktopManager)
-  # services.libinput.enable = true;
-
   # User account (don't forget to set a password with ‘passwd’)
   users.users.chris = {
     isNormalUser = true;
@@ -70,6 +77,7 @@
     ];
   };
 
+  # Home Manager
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {

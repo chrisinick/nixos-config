@@ -14,14 +14,9 @@
 
   # Network
   networking.hostName = "chris-desktop";
-  systemd.network = {
-    enable = true;
-    networks."10-wired" = {
-      matchConfig.Name = "en*";
-      networkConfig.DHCP = "yes";
-    };
-  };
-  services.resolved.enable = true;
+
+  # Touchpad support (enabled default in most desktopManager)
+  # services.libinput.enable = true;
 
   system.stateVersion = "24.11";
 }
