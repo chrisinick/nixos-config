@@ -28,7 +28,7 @@ nix flake update
 ### Rebuild
 
 ```bash
-sudo nixos-rebuild switch --flake .#default
+sudo nixos-rebuild switch --flake .
 ```
 
 ## Must be done manually still
@@ -55,6 +55,7 @@ sudo nixos-rebuild switch --flake .#default
 - vpn
 - osbidian
 - refactor configs
+- rewrite script (stage and unstage)
 
 ## License
 

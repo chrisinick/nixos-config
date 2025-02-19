@@ -16,15 +16,12 @@
       nixpkgs,
       ...
     }@inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
     {
-      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.chris-desktop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./configuration.nix
+          ./nixos/configuration.nix
           inputs.home-manager.nixosModules.default
         ];
       };

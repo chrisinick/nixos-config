@@ -89,7 +89,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      chris = import ./home.nix;
+      chris = import ../home-manager/home.nix;
     };
   };
 
@@ -102,6 +102,7 @@
 
   # Enabled programs
   programs.dconf.enable = true;
+  programs.git.enable = true;
   programs.firefox.enable = true;
   programs.thunderbird.enable = true;
   programs.vim = {
@@ -121,6 +122,7 @@
     hunspellDicts.en_US
     hunspellDicts.de_DE
     wl-clipboard
+    adw-gtk3
     adwaita-fonts
 
     # Rust
@@ -137,12 +139,14 @@
     nil
     nixfmt-rfc-style
 
-    # Important
-    adw-gtk3
-    wget
+    # Essential
     syncthing
     ghostty
     syncthing
+
+    # CLI
+    wget
+    glow
 
     # Apps
     papers
