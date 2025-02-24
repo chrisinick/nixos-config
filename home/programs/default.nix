@@ -64,6 +64,7 @@
       defaultViewingMode = "theatre";
       displayVideoPlayButton = false;
       expandSideBar = true;
+      externalPlayer = "clapper";
       hideHeaderLogo = true;
       hideLabelsSideBar = false;
       mainColor = "Blue";
