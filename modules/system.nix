@@ -114,8 +114,6 @@
     enable = true;
     terminal = "ghostty";
   };
-  # Work
-  programs.chromium.enable = true;
 
   # Packages installed in system profile
   environment.systemPackages = with pkgs; [
@@ -152,6 +150,7 @@
     # Work
     openvpn
     remmina
+    chromium
 
     # CLI
     wget
