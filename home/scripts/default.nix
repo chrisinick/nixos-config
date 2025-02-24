@@ -75,7 +75,7 @@
     "scripts/work_vpn.sh" = {
       text = ''
         #!/usr/bin/env bash
-        sudo ${pkgs.openvpn}/bin/openvpn --config /home/chris/vault/sync/arbeit/client-config.ovpn
+        sudo ${pkgs.openvpn}/bin/openvpn --config /home/chris/vault/sync/arbeit/vpn/client-config.ovpn
       '';
       executable = true;
     };
