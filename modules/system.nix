@@ -150,6 +150,7 @@
     # Work
     openvpn
     remmina
+    microsoft-edge
 
     # CLI
     wget
