@@ -50,7 +50,7 @@
     };
 
     # University VPN
-    "scripts/th-nuernberg_vpn.sh" = {
+    "scripts/university_vpn.sh" = {
       text = ''
         #!/usr/bin/env bash
         MTU=1284
@@ -67,6 +67,15 @@
           --mtu $MTU \
           --force-dpd $DEADPEERSSECS \
           vpn.ohmportal.de
+      '';
+      executable = true;
+    };
+
+    # Work VPN
+    "scripts/work_vpn.sh" = {
+      text = ''
+        #!/usr/bin/env bash
+        sudo ${pkgs.openvpn}/bin/openvpn --config /home/chris/vault/sync/arbeit/client-config.ovpn
       '';
       executable = true;
     };
