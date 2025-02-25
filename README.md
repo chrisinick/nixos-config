@@ -10,6 +10,12 @@
 - basic bash, git, vim settings
 - ghostty, zed, obsidian
 
+## TODO
+
+- chromium settings
+- remmina start on login?
+- remmina settings (Gut)
+
 ## Important commands
 
 ### Collect garbage
