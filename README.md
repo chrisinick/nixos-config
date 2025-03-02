@@ -15,6 +15,7 @@
 - chromium settings
 - remmina start on login?
 - remmina settings (Gut)
+- firefox
 
 ## Important commands
 
