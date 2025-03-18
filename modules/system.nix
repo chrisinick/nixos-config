@@ -165,6 +165,7 @@
     libreoffice-fresh
     obsidian
     zed-editor
+    helix
     signal-desktop
     stremio
     freetube
