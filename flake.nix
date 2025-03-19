@@ -25,5 +25,14 @@
           inputs.home-manager.nixosModules.default
         ];
       };
+
+      nixosConfigurations.chris-laptop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/chris-laptop
+          inputs.home-manager.nixosModules.default
+        ];
+      };
     };
 }
