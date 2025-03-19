@@ -142,7 +142,6 @@
     # Essential
     syncthing
     ghostty
-    syncthing
 
     # University
     openconnect

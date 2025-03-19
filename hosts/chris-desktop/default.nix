@@ -15,8 +15,5 @@
   # Network
   networking.hostName = "chris-desktop";
 
-  # Touchpad support (enabled default in most desktopManager)
-  # services.libinput.enable = true;
-
   system.stateVersion = "24.11";
 }
