@@ -20,7 +20,7 @@
     '';
   };
   programs.nautilus-open-any-terminal = {
-    enable = true;
+    #enable = true;
     #terminal = "ghostty";
   };
 
