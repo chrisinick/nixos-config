@@ -19,6 +19,11 @@
   networking.wireless.iwd.enable = true;
   networking.networkmanager.wifi.backend = "iwd";
 
+  # Wifi hotspot utility
+  environment.systemPackages = with pkgs; [
+    linux-wifi-hotspot
+  ];
+
   # auto-cpufreq
   services.auto-cpufreq.enable = true;
   services.auto-cpufreq.settings = {

@@ -49,6 +49,7 @@
     papers
     clapper
     amberol
+    gnome-sound-recorder
     metadata-cleaner
     tor-browser
     libreoffice-fresh

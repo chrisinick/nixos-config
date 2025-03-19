@@ -13,6 +13,7 @@
 ## TODO
 
 - firefox
+- zotero
 
 ## Important commands
 
@@ -51,7 +52,7 @@ nix flake init -t templates#full
 - Import bookmarks (from sync/arbeit/chromium_lesezeichen/)
 - Go through the settings
 
-### Gnome settings
+### Gnome
 
 - Turn on night light
 - Set up keyboard shortcuts for launching apps
@@ -61,9 +62,13 @@ nix flake init -t templates#full
 - Select refresh rate
 - Set default apps
 
-### Remmina settings
+### Remmina
 
 Seen notes in sync/arbeit/vpn/
+
+### Warframe
+
+Restore settings from sync/backup/warframe/
 
 ## License
 
