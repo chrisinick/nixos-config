@@ -12,9 +12,6 @@
 
 ## TODO
 
-- chromium settings
-- remmina start on login?
-- remmina settings (Gut)
 - firefox
 
 ## Important commands
@@ -49,6 +46,11 @@ nix flake init -t templates#full
 
 ## Must be configured manually still
 
+### Chromium
+
+- Import bookmarks (from sync/arbeit/chromium_lesezeichen/)
+- Go through the settings
+
 ### Gnome settings
 
 - Turn on night light
@@ -59,9 +61,12 @@ nix flake init -t templates#full
 - Select refresh rate
 - Set default apps
 
+### Remmina settings
+
+Seen notes in sync/arbeit/vpn/
+
 ## License
 
 This configuration is licensed under the [GPLv3](https://github.com/chrisinick/ideapad-mode/blob/master/LICENSE.txt) License.
 
 The nixbuild.sh script is based on [No Boilerplate's rebuild script](https://github.com/0atman/noboilerplate/blob/main/scripts/38-nixos.md#dont-use-nix-env).
-
