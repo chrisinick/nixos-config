@@ -6,6 +6,11 @@
   ...
 }:
 {
+  imports = [
+    ./programs.nix
+    ./packages.nix
+  ];
+
   # systemd-boot EFI boot loader
   boot.loader = {
     systemd-boot = {
@@ -96,110 +101,6 @@
   # Nix packages configuration
   nixpkgs.config.allowUnfree = true;
 
-  # Enabled programs
-  programs.dconf.enable = true;
-  programs.git.enable = true;
-  programs.firefox.enable = true;
-  programs.thunderbird.enable = true;
-  programs.vim = {
-    enable = true;
-    defaultEditor = true;
-  };
-  programs.bash = {
-    interactiveShellInit = ''
-      set -o vi
-    '';
-  };
-  programs.nautilus-open-any-terminal = {
-    enable = true;
-    terminal = "ghostty";
-  };
-
-  # Packages installed in system profile
-  environment.systemPackages = with pkgs; [
-    # System
-    hunspell
-    hunspellDicts.en_US
-    hunspellDicts.de_DE
-    wl-clipboard
-    adw-gtk3
-    adwaita-fonts
-
-    # Rust
-    gcc
-    rustc
-    cargo
-    rustfmt
-    clippy
-    rust-analyzer
-    package-version-server
-
-    # Nix
-    nixd
-    nil
-    nixfmt-rfc-style
-
-    # Essential
-    syncthing
-    ghostty
-
-    # University
-    openconnect
-
-    # Work
-    openvpn
-    remmina
-    chromium
-
-    # CLI
-    wget
-    glow
-
-    # Apps
-    papers
-    clapper
-    amberol
-    metadata-cleaner
-    tor-browser
-    libreoffice-fresh
-    obsidian
-    zed-editor
-    signal-desktop
-    stremio
-    freetube
-    foliate
-    hypnotix
-    komikku
-    gnome-podcasts
-    shortwave
-    blanket
-  ];
-
-  # Excluded packages
-  environment.gnome.excludePackages = with pkgs; [
-    cheese
-    eog
-    epiphany
-    evince
-    geary
-    gnome-console
-    gnome-maps
-    gnome-music
-    gnome-weather
-    gedit
-    gnome-connections
-    gnome-photos
-    gnome-tour
-    snapshot
-    simple-scan
-    totem
-    yelp
-  ];
-
-  services.xserver.excludePackages = with pkgs; [
-    xterm
-  ];
-
   # Nix settings
   nix.settings.experimental-features = [
     "nix-command"
@@ -215,23 +116,6 @@
       dates = "weekly";
       options = "--delete-older-than 14d";
     };
-  };
-
-  # Syncthing
-  services.syncthing = {
-    enable = true;
-    group = "users";
-    user = "chris";
-    dataDir = "/home/chris";
-    configDir = "/home/chris/.config/syncthing";
-  };
-
-  # Steam
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    localNetworkGameTransfers.openFirewall = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are started in user sessions.
