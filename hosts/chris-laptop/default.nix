@@ -46,18 +46,18 @@
   # Touchpad support
   services.libinput.enable = true;
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      chris.home = {
-        # Gnome performance balanced
-        dconf.settings."org/gnome/shell".last-selected-power-profile = "balanced";
+  #home-manager = {
+  #extraSpecialArgs = { inherit inputs; };
+  #users = {
+  #chris.home = {
+  # Gnome performance balanced
+  #dconf.settings."org/gnome/shell".last-selected-power-profile = "balanced";
 
-        # Freetube quality setting
-        programs.freetube.settings.defaultQuality = "1080";
-      };
-    };
-  };
+  # Freetube quality setting
+  #programs.freetube.settings.defaultQuality = "1080";
+  #};
+  #};
+  #};
 
   system.stateVersion = "24.11";
 }
