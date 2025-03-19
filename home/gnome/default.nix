@@ -5,7 +5,7 @@
   ...
 }:
 let
-  wallpaper-uri = "file:///home/chris/vault/sync/bilder/wallpapers/snow_forest.jpg";
+  wallpaper-uri = "file:///home/chris/vault/sync/bilder/wallpapers/current/wallpaper";
 in
 {
   imports = [

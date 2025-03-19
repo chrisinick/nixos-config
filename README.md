@@ -45,7 +45,16 @@ nix flake show templates
 nix flake init -t templates#full
 ```
 
-## Must be configured manually still
+## Must be configured manually
+
+### Syncthing
+
+Configure sync directories
+
+### Firefox & Thunderbird
+
+- Log in and go through settings
+- Add ublock filters
 
 ### Chromium
 
