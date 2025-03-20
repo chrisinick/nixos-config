@@ -29,7 +29,12 @@
     rust-analyzer
     package-version-server
 
+    # Latex
+    texliveSmall
+    zathura
+
     # Essential
+    ffmpeg
     syncthing
     ghostty
 

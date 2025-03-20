@@ -19,6 +19,7 @@
       "git-firefly"
       "basher"
       "nix"
+      "latex"
     ];
     userSettings = {
       telemetry = {
