@@ -13,6 +13,7 @@
 ## TODO
 
 - firefox
+- latex
 - zotero
 
 ## Important commands
@@ -73,7 +74,7 @@ Configure sync directories
 
 ### Remmina
 
-Seen notes in sync/arbeit/vpn/
+See notes in sync/arbeit/vpn/
 
 ### Warframe
 
