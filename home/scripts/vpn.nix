@@ -15,7 +15,7 @@
         DEADPEERSSECS=30
         IFACE=vpn0
         set +o histexpand
-        sudo ${pkgs.openconnect}/bin/openconnect \
+        sudo /run/current-system/sw/bin/openconnect \
           --protocol gp \
           --syslog \
           --disable-ipv6 \
@@ -32,7 +32,7 @@
     "scripts/work_vpn.sh" = {
       text = ''
         #!/usr/bin/env bash
-        sudo ${pkgs.openvpn}/bin/openvpn --config /home/chris/vault/sync/arbeit/vpn/client-config.ovpn
+        sudo /run/current-system/sw/bin/openvpn --config /home/chris/vault/sync/arbeit/vpn/client-config.ovpn
       '';
       executable = true;
     };

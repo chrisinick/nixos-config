@@ -81,12 +81,23 @@
           };
           settings = {
             texlab = {
+              latexindent = {
+                modifyLineBreaks = true;
+              };
               build = {
                 onSave = true;
                 forwardSearchAfter = true;
+                executable = "/run/current-system/sw/bin/latexmk";
+                args = [
+                  "-pdf"
+                  "-interaction=nonstopmode"
+                  "-file-line-error"
+                  "-synctex=1"
+                  "%f"
+                ];
               };
               forwardSearch = {
-                executable = "zathura";
+                executable = "/run/current-system/sw/bin/zathura";
                 args = [
                   "--synctex-forward"
                   "%l:1:%f"

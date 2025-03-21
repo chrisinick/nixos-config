@@ -30,7 +30,7 @@
     package-version-server
 
     # Latex
-    texliveSmall
+    texliveMedium
     texlab
     zathura
 

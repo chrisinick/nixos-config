@@ -13,7 +13,7 @@
         Name=SortAppGrid
         Type=Application
         Comment=Sorts the Gnome app grid alphabetically
-        Exec=${pkgs.bash}/bin/bash -c "gsettings set org.gnome.shell app-picker-layout "[]""
+        Exec=/run/current-system/sw/bin/bash -c "gsettings set org.gnome.shell app-picker-layout "[]""
         Terminal=false
         X-GNOME-Autostart-enabled=true
       '';
