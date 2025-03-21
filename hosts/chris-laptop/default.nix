@@ -16,10 +16,10 @@
   networking.hostName = "chris-laptop";
 
   # Wifi (iwd)
-  networking.wireless.iwd.enable = true;
+  #networking.wireless.iwd.enable = true;
   networking.networkmanager.enable = true;
-  networking.networkmanager.wifi.backend = "iwd";
-  networking.networkmanager.wifi.powersave = true;
+  #networking.networkmanager.wifi.backend = "iwd";
+  #networking.networkmanager.wifi.powersave = true;
 
   # Wifi hotspot utility
   environment.systemPackages = with pkgs; [
