@@ -75,6 +75,29 @@
             path = "/run/current-system/sw/bin/package-version-server";
           };
         };
+        texlab = {
+          binary = {
+            path = "/run/current-system/sw/bin/texlab";
+          };
+          settings = {
+            texlab = {
+              build = {
+                onSave = true;
+                forwardSearchAfter = true;
+              };
+              forwardSearch = {
+                executable = "zathura";
+                args = [
+                  "--synctex-forward"
+                  "%l:1:%f"
+                  "-x"
+                  "zed %%{input}:%%{line}"
+                  "%p"
+                ];
+              };
+            };
+          };
+        };
       };
       languages = {
         Nix = {

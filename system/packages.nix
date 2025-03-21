@@ -31,6 +31,7 @@
 
     # Latex
     texliveSmall
+    texlab
     zathura
 
     # Essential
