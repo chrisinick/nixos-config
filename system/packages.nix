@@ -30,9 +30,9 @@
     package-version-server
 
     # Latex
-    texliveMedium
-    texlab
-    zathura
+    #texliveMedium
+    #texlab
+    #zathura
 
     # Essential
     ffmpeg
