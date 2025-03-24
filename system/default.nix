@@ -107,7 +107,7 @@
     "nix-command"
     "flakes"
   ];
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs-unstable}" ];
 
   # Maintenance automation
   nix = {
