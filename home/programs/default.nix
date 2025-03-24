@@ -5,6 +5,8 @@
   ...
 }:
 {
+  nixpkgs.config.allowUnfree = true;
+
   imports = [
     ./freetube.nix
     ./ghostty.nix
