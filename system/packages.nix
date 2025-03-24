@@ -38,6 +38,7 @@
     ffmpeg
     syncthing
     ghostty
+    cheese
 
     # University
     openconnect
