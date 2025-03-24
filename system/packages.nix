@@ -61,7 +61,7 @@
     tor-browser
     libreoffice-fresh
     obsidian
-    zed-editor
+    #zed-editor
     signal-desktop
     stremio
     freetube
