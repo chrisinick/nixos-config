@@ -96,7 +96,7 @@
   };
 
   # Environment variables
-  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.sessionVariables.QT_QPA_PLATFORM = "wayland";
 
   # Nix packages configuration
