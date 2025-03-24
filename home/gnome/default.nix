@@ -90,7 +90,7 @@ in
           "org.gnome.Nautilus.desktop"
           "startcenter.desktop"
           "obsidian.desktop"
-          "dev.zed.Zed.desktop"
+          "code.desktop"
           "org.gnome.TextEditor.desktop"
         ];
         last-selected-power-profile = "performance";
