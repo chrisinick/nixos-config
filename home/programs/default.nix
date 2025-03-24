@@ -10,7 +10,7 @@
     ./ghostty.nix
     ./git.nix
     ./vim.nix
-    #./zed-editor.nix
+    ./vscode.nix
   ];
 
   services.remmina.enable = true;

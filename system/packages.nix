@@ -62,7 +62,7 @@
     tor-browser
     libreoffice-fresh
     obsidian
-    #zed-editor
+    vscode
     signal-desktop
     stremio
     freetube
