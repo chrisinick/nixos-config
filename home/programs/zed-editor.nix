@@ -59,6 +59,11 @@
         };
         version = "2";
       };
+      #jupyter = {
+      #kernel_selections = {
+      #python = ""
+      #}
+      #};
       lsp = {
         rust-analyzer = {
           binary = {
