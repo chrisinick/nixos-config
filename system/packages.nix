@@ -30,12 +30,6 @@
     rust-analyzer
     package-version-server
 
-    # C
-    cmake
-
-    # Python
-    python3
-
     # Latex
     #texliveMedium
     #texlab
