@@ -30,6 +30,9 @@
     rust-analyzer
     package-version-server
 
+    # C
+    cmake
+
     # Latex
     #texliveMedium
     #texlab
