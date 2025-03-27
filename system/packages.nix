@@ -66,6 +66,7 @@
     libreoffice-fresh
     obsidian
     vscode
+    zed-editor
     signal-desktop
     stremio
     freetube

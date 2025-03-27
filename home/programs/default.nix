@@ -13,6 +13,7 @@
     ./git.nix
     ./vim.nix
     ./vscode.nix
+    ./zed-editor.nix
   ];
 
   services.remmina.enable = true;
