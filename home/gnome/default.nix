@@ -64,12 +64,6 @@ in
         remove-old-trash-files = true;
       };
 
-      # Printing
-      "org/gnome/desktop/lockdown" = {
-        disable-print-setup = true;
-        disable-printing = true;
-      };
-
       # Sound
       "org/gnome/desktop/sound" = {
         event-sounds = false;
