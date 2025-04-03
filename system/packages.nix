@@ -35,6 +35,9 @@
     #texlab
     #zathura
 
+    # Arduino
+    arduino-ide
+
     # Essential
     ffmpeg
     syncthing
