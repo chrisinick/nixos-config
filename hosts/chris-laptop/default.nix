@@ -25,24 +25,24 @@
   ];
 
   # auto-cpufreq
-  #services.power-profiles-daemon.enable = false;
-  #services.auto-cpufreq.enable = true;
-  #services.auto-cpufreq.settings = {
-  #charger = {
-  #governor = "performance";
-  #energy_performance_preference = "performance";
-  #energy_perf_bias = "balance_performance";
-  #platform_profile = "performance";
-  #turbo = "auto";
-  #};
-  #battery = {
-  #governor = "powersave";
-  #energy_performance_preference = "power";
-  #energy_perf_bias = "balance_power";
-  #platform_profile = "low-power";
-  #turbo = "never";
-  #};
-  #};
+  services.power-profiles-daemon.enable = false;
+  services.auto-cpufreq.enable = true;
+  services.auto-cpufreq.settings = {
+    charger = {
+      governor = "performance";
+      energy_performance_preference = "performance";
+      energy_perf_bias = "balance_performance";
+      platform_profile = "performance";
+      turbo = "auto";
+    };
+    battery = {
+      governor = "powersave";
+      energy_performance_preference = "power";
+      energy_perf_bias = "balance_power";
+      platform_profile = "low-power";
+      turbo = "never";
+    };
+  };
 
   # Touchpad support
   services.libinput.enable = true;
