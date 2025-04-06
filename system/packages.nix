@@ -31,6 +31,7 @@
     package-version-server
 
     # Python
+    quickemu
     pyright
 
     # Latex
