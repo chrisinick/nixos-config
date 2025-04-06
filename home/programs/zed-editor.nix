@@ -80,6 +80,20 @@
             path = "/run/current-system/sw/bin/package-version-server";
           };
         };
+        pyright = {
+          binary = {
+            path = "/run/current-system/sw/bin/pyright";
+          };
+          settings = {
+            python.analysis = {
+              diagnosticMode = "workspace";
+              #typeCheckingMode = "strict";
+            };
+            #python = {
+            #pythonPath = ".venv/bin/python";
+            #};
+          };
+        };
         texlab = {
           binary = {
             path = "/run/current-system/sw/bin/texlab";

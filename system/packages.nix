@@ -30,6 +30,9 @@
     rust-analyzer
     package-version-server
 
+    # Python
+    pyright
+
     # Latex
     #texliveMedium
     #texlab
