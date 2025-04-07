@@ -31,7 +31,6 @@
     package-version-server
 
     # VM
-    gnome-boxes
     quickemu
     spice
     virt-viewer
