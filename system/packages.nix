@@ -33,6 +33,7 @@
     # VM
     quickemu
     spice
+    virt-viewer
 
     # Latex
     #texliveMedium
