@@ -30,9 +30,9 @@
     rust-analyzer
     package-version-server
 
-    # Python
+    # VM
     quickemu
-    pyright
+    spice
 
     # Latex
     #texliveMedium
