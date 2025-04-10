@@ -45,6 +45,7 @@
 
     # Essential
     ffmpeg
+    imagemagick
     syncthing
     ghostty
     cheese
