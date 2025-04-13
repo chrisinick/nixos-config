@@ -44,7 +44,7 @@
       };
       format_on_save = "on";
       bindings = {
-        "shift-esc" = "";
+        "shift-escape" = "";
       };
       vim_mode = true;
       vim = {
