@@ -11,6 +11,7 @@
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
         ms-python.python
+        ms-python.vscode-pylance
         ms-toolsai.jupyter
       ];
 
@@ -24,6 +25,7 @@
 
         "workbench.startupEditor" = "none";
         "workbench.tips.enabled" = false;
+        "workbench.colorTheme" = "Default Light Modern";
 
         "python.pythonPath" = "${pkgs.python3}/bin/python3";
         "python.jediEnabled" = false;

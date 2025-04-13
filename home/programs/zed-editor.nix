@@ -43,6 +43,9 @@
         enabled = true;
       };
       format_on_save = "on";
+      bindings = {
+        "shift-esc" = "";
+      };
       vim_mode = true;
       vim = {
         toggle_relative_line_numbers = true;
