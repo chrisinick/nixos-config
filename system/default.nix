@@ -93,6 +93,7 @@
     users = {
       chris = import ../home;
     };
+    backupFileExtension = "backup";
   };
 
   # Environment variables

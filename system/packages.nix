@@ -30,11 +30,6 @@
     rust-analyzer
     package-version-server
 
-    # VM
-    quickemu
-    spice
-    virt-viewer
-
     # Latex
     #texliveMedium
     #texlab
