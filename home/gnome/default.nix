@@ -27,7 +27,7 @@ in
         clock-show-weekday = true;
         color-scheme = "default";
         enable-hot-corners = false;
-        #gtk-theme = "adw-gtk3";
+        gtk-theme = "adw-gtk3";
         show-battery-percentage = true;
         text-scaling-factor = 1.20;
       };
