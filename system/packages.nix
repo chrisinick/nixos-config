@@ -60,6 +60,7 @@
     # Apps
     papers
     clapper
+    celluloid
     amberol
     gnome-sound-recorder
     metadata-cleaner
