@@ -47,6 +47,7 @@
 
     # University
     openconnect
+    labelImg
 
     # Work
     openvpn
