@@ -108,6 +108,7 @@
     enable = true;
     libraries = with pkgs; [
       zlib
+      xorg.libxcb
     ];
   };
 
