@@ -106,7 +106,9 @@
   # Dynamically linked executables
   programs.nix-ld = {
     enable = true;
-    libraries = with pkgs; [ ];
+    libraries = with pkgs; [
+      libz
+    ];
   };
 
   # Nix settings
