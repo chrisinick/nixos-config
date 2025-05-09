@@ -78,6 +78,8 @@
     gnome-podcasts
     shortwave
     blanket
+
+    torzu
   ];
 
   # Excluded packages
