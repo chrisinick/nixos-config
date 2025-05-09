@@ -103,6 +103,12 @@
   # Nix packages configuration
   nixpkgs.config.allowUnfree = true;
 
+  # Dynamically linked executables
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [ ];
+  };
+
   # Nix settings
   nix.settings.experimental-features = [
     "nix-command"
