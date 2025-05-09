@@ -15,7 +15,6 @@
     wl-clipboard
     adw-gtk3
     adwaita-fonts
-    nix-index
 
     # Nix
     nixd
@@ -80,7 +79,9 @@
     shortwave
     blanket
 
+    # Emulation
     torzu
+    nsz
   ];
 
   # Excluded packages
