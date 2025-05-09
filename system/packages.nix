@@ -15,6 +15,7 @@
     wl-clipboard
     adw-gtk3
     adwaita-fonts
+    nix-index
 
     # Nix
     nixd
