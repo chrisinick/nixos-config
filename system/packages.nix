@@ -37,6 +37,7 @@
 
     # Arduino
     arduino-ide
+    nodejs
 
     # Essential
     ffmpeg
