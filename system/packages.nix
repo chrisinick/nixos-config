@@ -45,6 +45,7 @@
     syncthing
     ghostty
     cheese
+    pinta
 
     # University
     openconnect
