@@ -81,9 +81,7 @@
     shortwave
     blanket
 
-    # Emulation
-    torzu
-    nsz
+    warp
   ];
 
   # Excluded packages
