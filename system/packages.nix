@@ -82,6 +82,7 @@
     blanket
 
     warp
+    pixz
   ];
 
   # Excluded packages
