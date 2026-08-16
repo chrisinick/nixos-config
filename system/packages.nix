@@ -13,6 +13,7 @@
     adw-gtk3
     adwaita-fonts
     nerd-fonts.commit-mono
+    nerd-fonts.jetbrains-mono
 
     # Nix
     nixd
