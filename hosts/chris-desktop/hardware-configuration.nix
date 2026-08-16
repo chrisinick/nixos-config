@@ -21,22 +21,6 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" = {
-    device = "/dev/disk/by-label/root";
-    fsType = "f2fs";
-  };
-
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-label/ESP";
-    fsType = "vfat";
-    options = [
-      "fmask=0022"
-      "dmask=0022"
-    ];
-  };
-
-  swapDevices = [ ];
-
   networking.useDHCP = lib.mkDefault false;
   networking.interfaces.enp7s0.useDHCP = lib.mkDefault true;
 
