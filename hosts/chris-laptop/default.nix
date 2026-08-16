@@ -1,18 +1,14 @@
 {
-  inputs,
   ...
 }:
 {
   imports = [
-    inputs.disko.nixosModules.disko
+    #inputs.nixos-hardware.nixosModules.framework-intel-core-ultra-series3
     ./hardware-configuration.nix
     ../../system
   ];
 
-  networking.hostName = "chris-laptop";
-
   disko.devices.disk.main.device = "/dev/disk/by-id/nvme-WDC_WDS500G2B0C-00PXH0_21375R468305";
-
   system.stateVersion = "26.05";
 
   # Wifi

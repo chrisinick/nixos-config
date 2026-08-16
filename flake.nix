@@ -5,6 +5,8 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
 
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
@@ -42,8 +44,10 @@
             inherit system;
             specialArgs = { inherit inputs stablePkgs; };
             modules = [
+              disko.nixosModules.disko
               home-manager.nixosModules.default
               ./hosts/${hostname}
+              { networking.hostName = hostname; }
             ];
           };
         }) hosts
