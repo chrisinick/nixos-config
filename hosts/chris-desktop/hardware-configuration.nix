@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   modulesPath,
   ...
 }:
@@ -23,12 +22,12 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-label/nixos";
+    device = "/dev/disk/by-label/root";
     fsType = "f2fs";
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-label/BOOT";
+    device = "/dev/disk/by-label/ESP";
     fsType = "vfat";
     options = [
       "fmask=0022"

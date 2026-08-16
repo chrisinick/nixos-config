@@ -5,6 +5,7 @@
 }:
 {
   imports = [
+    ./disk-config.nix
     ./programs.nix
     ./packages.nix
   ];

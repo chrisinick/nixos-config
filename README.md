@@ -16,6 +16,10 @@
 - latex
 - zotero
 
+```bash
+sudo nix --extra-experimental-features 'nix-command flakes' run 'github:nix-community/disko/latest#disko-install' -- --write-efi-boot-entries --flake 'github:chrisinick/nixos-config#chris-laptop'
+```
+
 ## Important commands
 
 ### Collect garbage
@@ -50,7 +54,7 @@ nix flake init -t templates#full
 
 ### Firefox & Thunderbird
 
-- Log in and go through settings
+- Go through the settings
 - Add ublock filters
 
 ### Chromium

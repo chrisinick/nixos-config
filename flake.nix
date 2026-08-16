@@ -5,6 +5,11 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
 
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
@@ -16,6 +21,8 @@
       self,
       nixpkgs-unstable,
       nixpkgs-stable,
+      disko,
+      home-manager,
       ...
     }@inputs:
     let
@@ -24,7 +31,7 @@
         "chris-laptop"
       ];
       system = "x86_64-linux";
-      pkgs = import nixpkgs-unstable { inherit system; };
+      #pkgs = import nixpkgs-unstable { inherit system; };
       stablePkgs = import nixpkgs-stable { inherit system; };
     in
     {
@@ -34,7 +41,10 @@
           value = nixpkgs-unstable.lib.nixosSystem {
             inherit system;
             specialArgs = { inherit inputs stablePkgs; };
-            modules = [ ./hosts/${hostname} ];
+            modules = [
+              home-manager.nixosModules.default
+              ./hosts/${hostname}
+            ];
           };
         }) hosts
       );
