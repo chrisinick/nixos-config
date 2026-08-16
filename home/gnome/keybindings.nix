@@ -4,7 +4,7 @@
 {
   dconf.settings = {
     "org/gnome/desktop/input-sources" = {
-      xkb-options = [ "ctrl:escape" ];
+      xkb-options = [ "caps:escape" ];
     };
     "org/gnome/desktop/wm/keybindings" = {
       maximize = [ "<Super>Up" ];

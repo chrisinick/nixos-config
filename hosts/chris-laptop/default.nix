@@ -27,7 +27,7 @@
   };
 
   # Battery management
-  services.power-profiles-daemon.enable = false;
+  services.power-profiles-daemon.enable = true;
 
   # Touchpad support
   services.libinput.enable = true;
