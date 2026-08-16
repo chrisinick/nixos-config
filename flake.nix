@@ -19,25 +19,24 @@
       ...
     }@inputs:
     let
+      hosts = [
+        "chris-desktop"
+        "chris-laptop"
+      ];
       system = "x86_64-linux";
       pkgs = import nixpkgs-unstable { inherit system; };
       stablePkgs = import nixpkgs-stable { inherit system; };
     in
     {
-      nixosConfigurations.chris-desktop = nixpkgs-unstable.lib.nixosSystem {
-        inherit system;
-        specialArgs = { inherit inputs stablePkgs; };
-        modules = [
-          ./hosts/chris-desktop
-        ];
-      };
-
-      nixosConfigurations.chris-laptop = nixpkgs-unstable.lib.nixosSystem {
-        inherit system;
-        specialArgs = { inherit inputs stablePkgs; };
-        modules = [
-          ./hosts/chris-laptop
-        ];
-      };
+      nixosConfigurations = builtins.listToAttrs (
+        map (hostname: {
+          name = hostname;
+          value = nixpkgs-unstable.lib.nixosSystem {
+            inherit system;
+            specialArgs = { inherit inputs stablePkgs; };
+            modules = [ ./hosts/${hostname} ];
+          };
+        }) hosts
+      );
     };
 }
