@@ -47,7 +47,7 @@
       journal.hour_format = "hour24";
       calls.mute_on_join = true;
       terminal.shell.program = "${pkgs.fish}/bin/fish";
-      buffer_font_family = "CommitMono Nerd Font";
+      buffer_font_family = "CommitMono Nerd Font Mono";
       buffer_font_size = 18;
       ui_font_size = 20;
       inlay_hints.enabled = true;
