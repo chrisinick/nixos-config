@@ -18,12 +18,7 @@
 
 ```bash
 sudo nix --extra-experimental-features 'nix-command flakes' run 'github:nix-community/disko/latest' -- --write-efi-boot-entries --mode destroy,format,mount --flake 'github:chrisinick/nixos-config#chris-laptop'
-sudo nixos-install --extra-experimental-features 'nix-command flakes' --no-update-lock-file --flake 'github:chrisinick/nixos-config#chris-laptop'
-```
-
-```bash
-git clone https://github.com/chrisinick/nixos-config.git
-sudo nix --extra-experimental-features 'nix-command flakes' run 'github:nix-community/disko/latest#disko-install' -- --write-efi-boot-entries --mode format --flake './nixos-config#chris-laptop'
+sudo nixos-install --no-update-lock-file --flake 'github:chrisinick/nixos-config#chris-laptop'
 ```
 
 ## Important commands
