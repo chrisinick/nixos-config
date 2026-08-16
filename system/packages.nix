@@ -12,6 +12,7 @@
     wl-clipboard
     adw-gtk3
     adwaita-fonts
+    commit-mono
 
     # Nix
     nixd

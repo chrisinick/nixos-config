@@ -17,26 +17,35 @@
       "git-firefly"
       "basher"
       "nix"
-      "latex"
+      "typst"
     ];
     userSettings = {
+      cli_default_open_behavior = "existing_window";
+      colorize_brackets = true;
+      project_panel.dock = "left";
+      outline_panel.dock = "left";
+      collaboration_panel.dock = "left";
+      git_panel.dock = "left";
+      agent = {
+        sidebar_side = "right";
+        default_profile = "write";
+        dock = "right";
+      };
+      theme = {
+        mode = "system";
+        light = "One Light";
+        dark = "One Dark";
+      };
       telemetry = {
         metrics = false;
         diagnostics = false;
       };
-      features = {
-        copilot = false;
-      };
-      journal = {
-        hour_format = "hour24";
-      };
-      calls = {
-        mute_on_join = true;
-      };
+      journal.hour_format = "hour24";
+      calls.mute_on_join = true;
+      terminal.shell.program = "${pkgs.fish}/bin/fish";
+      buffer_font_family = "CommitMono Nerd Font";
+      buffer_font_size = 18;
       ui_font_size = 20;
-      ui_font_weight = 500;
-      buffer_font_size = 20;
-      buffer_font_weight = 500;
       inlay_hints = {
         enabled = true;
       };
