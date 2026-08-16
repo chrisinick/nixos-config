@@ -12,7 +12,7 @@
     wl-clipboard
     adw-gtk3
     adwaita-fonts
-    commit-mono
+    nerd-fonts.commit-mono
 
     # Nix
     nixd
@@ -29,8 +29,8 @@
     package-version-server
 
     # Latex
-    #texliveMedium
-    #texlab
+    texliveMedium
+    texlab
     zathura
 
     # Essential

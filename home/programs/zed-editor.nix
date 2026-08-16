@@ -18,6 +18,8 @@
       "basher"
       "nix"
       "typst"
+      "markdownlint"
+      "latex"
     ];
     userSettings = {
       cli_default_open_behavior = "existing_window";
@@ -46,10 +48,10 @@
       buffer_font_family = "CommitMono Nerd Font";
       buffer_font_size = 18;
       ui_font_size = 20;
-      inlay_hints = {
-        enabled = true;
-      };
+      inlay_hints.enabled = true;
       format_on_save = "on";
+      tab_size = 4;
+      preferred_line_length = 100;
       vim_mode = true;
       vim = {
         toggle_relative_line_numbers = true;
@@ -59,93 +61,74 @@
       };
       load_direnv = "shell_hook";
       base_keymap = "VSCode";
-      assistant = {
-        default_model = {
-          provider = "zed.dev";
-          model = "claude-3-5-sonnet-latest";
-        };
-        version = "2";
-      };
-      #jupyter = {
-      #kernel_selections = {
-      #python = ""
-      #}
-      #};
+      diagnostics.inline.enabled = true;
+      minimap.show = "never";
       lsp = {
         rust-analyzer = {
-          binary = {
-            path = "/run/current-system/sw/bin/rust-analyzer";
-          };
-          initialization_options = {
-            check = {
-              command = "clippy";
-            };
-          };
+          binary.path = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+          initialization_options.check.command = "clippy";
         };
-        package-version-server = {
-          binary = {
-            path = "/run/current-system/sw/bin/package-version-server";
-          };
+        package-version-server.binary.path = "${pkgs.package-version-server}/bin/package-version-server";
+        basedpyright.settings = {
+          basedpyright.analysis.diagnosticMode = "workspace";
+          exclusions = [ "**/.venv/**" ];
         };
-        pyright = {
-          binary = {
-            path = "/run/current-system/sw/bin/pyright";
-          };
+        tinymist = {
           settings = {
-            python.analysis = {
-              diagnosticMode = "workspace";
-              #typeCheckingMode = "strict";
-            };
-            #python = {
-            #pythonPath = ".venv/bin/python";
-            #};
+            formatterMode = "typstyle";
+            syntaxOnly = "onPowerSaving";
           };
+          initialization_options.preview.background.enabled = true;
+        };
+        markdownlint.settings = {
+          "MD013" = false;
         };
         texlab = {
-          binary = {
-            path = "/run/current-system/sw/bin/texlab";
-          };
-          settings = {
-            texlab = {
-              latexindent = {
-                modifyLineBreaks = true;
-              };
-              build = {
-                onSave = true;
-                forwardSearchAfter = true;
-                executable = "/run/current-system/sw/bin/latexmk";
-                args = [
-                  "-pdf"
-                  "-interaction=nonstopmode"
-                  "-file-line-error"
-                  "-synctex=1"
-                  "%f"
-                ];
-              };
-              forwardSearch = {
-                executable = "/run/current-system/sw/bin/zathura";
-                args = [
-                  "--synctex-forward"
-                  "%l:1:%f"
-                  "-x"
-                  "zed %%{input}:%%{line}"
-                  "%p"
-                ];
-              };
+          binary.path = "${pkgs.texlab}/bin/texlab";
+          settings.texlab = {
+            latexindent.modifyLineBreaks = true;
+            build = {
+              onSave = true;
+              forwardSearchAfter = true;
+              executable = "${pkgs.texliveMedium}/bin/latexmk";
+              args = [
+                "-pdf"
+                "-interaction=nonstopmode"
+                "-file-line-error"
+                "-synctex=1"
+                "%f"
+              ];
+            };
+            forwardSearch = {
+              executable = "${pkgs.zathura}/bin/zathura";
+              args = [
+                "--synctex-forward"
+                "%l:1:%f"
+                "-x"
+                "zed %%{input}:%%{line}"
+                "%p"
+              ];
             };
           };
         };
-      };
-      languages = {
-        Nix = {
-          language_servers = [
-            "nil"
-            "!nixd"
+        jdtls.initialization_options.settings.java = {
+          maven.enabled = true;
+          jdt.ls.lombokSupport.enabled = true;
+          exclusions = [
+            "**/node_modules/**"
+            "**/.metadata/**"
+            "**/archetype-resources/**"
+            "**/META-INF/maven/**"
+            "/**/test/**"
           ];
-          formatter = {
-            external = {
-              command = "nixfmt";
-            };
+        };
+        languages = {
+          Nix = {
+            language_servers = [
+              "nil"
+              "!nixd"
+            ];
+            formatter.external.command = "nixfmt";
           };
         };
       };
