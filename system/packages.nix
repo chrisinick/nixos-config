@@ -14,6 +14,7 @@
     adwaita-fonts
     nerd-fonts.commit-mono
     nerd-fonts.jetbrains-mono
+    nerd-fonts.comic-shanns-mono
 
     # Nix
     nixd

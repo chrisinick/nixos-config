@@ -12,6 +12,7 @@
       package-version-server
       nerd-fonts.commit-mono
       nerd-fonts.jetbrains-mono
+      nerd-fonts.comic-shanns-mono
     ];
     extensions = [
       "html"
@@ -48,7 +49,7 @@
       journal.hour_format = "hour24";
       calls.mute_on_join = true;
       terminal.shell.program = "${pkgs.fish}/bin/fish";
-      buffer_font_family = "JetBrainsMono Nerd Font";
+      buffer_font_family = "ComicShannsMono Nerd Font";
       buffer_font_size = 18;
       ui_font_size = 20;
       inlay_hints.enabled = true;
