@@ -85,7 +85,7 @@
   # CUPS for printing
   # services.printing.enable = true;
 
-  # User account (don't forget to set a password with ‘passwd’)
+  # User account
   users.users.chris = {
     isNormalUser = true;
     extraGroups = [
@@ -106,8 +106,8 @@
   };
 
   # Environment variables
-  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  # environment.sessionVariables.QT_QPA_PLATFORM = "wayland";
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.QT_QPA_PLATFORM = "wayland";
 
   # Nix packages configuration
   nixpkgs.config.allowUnfree = true;

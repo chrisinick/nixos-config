@@ -1,4 +1,5 @@
 {
+  pkgs,
   ...
 }:
 {
@@ -19,7 +20,7 @@
     enable = true;
     options = {
       synctex = true;
-      "synctex-editor-command" = "/run/current-system/sw/bin/zeditor %{input}:%{line}";
+      "synctex-editor-command" = "${pkgs.zed-editor}/bin/zeditor %{input}:%{line}";
     };
   };
 }

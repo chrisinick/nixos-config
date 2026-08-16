@@ -6,6 +6,7 @@
     ./gnome.nix
     ./vpn.nix
   ];
+
   home.file = {
     # ideapadmode
     "scripts/ideapadmode.sh" = {

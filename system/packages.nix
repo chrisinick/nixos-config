@@ -19,13 +19,13 @@
     nixfmt
 
     # Rust
-    #gcc
-    #rustc
-    #cargo
-    #rustfmt
-    #clippy
-    #rust-analyzer
-    #package-version-server
+    gcc
+    rustc
+    cargo
+    rustfmt
+    clippy
+    rust-analyzer
+    package-version-server
 
     # Latex
     #texliveMedium

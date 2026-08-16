@@ -9,6 +9,7 @@ in
   imports = [
     ./keybindings.nix
   ];
+
   # Gnome settings
   dconf = {
     enable = true;
