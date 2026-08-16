@@ -2,9 +2,12 @@
 set -e
 trap "git reset; exit 1" ERR
 find . -name "*.nix" -exec nixfmt {} \;
-git diff -U0 *.nix
+git diff -U0 -- '*.nix'
 echo "NixOS rebuilding..."
 git add .
 sudo nixos-rebuild switch --impure --flake .
-gen=$(nixos-rebuild list-generations | grep current)
-git commit -am "$gen"
+commit_msg=$(nixos-rebuild list-generations --json | jq -r '
+    .[] | select(.current == true) |
+    "NixOS \(.nixosVersion) | kernel \(.kernelVersion) | \(.date)"
+')
+git commit -m "$commit_msg"

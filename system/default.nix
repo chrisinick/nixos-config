@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   inputs,
   ...
@@ -21,11 +19,25 @@
     timeout = 2;
   };
 
+  # Latest kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # Time zone
   time.timeZone = "Europe/Berlin";
 
-  # Internationalisation
+  # Internationalization
   i18n.defaultLocale = "de_DE.UTF-8";
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "de_DE.UTF-8";
+    LC_IDENTIFICATION = "de_DE.UTF-8";
+    LC_MEASUREMENT = "de_DE.UTF-8";
+    LC_MONETARY = "de_DE.UTF-8";
+    LC_NAME = "de_DE.UTF-8";
+    LC_NUMERIC = "de_DE.UTF-8";
+    LC_PAPER = "de_DE.UTF-8";
+    LC_TELEPHONE = "de_DE.UTF-8";
+    LC_TIME = "de_DE.UTF-8";
+  };
   console = {
     font = "Lat2-Terminus16";
     keyMap = "de";
@@ -44,34 +56,30 @@
   };
   services.resolved.enable = true;
 
-  # X11, Wayland, Gnome
-  services.xserver = {
-    enable = true;
-    desktopManager.gnome.enable = true;
-    displayManager.gdm = {
-      enable = true;
-      autoSuspend = false;
-    };
-
-    # Keymap in X11 and Wayland
-    xkb.layout = "de";
-    xkb.options = "caps:escape";
-  };
+  # Gnome
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
   services.displayManager.defaultSession = "gnome";
   programs.xwayland.enable = true;
-
   systemd.user.services.gnomeSettingsDaemon.enable = true;
   systemd.user.services.gnomeKeyring.enable = true;
+  services.gnome.games.enable = false;
+
+  # X Keymap
+  services.xserver.xkb = {
+    layout = "de";
+    options = "caps:escape";
+  };
 
   # Sound
+  security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     pulse.enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
-    jack.enable = true;
+    #jack.enable = true;
   };
-  security.rtkit.enable = true;
 
   # CUPS for printing
   # services.printing.enable = true;
@@ -109,7 +117,7 @@
     libraries = with pkgs; [
       # NX Optimizer
       zlib
-      xorg.libxcb
+      libxcb
     ];
   };
 

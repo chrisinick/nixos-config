@@ -1,7 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
   inputs,
   ...
 }:
@@ -12,53 +9,26 @@
     inputs.home-manager.nixosModules.default
   ];
 
-  # Network
   networking.hostName = "chris-laptop";
 
+  system.stateVersion = "26.05";
+
   # Wifi
-  networking.networkmanager.enable = true;
-  networking.networkmanager.wifi.powersave = true;
-
-  # Wifi hotspot utility
-  environment.systemPackages = with pkgs; [
-    linux-wifi-hotspot
-  ];
-
-  # auto-cpufreq
-  services.power-profiles-daemon.enable = false;
-  services.auto-cpufreq.enable = true;
-  services.auto-cpufreq.settings = {
-    charger = {
-      governor = "performance";
-      energy_performance_preference = "performance";
-      energy_perf_bias = "balance_performance";
-      platform_profile = "performance";
-      turbo = "auto";
-    };
-    battery = {
-      governor = "powersave";
-      energy_performance_preference = "power";
-      energy_perf_bias = "balance_power";
-      platform_profile = "low-power";
-      turbo = "never";
-    };
+  networking.wireless.iwd.enable = true;
+  networking.wireless.iwd.settings = {
+    Network.EnableIPv6 = true;
+    Settings.AutoConnect = true;
+    Settings.AddressRandomization = "enabled";
   };
+  networking.networkmanager.enable = true;
+  networking.networkmanager.wifi = {
+    powersave = true;
+    backend = "iwd";
+  };
+
+  # Battery management
+  services.power-profiles-daemon.enable = false;
 
   # Touchpad support
   services.libinput.enable = true;
-
-  #home-manager = {
-  #extraSpecialArgs = { inherit inputs; };
-  #users = {
-  #chris.home = {
-  # Gnome performance balanced
-  #dconf.settings."org/gnome/shell".last-selected-power-profile = "balanced";
-
-  # Freetube quality setting
-  #programs.freetube.settings.defaultQuality = "1080";
-  #};
-  #};
-  #};
-
-  system.stateVersion = "24.11";
 }

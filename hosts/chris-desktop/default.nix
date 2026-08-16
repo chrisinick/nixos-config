@@ -1,7 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
   inputs,
   ...
 }:
@@ -12,8 +9,7 @@
     inputs.home-manager.nixosModules.default
   ];
 
-  # Network
   networking.hostName = "chris-desktop";
 
-  system.stateVersion = "24.11";
+  system.stateVersion = "26.05";
 }

@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -16,7 +16,6 @@
       self,
       nixpkgs-unstable,
       nixpkgs-stable,
-      home-manager,
       ...
     }@inputs:
     let
@@ -30,7 +29,6 @@
         specialArgs = { inherit inputs stablePkgs; };
         modules = [
           ./hosts/chris-desktop
-          inputs.home-manager.nixosModules.default
         ];
       };
 
@@ -39,7 +37,6 @@
         specialArgs = { inherit inputs stablePkgs; };
         modules = [
           ./hosts/chris-laptop
-          inputs.home-manager.nixosModules.default
         ];
       };
     };

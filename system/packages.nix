@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   stablePkgs,
   ...
@@ -19,33 +17,30 @@
     # Nix
     nixd
     nil
-    nixfmt-rfc-style
+    nixfmt
 
     # Rust
-    gcc
-    rustc
-    cargo
-    rustfmt
-    clippy
-    rust-analyzer
-    package-version-server
+    #gcc
+    #rustc
+    #cargo
+    #rustfmt
+    #clippy
+    #rust-analyzer
+    #package-version-server
 
     # Latex
     #texliveMedium
     #texlab
-    #zathura
-
-    # Arduino
-    arduino-ide
-    nodejs
+    zathura
 
     # Essential
+    jq
     ffmpeg
     imagemagick
-    syncthing
     ghostty
     cheese
     pinta
+    gnome-tweaks
 
     # University
     openconnect
@@ -53,7 +48,6 @@
     # Work
     openvpn
     remmina
-    chromium
 
     # CLI
     wget
@@ -65,14 +59,13 @@
     celluloid
     amberol
     gnome-sound-recorder
-    metadata-cleaner
+    #metadata-cleaner
     tor-browser
     libreoffice-fresh
     obsidian
-    vscode
     zed-editor
     signal-desktop
-    stremio
+    stremio-linux-shell
     freetube
     foliate
     hypnotix
@@ -80,9 +73,7 @@
     gnome-podcasts
     shortwave
     blanket
-
     warp
-    pixz
   ];
 
   # Excluded packages

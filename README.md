@@ -4,9 +4,9 @@
 
 ## Properties
 
-- f2fs, no swap
+- ext4, no swap
 - systemd-boot, wayland, pipewire
-- gnome, libadwaita
+- gnome
 - basic bash, git, vim settings
 - ghostty, zed, obsidian
 
@@ -47,10 +47,6 @@ nix flake init -t templates#full
 ```
 
 ## Must be configured manually
-
-### Syncthing
-
-Configure sync directories
 
 ### Firefox & Thunderbird
 

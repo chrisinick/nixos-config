@@ -37,8 +37,8 @@ in
 
       # Wallpaper
       "org/gnome/desktop/background" = {
-        picture-uri = wallpaper-uri;
-        picture-uri-dark = wallpaper-uri;
+        #picture-uri = wallpaper-uri;
+        #picture-uri-dark = wallpaper-uri;
       };
       "org/gnome/desktop/screensaver".picture-uri = wallpaper-uri;
 

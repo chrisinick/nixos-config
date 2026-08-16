@@ -10,7 +10,7 @@
     extraPackages = with pkgs; [
       nixd
       nil
-      nixfmt-rfc-style
+      nixfmt
       package-version-server
     ];
     extensions = [

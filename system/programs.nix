@@ -1,14 +1,11 @@
 {
-  config,
-  lib,
-  pkgs,
   ...
 }:
 {
-  # Enabled programs
   programs.dconf.enable = true;
   programs.git.enable = true;
   programs.firefox.enable = true;
+  programs.chromium.enable = true;
   programs.thunderbird.enable = true;
   programs.vim = {
     enable = true;
@@ -23,17 +20,7 @@
     enable = true;
     terminal = "ghostty";
   };
-
-  # Syncthing
-  services.syncthing = {
-    enable = true;
-    group = "users";
-    user = "chris";
-    dataDir = "/home/chris";
-    configDir = "/home/chris/.config/syncthing";
-  };
-
-  # Steam
+  programs.vscode.enable = true;
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
