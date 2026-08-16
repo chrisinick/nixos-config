@@ -2,8 +2,6 @@
 
 **My NixOS configuration**
 
-## Properties
-
 - ext4, no swap
 - systemd-boot, wayland, pipewire
 - gnome
@@ -16,12 +14,34 @@
 - latex
 - zotero
 
+## Installation
+
+1. Boot from nixos live iso
+2. Run these commands in the console:
+
+### chris-laptop
+
 ```bash
+sudo loadkeys de
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'de')]"
 sudo nix --extra-experimental-features 'nix-command flakes' run 'github:nix-community/disko/latest' -- --write-efi-boot-entries --mode destroy,format,mount --flake 'github:chrisinick/nixos-config#chris-laptop'
 sudo nixos-install --no-update-lock-file --flake 'github:chrisinick/nixos-config#chris-laptop'
+sudo nixos-enter --root /mnt -c 'passwd chris'
 ```
 
-## Important commands
+### chris-desktop
+
+```bash
+sudo loadkeys de
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'de')]"
+sudo nix --extra-experimental-features 'nix-command flakes' run 'github:nix-community/disko/latest' -- --write-efi-boot-entries --mode destroy,format,mount --flake 'github:chrisinick/nixos-config#chris-desktop'
+sudo nixos-install --no-update-lock-file --flake 'github:chrisinick/nixos-config#chris-desktop'
+sudo nixos-enter --root /mnt -c 'passwd chris'
+```
+
+## Usage
+
+Use nixswitch.sh and nixbuild.sh scripts!
 
 ### Collect garbage
 
