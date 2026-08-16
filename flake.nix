@@ -28,10 +28,7 @@
       ...
     }@inputs:
     let
-      hosts = [
-        "chris-desktop"
-        "chris-laptop"
-      ];
+      hosts = builtins.attrNames (builtins.readDir ./hosts);
       system = "x86_64-linux";
       #pkgs = import nixpkgs-unstable { inherit system; };
       stablePkgs = import nixpkgs-stable { inherit system; };

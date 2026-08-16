@@ -45,6 +45,7 @@
     openconnect
 
     # Work
+    chromium
     openvpn
     remmina
 
