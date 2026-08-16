@@ -10,6 +10,7 @@
       nil
       nixfmt
       package-version-server
+      nerd-fonts.commit-mono
     ];
     extensions = [
       "html"
@@ -20,6 +21,7 @@
       "typst"
       "markdownlint"
       "latex"
+      "java"
     ];
     userSettings = {
       cli_default_open_behavior = "existing_window";
@@ -56,13 +58,21 @@
       vim = {
         toggle_relative_line_numbers = true;
         use_system_clipboard = "always";
-        use_multiline_find = true;
         use_smartcase_find = true;
       };
       load_direnv = "shell_hook";
       base_keymap = "VSCode";
       diagnostics.inline.enabled = true;
       minimap.show = "never";
+      languages = {
+        Nix = {
+          language_servers = [
+            "nil"
+            "!nixd"
+          ];
+          formatter.external.command = "nixfmt";
+        };
+      };
       lsp = {
         rust-analyzer = {
           binary.path = "${pkgs.rust-analyzer}/bin/rust-analyzer";
@@ -121,15 +131,6 @@
             "**/META-INF/maven/**"
             "/**/test/**"
           ];
-        };
-        languages = {
-          Nix = {
-            language_servers = [
-              "nil"
-              "!nixd"
-            ];
-            formatter.external.command = "nixfmt";
-          };
         };
       };
     };
