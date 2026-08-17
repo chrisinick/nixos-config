@@ -14,5 +14,5 @@
     ./zed-editor.nix
   ];
 
-  services.remmina.enable = false;
+  #services.remmina.enable = true;
 }
