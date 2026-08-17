@@ -11,20 +11,19 @@
       defaultViewingMode = "theatre";
       displayVideoPlayButton = false;
       expandSideBar = true;
-      externalPlayer = "clapper";
       hideHeaderLogo = true;
       hideLabelsSideBar = false;
       mainColor = "Blue";
       region = "DE";
       rememberSearchHistory = false;
+      uiScale = 110;
+      unsubscriptionPopupStatus = true;
+      useRssFeeds = true;
+      useSponsorBlock = true;
       sponsorBlockSelfPromo = {
         color = "Yellow";
         skip = "autoSkip";
       };
-      uiScale = 120;
-      unsubscriptionPopupStatus = true;
-      useRssFeeds = true;
-      useSponsorBlock = true;
     };
   };
 }

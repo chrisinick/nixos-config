@@ -52,7 +52,7 @@
       ui_font_size = 20;
       inlay_hints.enabled = true;
       format_on_save = "on";
-      tab_size = 4;
+      tab_size = 2;
       preferred_line_length = 100;
       vim_mode = true;
       vim = {
