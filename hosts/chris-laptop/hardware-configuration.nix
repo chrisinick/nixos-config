@@ -20,7 +20,6 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [
     "kvm-amd"
-    "acpi_call" # for ideapadmode script
   ];
   boot.extraModulePackages = [ ];
 
