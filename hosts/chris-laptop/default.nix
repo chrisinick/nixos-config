@@ -1,9 +1,10 @@
 {
+  inputs,
   ...
 }:
 {
   imports = [
-    #inputs.nixos-hardware.nixosModules.framework-intel-core-ultra-series3
+    inputs.nixos-hardware.nixosModules.framework-intel-core-ultra-series3
     ./hardware-configuration.nix
     ../../system
   ];

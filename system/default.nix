@@ -46,6 +46,10 @@
 
   # Hardware settings
   hardware.graphics.enable = true;
+  #services.fwupd.enable = true;
+  #services.fwupd.extraRemotes = [ "lvfs-testing" ];
+  # Might be necessary once to make the update succeed
+  #services.fwupd.uefiCapsuleSettings.DisableCapsuleUpdateOnDisk = true;
 
   # Network
   systemd.network = {
