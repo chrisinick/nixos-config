@@ -10,6 +10,7 @@
 
 ## TODO
 
+- rclone filen setup
 - gnome enable appindicators extension
 - add rollback command to readme
 - secure boot
@@ -18,6 +19,20 @@
 - cosmic de
 - zram / zswap
 - doom emacs (+ obsidian like brain)
+
+## rclone notes
+
+`~/.config/rclone`
+
+```bash
+--track-renames to recognize this as a rename instead of deleting/re-uploading everything
+
+--check-access as safeguards: RCLONE_TEST files must exist in exact locations
+
+--resilient --recover --max-lock 2m --conflict-resolve newer
+
+--create-empty-src-dirs look up later
+```
 
 ## Installation
 
