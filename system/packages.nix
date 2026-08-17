@@ -79,7 +79,6 @@
     #metadata-cleaner
     tor-browser
     libreoffice-fresh
-    obsidian
     zed-editor
     signal-desktop
     stremio-linux-shell

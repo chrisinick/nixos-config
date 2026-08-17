@@ -2,17 +2,27 @@
 
 **My NixOS configuration**
 
-- ext4, no swap
+- ext4, no swap (with disko)
 - systemd-boot, wayland, pipewire
 - gnome
-- basic bash, git, vim settings
-- ghostty, zed, obsidian
+- fish, git, vim settings
+- ghostty, zed
 
 ## TODO
 
 - firefox
 - latex
 - zotero
+- Check scripts
+
+- secure boot (limine)
+- disk encryption
+- auto hybernate from suspend
+
+- cosmic de
+- zram / zswap
+
+- doom emacs (+ obsidian like brain)
 
 ## Installation
 
