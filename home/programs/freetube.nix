@@ -20,8 +20,32 @@
       unsubscriptionPopupStatus = true;
       useRssFeeds = true;
       useSponsorBlock = true;
+      sponsorBlockFiller = {
+        color = "Blue";
+        skip = "doNothing";
+      };
+      sponsorBlockInteraction = {
+        color = "Blue";
+        skip = "doNothing";
+      };
+      sponsorBlockIntro = {
+        color = "Blue";
+        skip = "doNothing";
+      };
+      sponsorBlockMusicOffTopic = {
+        color = "Blue";
+        skip = "doNothing";
+      };
+      sponsorBlockRecap = {
+        color = "Blue";
+        skip = "doNothing";
+      };
       sponsorBlockSelfPromo = {
-        color = "Yellow";
+        color = "Blue";
+        skip = "autoSkip";
+      };
+      sponsorBlockSponsor = {
+        color = "Blue";
         skip = "autoSkip";
       };
     };
