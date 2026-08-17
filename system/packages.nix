@@ -17,6 +17,7 @@
     nerd-fonts.commit-mono
 
     # Gnome Extensions
+    gnome-tweaks
     gnomeExtensions.appindicator
 
     # Nix
@@ -57,6 +58,7 @@
     # University
     openconnect
     networkmanager-openconnect
+    zotero
 
     # Work
     chromium

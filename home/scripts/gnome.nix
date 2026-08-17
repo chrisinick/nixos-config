@@ -17,7 +17,7 @@
     };
 
     # Nautilus context menu: Compress mulithreaded
-    ".local/share/nautilus/scripts/compress_multithreaded.sh" = {
+    ".local/share/nautilus/scripts/Compress multithreaded" = {
       text = ''
         #!/usr/bin/env bash
         FILE="$1"
@@ -28,7 +28,7 @@
     };
 
     # Nautilus context menu: Decompress mulithreaded
-    ".local/share/nautilus/scripts/decompress_multithreaded.sh" = {
+    ".local/share/nautilus/scripts/Decompress multithreaded" = {
       text = ''
         #!/usr/bin/env bash
         FILE="$1"

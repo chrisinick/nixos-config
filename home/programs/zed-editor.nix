@@ -23,6 +23,21 @@
       "latex"
       "java"
     ];
+    userKeymaps = [
+      {
+        bindings = {
+          "shift-escape" = "";
+          "ctrl-shift-escape" = "workspace::ToggleZoom";
+        };
+      }
+      {
+        context = "CommitEditor > Editor";
+        bindings = {
+          "shift-escape" = "";
+          "ctrl-shift-escape" = "git::ExpandCommitEditor";
+        };
+      }
+    ];
     userSettings = {
       cli_default_open_behavior = "existing_window";
       colorize_brackets = true;

@@ -10,17 +10,11 @@
 
 ## TODO
 
-- latex
-- zotero
-- Check scripts
-
-- secure boot (limine)
+- secure boot
 - disk encryption
 - auto hybernate from suspend
-
 - cosmic de
 - zram / zswap
-
 - doom emacs (+ obsidian like brain)
 
 ## Installation

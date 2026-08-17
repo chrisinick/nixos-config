@@ -5,19 +5,19 @@
 {
   home.file = {
     # University VPN
-    "scripts/university_vpn.sh" = {
+    ".local/bin/univpn" = {
       text = ''
         #!/usr/bin/env bash
         MTU=1284
-        HIREPORT=${pkgs.openconnect}/libexec/openconnect/hipreport.sh
+        HIPREPORT=${pkgs.openconnect}/libexec/openconnect/hipreport.sh
         DEADPEERSSECS=30
         IFACE=vpn0
         set +o histexpand
-        sudo /run/current-system/sw/bin/openconnect \
+        sudo ${pkgs.openconnect}/bin/openconnect \
           --protocol gp \
           --syslog \
           --disable-ipv6 \
-          --csd-wrapper $HIREPORT \
+          --csd-wrapper $HIPREPORT \
           --interface $IFACE \
           --mtu $MTU \
           --force-dpd $DEADPEERSSECS \
@@ -27,12 +27,13 @@
     };
 
     # Work VPN
-    "scripts/work_vpn.sh" = {
+    ".local/bin/scripts/workvpn" = {
       text = ''
         #!/usr/bin/env bash
-        sudo /run/current-system/sw/bin/openvpn --config /home/chris/vault/sync/arbeit/vpn/client-config.ovpn
+        sudo ${pkgs.openvpn}/bin/openvpn --config /home/chris/vault/sync/arbeit/vpn/client-config.ovpn
       '';
       executable = true;
     };
+    #TODO change config path
   };
 }
