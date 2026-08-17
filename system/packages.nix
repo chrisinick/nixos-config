@@ -52,6 +52,7 @@
     curl
     glow
     fastfetch
+    filen-cli
 
     # University
     openconnect
@@ -67,7 +68,6 @@
     ghostty
     localsend
     cheese
-    mediawriter
     impression
     meld
     papers
@@ -93,6 +93,8 @@
     warp
     pinta
     rnote
+    tutanota-desktop
+    discord
 
     # Gaming
     protontricks

@@ -14,5 +14,6 @@
     ./zed-editor.nix
   ];
 
+  programs.discord.enable = true;
   services.remmina.enable = true;
 }
