@@ -13,8 +13,8 @@
       shell-integration-features = "no-cursor";
       theme = "dark:Adwaita Dark,light:Adwaita";
       font-family = "Commit Mono";
-      window-width = 142;
-      window-height = 42;
+      window-width = 143;
+      window-height = 43;
     };
   };
 }
