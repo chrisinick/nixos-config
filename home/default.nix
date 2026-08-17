@@ -19,7 +19,7 @@
     VISUAL = "zeditor";
   };
   home.sessionPath = [
-    "$HOME/.local/bin"
+    "$HOME/.local/bin/"
   ];
 
   home.stateVersion = "26.05";
