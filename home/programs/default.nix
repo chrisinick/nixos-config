@@ -8,6 +8,7 @@
     ./freetube.nix
     ./ghostty.nix
     ./git.nix
+    ./rclone.nix
     ./vim.nix
     ./vscode.nix
     ./zathura.nix

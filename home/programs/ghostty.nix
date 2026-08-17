@@ -12,8 +12,9 @@
       cursor-style = "block";
       shell-integration-features = "no-cursor";
       theme = "dark:Adwaita Dark,light:Adwaita";
-      window-width = 120;
-      window-height = 40;
+      font-family = "Commit Mono";
+      window-width = 142;
+      window-height = 42;
     };
   };
 }
