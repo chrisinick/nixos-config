@@ -27,7 +27,7 @@
     };
 
     # Work VPN
-    ".local/bin/scripts/workvpn" = {
+    ".local/bin/workvpn" = {
       text = ''
         #!/usr/bin/env bash
         sudo ${pkgs.openvpn}/bin/openvpn --config /home/chris/vault/sync/arbeit/vpn/client-config.ovpn

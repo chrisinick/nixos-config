@@ -1,5 +1,4 @@
 {
-  config,
   ...
 }:
 {
@@ -20,7 +19,7 @@
     VISUAL = "zeditor";
   };
   home.sessionPath = [
-    "${config.home.homeDirectory}/.local/bin"
+    "$HOME/.local/bin"
   ];
 
   home.stateVersion = "26.05";
