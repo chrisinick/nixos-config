@@ -1,4 +1,5 @@
 {
+  pkgs,
   ...
 }:
 {
@@ -25,5 +26,6 @@
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     localNetworkGameTransfers.openFirewall = true;
+    extraCompatPackages = with pkgs; [ proton-ge-bin ];
   };
 }

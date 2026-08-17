@@ -14,6 +14,9 @@
     adwaita-fonts
     nerd-fonts.commit-mono
 
+    # Gnome Extensions
+    gnomeExtensions.appindicator
+
     # Nix
     nixd
     nil
@@ -35,12 +38,11 @@
 
     # Essential
     jq
+    btop
     ffmpeg
     imagemagick
     ghostty
     cheese
-    pinta
-    gnome-tweaks
 
     # University
     openconnect
@@ -55,11 +57,16 @@
     glow
 
     # Apps
+    mediawriter
+    impression
+    localsend
+    meld
     papers
     clapper
     celluloid
     amberol
     gnome-sound-recorder
+    newsflash
     #metadata-cleaner
     tor-browser
     libreoffice-fresh
@@ -75,6 +82,13 @@
     shortwave
     blanket
     warp
+    pinta
+    rnote
+
+    # Gaming
+    protontricks
+    heroic
+    faugus-launcher
   ];
 
   # Excluded packages
