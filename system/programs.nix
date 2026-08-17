@@ -5,7 +5,17 @@
 {
   programs.dconf.enable = true;
   programs.git.enable = true;
-  programs.firefox.enable = true;
+  programs.firefox = {
+    enable = true;
+    languagePacks = [
+      "de"
+      "en-US"
+    ];
+    policies = {
+      DisableTelemetry = true;
+      CrashReportsSubmit.Enabled = false;
+    };
+  };
   programs.thunderbird.enable = true;
   programs.bash = {
     interactiveShellInit = ''

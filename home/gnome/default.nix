@@ -28,7 +28,7 @@ in
         enable-hot-corners = false;
         gtk-theme = "adw-gtk3";
         show-battery-percentage = true;
-        text-scaling-factor = 1.20;
+        text-scaling-factor = 1.12;
       };
       "org/gnome/desktop/calendar".show-weekdate = true;
       "org/gnome/desktop/datetime".automatic-timezone = true;

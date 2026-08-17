@@ -10,7 +10,6 @@
 
 ## TODO
 
-- firefox
 - latex
 - zotero
 - Check scripts
