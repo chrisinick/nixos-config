@@ -11,6 +11,7 @@
 ## TODO
 
 - rclone filen setup
+- apparmor?
 - gnome enable appindicators extension
 - add rollback command to readme
 - secure boot

@@ -25,6 +25,12 @@
     backend = "iwd";
   };
 
+  # Bluetooth
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = false;
+  };
+
   # Battery management
   services.power-profiles-daemon.enable = true;
 

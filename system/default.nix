@@ -45,11 +45,8 @@
   };
 
   # Hardware settings
+  services.fwupd.enable = true;
   hardware.graphics.enable = true;
-  #services.fwupd.enable = true;
-  #services.fwupd.extraRemotes = [ "lvfs-testing" ];
-  # Might be necessary once to make the update succeed
-  #services.fwupd.uefiCapsuleSettings.DisableCapsuleUpdateOnDisk = true;
 
   # Network
   systemd.network = {
@@ -83,7 +80,13 @@
     pulse.enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
-    #jack.enable = true;
+    extraConfig = {
+      pipewire."99-silent-bell.conf" = {
+        "context.properties" = {
+          "module.x11.bell" = false;
+        };
+      };
+    };
   };
 
   # CUPS for printing
