@@ -24,6 +24,9 @@
   };
   programs.fish = {
     enable = true;
+    shellInit = ''
+      fish_add_path $HOME/.local/bin
+    '';
     interactiveShellInit = ''
       set fish_greeting
       fish_vi_key_bindings
