@@ -11,10 +11,8 @@
     hunspellDicts.de_DE
     wl-clipboard
 
-    # Theme & Fonts
+    # Theme
     adw-gtk3
-    adwaita-fonts
-    nerd-fonts.commit-mono
 
     # Gnome Extensions
     gnome-tweaks
@@ -102,6 +100,17 @@
     protontricks
     heroic
     faugus-launcher
+  ];
+
+  fonts.packages = with pkgs; [
+    adwaita-fonts
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-color-emoji
+    fira-code
+    fira-code-symbols
+    jetbrains-mono
+    commit-mono
   ];
 
   # Excluded packages

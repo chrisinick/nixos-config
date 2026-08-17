@@ -16,6 +16,7 @@
       CrashReportsSubmit.Enabled = false;
     };
   };
+  fonts.fontconfig.useEmbeddedBitmaps = true; # for emojis in firefox
   programs.thunderbird.enable = true;
   programs.bash = {
     interactiveShellInit = ''
