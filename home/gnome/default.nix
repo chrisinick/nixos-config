@@ -24,9 +24,9 @@ in
       "org/gnome/desktop/interface" = {
         clock-format = "24h";
         clock-show-weekday = true;
-        color-scheme = "default";
+        color-scheme = "prefer-dark";
         enable-hot-corners = false;
-        gtk-theme = "adw-gtk3";
+        gtk-theme = "adw-gtk3-dark";
         show-battery-percentage = true;
         text-scaling-factor = 1.12;
       };
@@ -52,7 +52,7 @@ in
       # Peripherals
       "org/gnome/desktop/peripherals/mouse" = {
         accel-profile = "flat";
-        speed = -0.20;
+        speed = -0.25;
       };
 
       # Privacy
@@ -79,6 +79,7 @@ in
         favorite-apps = [
           "firefox.desktop"
           "thunderbird.desktop"
+          "tutanota-desktop.desktop"
           "com.mitchellh.ghostty.desktop"
           "org.gnome.Nautilus.desktop"
           "startcenter.desktop"
@@ -86,6 +87,8 @@ in
           "dev.zed.Zed.desktop"
           "code.desktop"
           "org.gnome.TextEditor.desktop"
+          "signal.desktop"
+          "discord.desktop"
         ];
         last-selected-power-profile = "performance";
         automatic-location = false;

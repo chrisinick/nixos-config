@@ -26,14 +26,14 @@
     userKeymaps = [
       {
         bindings = {
-          "shift-escape" = "";
+          "shift-escape" = null;
           "ctrl-shift-escape" = "workspace::ToggleZoom";
         };
       }
       {
         context = "CommitEditor > Editor";
         bindings = {
-          "shift-escape" = "";
+          "shift-escape" = null;
           "ctrl-shift-escape" = "git::ExpandCommitEditor";
         };
       }
