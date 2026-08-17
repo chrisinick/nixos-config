@@ -7,6 +7,10 @@
   programs.git.enable = true;
   programs.firefox.enable = true;
   programs.thunderbird.enable = true;
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = "set fish_greeting";
+  };
   programs.vim = {
     enable = true;
     defaultEditor = true;
