@@ -10,6 +10,8 @@
 
 ## TODO
 
+- gnome enable appindicators extension
+- add rollback command to readme
 - secure boot
 - disk encryption
 - auto hybernate from suspend

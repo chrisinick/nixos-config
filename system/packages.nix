@@ -54,6 +54,7 @@
     glow
     fastfetch
     filen-cli
+    rclone
 
     # University
     openconnect
