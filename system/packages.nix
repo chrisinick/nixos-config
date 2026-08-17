@@ -10,6 +10,8 @@
     hunspellDicts.en_US
     hunspellDicts.de_DE
     wl-clipboard
+
+    # Theme & Fonts
     adw-gtk3
     adwaita-fonts
     nerd-fonts.commit-mono
@@ -31,35 +33,42 @@
     rust-analyzer
     package-version-server
 
+    # Typst
+    typst
+    typstyle
+    tinymist
+
     # Latex
     texliveMedium
     texlab
     zathura
 
-    # Essential
+    # CLI
     jq
     btop
     ffmpeg
     imagemagick
-    ghostty
-    cheese
+    wget
+    curl
+    glow
+    fastfetch
 
     # University
     openconnect
+    networkmanager-openconnect
 
     # Work
     chromium
     openvpn
+    networkmanager-openvpn
     remmina
 
-    # CLI
-    wget
-    glow
-
     # Apps
+    ghostty
+    localsend
+    cheese
     mediawriter
     impression
-    localsend
     meld
     papers
     clapper

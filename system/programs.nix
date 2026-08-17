@@ -7,19 +7,23 @@
   programs.git.enable = true;
   programs.firefox.enable = true;
   programs.thunderbird.enable = true;
-  programs.fish = {
-    enable = true;
-    interactiveShellInit = "set fish_greeting";
-  };
-  programs.vim = {
-    enable = true;
-    defaultEditor = true;
-  };
   programs.bash = {
     interactiveShellInit = ''
       set -o vi
     '';
   };
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = ''
+      set fish_greeting
+      fish_vi_key_bindings
+    '';
+  };
+  programs.vim = {
+    enable = true;
+    defaultEditor = true;
+  };
+  programs.bat.enable = true;
   programs.nautilus-open-any-terminal = {
     enable = true;
     terminal = "ghostty";

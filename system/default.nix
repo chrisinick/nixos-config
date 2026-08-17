@@ -107,7 +107,7 @@
 
   # Environment variables
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  environment.sessionVariables.QT_QPA_PLATFORM = "wayland";
+  #environment.sessionVariables.QT_QPA_PLATFORM = "wayland";
 
   # Nix packages configuration
   nixpkgs.config.allowUnfree = true;
