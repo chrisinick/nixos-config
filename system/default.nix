@@ -49,13 +49,6 @@
   hardware.graphics.enable = true;
 
   # Network
-  systemd.network = {
-    enable = true;
-    networks."10-wired" = {
-      matchConfig.Name = "en*";
-      networkConfig.DHCP = "yes";
-    };
-  };
   services.resolved.enable = true;
 
   # Gnome

@@ -12,7 +12,7 @@
   disko.devices.disk.main.device = "/dev/disk/by-id/nvme-WDC_WDS500G2B0C-00PXH0_21375R468305";
   system.stateVersion = "26.05";
 
-  # Wifi
+  # Network
   networking.wireless.iwd.enable = true;
   networking.wireless.iwd.settings = {
     Network.EnableIPv6 = true;
@@ -21,8 +21,8 @@
   };
   networking.networkmanager.enable = true;
   networking.networkmanager.wifi = {
-    powersave = true;
     backend = "iwd";
+    powersave = true;
   };
 
   # Bluetooth
