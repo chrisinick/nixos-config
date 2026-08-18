@@ -1,7 +1,5 @@
 # nixos-config
 
-**My NixOS configuration**
-
 - ext4, no swap (with disko)
 - systemd-boot, wayland, pipewire
 - gnome
@@ -11,8 +9,9 @@
 ## TODO
 
 - rclone filen setup
-- apparmor?
+- make easyeffects laptop sepcific
 - add rollback command to readme
+- apparmor?
 - secure boot
 - disk encryption
 - auto hybernate from suspend
@@ -98,24 +97,21 @@ nix flake init -t templates#full
 - Go through the settings
 - Add ublock filters
 
-### Chromium
-
-- Import bookmarks (from sync/arbeit/chromium_lesezeichen/)
-- Go through the settings
-
 ### Gnome
 
-- Turn on night light
-- Set up keyboard shortcuts for launching apps
-- Turn on active screen edges
-- Dynamic workspaces
-- Workspaces only on primary screen
-- Select refresh rate
-- Set default apps
+- Display settings
+- Night light
+- Keyboard shortcuts for launching apps
+- Default apps
+
+### Chromium
+
+- Import bookmarks (from sync)
+- Go through the settings
 
 ### Remmina
 
-See notes in sync/arbeit/vpn/
+See notes in sync
 
 ### Warframe
 
