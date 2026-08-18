@@ -6,10 +6,6 @@
     enable = true;
     preset.output = "framework13pro";
     settings = {
-      EffectsPipelines = {
-        processAllInputs = false;
-        processAllOutputs = false;
-      };
       StreamInputs.listenToMic = false;
       StreamOutputs.outputDevice = "alsa_output.pci-0000_00_1f.3.analog-stereo";
     };
