@@ -13,7 +13,7 @@
     #        ];
     #      };
     #    };
-    preset = "framework13pro";
+    preset.output = "framework13pro";
     extraPresets = {
       framework13pro = {
         "output" = {
