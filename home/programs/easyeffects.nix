@@ -74,6 +74,7 @@ in
     extraPresets = {
       framework13pro = {
         output = {
+          blocklist = [ ];
           plugins_order = [
             "equalizer#0"
             "compressor#0"
