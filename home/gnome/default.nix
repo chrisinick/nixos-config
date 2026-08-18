@@ -1,25 +1,17 @@
 {
-  lib,
   ...
 }:
 let
-  wallpaper-uri = "file:///home/chris/vault/sync/bilder/wallpapers/current/wallpaper";
+  wallpaper-uri = "https://i.imgur.com/Wt0PphP.jpeg";
 in
 {
   imports = [
     ./keybindings.nix
   ];
 
-  # Gnome settings
   dconf = {
     enable = true;
     settings = {
-      # Power
-      "org/gnome/settings-daemon/plugins/power" = {
-        sleep-inactive-ac-type = "nothing";
-      };
-      "org/gnome/desktop/session".idle-delay = lib.hm.gvariant.mkUint32 0;
-
       # Interface
       "org/gnome/desktop/interface" = {
         clock-format = "24h";
@@ -36,8 +28,8 @@ in
 
       # Wallpaper
       "org/gnome/desktop/background" = {
-        #picture-uri = wallpaper-uri;
-        #picture-uri-dark = wallpaper-uri;
+        picture-uri = wallpaper-uri;
+        picture-uri-dark = wallpaper-uri;
       };
       "org/gnome/desktop/screensaver".picture-uri = wallpaper-uri;
 
@@ -90,7 +82,6 @@ in
           "signal.desktop"
           "discord.desktop"
         ];
-        last-selected-power-profile = "performance";
         automatic-location = false;
       };
     };
