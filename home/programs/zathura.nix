@@ -4,7 +4,7 @@
 }:
 {
   programs.zathura = {
-    enable = false;
+    enable = true;
     options = {
       synctex = true;
       "synctex-editor-command" = "${pkgs.zed-editor}/bin/zeditor %{input}:%{line}";
