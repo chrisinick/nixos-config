@@ -15,10 +15,6 @@
     # Theme
     adw-gtk3
 
-    # Gnome Extensions
-    gnome-tweaks
-    gnomeExtensions.appindicator
-
     # Nix
     nixd
     nil
@@ -68,6 +64,7 @@
     remmina
 
     # Apps
+    gnome-tweaks
     ghostty
     localsend
     cheese
