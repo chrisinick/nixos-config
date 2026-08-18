@@ -5,6 +5,7 @@
   nixpkgs.config.allowUnfree = true;
 
   imports = [
+    ./easyeffects.nix
     ./freetube.nix
     ./ghostty.nix
     ./git.nix
