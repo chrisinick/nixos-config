@@ -54,6 +54,7 @@
     fastfetch
     filen-cli
     rclone
+    sl
 
     # University
     openconnect
