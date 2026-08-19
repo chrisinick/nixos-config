@@ -10,18 +10,35 @@
     ./packages.nix
   ];
 
+  # Latest kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # systemd-boot EFI boot loader
-  boot.loader = {
-    systemd-boot = {
+  boot = {
+    loader.systemd-boot = {
       enable = true;
       configurationLimit = 4;
     };
-    efi.canTouchEfiVariables = true;
-    timeout = 2;
-  };
+    loader.efi.canTouchEfiVariables = true;
 
-  # Latest kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+    # Boot theme
+    plymouth = {
+      enable = true;
+      #plymouth.theme = "solar";
+      extraConfig = ''
+        [Daemon]
+        DeviceScale=2
+      '';
+    };
+    loader.timeout = 0;
+    consoleLogLevel = 3;
+    initrd.verbose = false;
+    kernelParams = [
+      "quiet"
+      "rd.udev.log_level=3"
+      "rd.systemd.show_status=auto"
+    ];
+  };
 
   # Time zone
   time.timeZone = "Europe/Berlin";

@@ -12,6 +12,9 @@
   disko.devices.disk.main.device = "/dev/disk/by-id/nvme-WDC_WDS500G2B0C-00PXH0_21375R468305";
   system.stateVersion = "26.05";
 
+  # Hardware
+  hardware.framework.enableKmod = true;
+
   # Network
   networking.wireless.iwd.enable = true;
   networking.wireless.iwd.settings = {

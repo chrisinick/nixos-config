@@ -8,13 +8,12 @@
 
 ## TODO
 
-- add rollback command to readme
-- apparmor?
-- secure boot
-- disk encryption
+- plymouth
+- secure boot & disk encryption (unlock root with tpm, unlock separate home parition with systemd-homed / gdm + pam)
 - auto hybernate from suspend
 - cosmic de
 - zram / zswap
+- fingerprint scanner
 - doom emacs (+ obsidian like brain)
 
 ## Installation & Setup
@@ -51,26 +50,32 @@ sudo nixos-enter --root /mnt -c 'passwd chris'
 rclone config
 ```
 
-7. Do an rclone initial sync (run with --dry-run first):
+7. Do an rclone dry-run bisync:
 
 ```bash
 mkdir -p /home/chris/sync
 rclone bisync filen:sync /home/chris/sync --resync --dry-run --resilient --recover --max-lock 2m --conflict-resolve newer --create-empty-src-dirs --filters-file /home/chris/.config/rclone/filters.txt
 ```
 
-8. Enable the rclone-bisync systemd timer (manually run bisync with `filsy` which is in PATH):
+8. Do the initial rclone bisync:
+
+```bash
+rclone bisync filen:sync /home/chris/sync --resync --resilient --recover --max-lock 2m --conflict-resolve newer --create-empty-src-dirs --filters-file /home/chris/.config/rclone/filters.txt
+```
+
+9. Enable the rclone-bisync systemd timer (manually run bisync with `filsy`):
 
 ```bash
 systemctl --user enable --now rclone-bisync.timer
 ```
 
-9. See section [Must be configured manually](#must-be-configured-manually)
+10. See section [Must be configured manually](#must-be-configured-manually)
 
 ## Usage
 
 Use nixswitch.sh and nixbuild.sh scripts!
 
-### Rclone bisync
+### Rclone bisync with filen
 
 ```bash
 filsy
@@ -111,11 +116,6 @@ nix flake init -t templates#full
 ```
 
 ## Must be configured manually
-
-### Firefox & Thunderbird
-
-- Go through the settings
-- Add ublock filters
 
 ### Gnome
 

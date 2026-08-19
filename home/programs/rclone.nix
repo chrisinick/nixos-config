@@ -19,12 +19,13 @@ in
     };
   };
   systemd.user.services."rclone-bisync" = {
+    Unit.After = [ "network-online.target" ];
     Service = {
       Type = "oneshot";
       ExecStart = ''
         ${pkgs.rclone}/bin/rclone bisync \
-        ${config.home.homeDirectory}/sync \
         filen:sync \
+        ${config.home.homeDirectory}/sync \
         --quiet \
         --resilient \
         --recover \
@@ -39,14 +40,27 @@ in
     };
   };
 
+  # Rclone Web GUI
+  systemd.user.services."rclone-gui" = {
+    Unit.After = [ "network-online.target" ];
+    Service = {
+      ExecStart = "${pkgs.rclone}/bin/rclone gui --addr 127.0.0.1:5572 --no-open-browser";
+      Restart = "on-failure";
+      RestartSec = 5;
+    };
+    Install = {
+      WantedBy = [ "default.target" ];
+    };
+  };
+
   home.file = {
-    # Add bisync script to path ("filsy" = filen sync)
+    # bisync script which is in PATH ("filsy" = filen sync)
     ".local/bin/filsy" = {
       text = ''
         #!/usr/bin/env bash
         ${pkgs.rclone}/bin/rclone bisync \
-        ${config.home.homeDirectory}/sync \
         filen:sync \
+        ${config.home.homeDirectory}/sync \
         --resilient \
         --recover \
         --max-lock 2m \
