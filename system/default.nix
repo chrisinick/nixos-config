@@ -24,12 +24,8 @@
     # Boot theme
     plymouth = {
       enable = true;
-      theme = "lone";
-      themePackages = with pkgs; [
-        (adi1090x-plymouth-themes.override {
-          selected_themes = [ "lone" ];
-        })
-      ];
+      theme = "square_hud";
+      themePackages = with pkgs; [ adi1090x-plymouth-themes ];
     };
     loader.timeout = 0;
     consoleLogLevel = 3;
