@@ -17,6 +17,7 @@ in
       OnUnitActiveSec = "15m";
       Unit = "rclone-bisync.service";
     };
+    Install.WantedBy = [ "timers.target" ];
   };
   systemd.user.services."rclone-bisync" = {
     Unit.After = [ "network-online.target" ];
@@ -48,9 +49,7 @@ in
       Restart = "on-failure";
       RestartSec = 5;
     };
-    Install = {
-      WantedBy = [ "default.target" ];
-    };
+    Install.WantedBy = [ "default.target" ];
   };
 
   home.file = {
