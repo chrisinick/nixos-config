@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   ...
 }:
@@ -30,10 +31,9 @@
     ".local/bin/workvpn" = {
       text = ''
         #!/usr/bin/env bash
-        sudo ${pkgs.openvpn}/bin/openvpn --config /home/chris/vault/sync/arbeit/vpn/client-config.ovpn
+        sudo ${pkgs.openvpn}/bin/openvpn --config ${config.home.homeDirectory}/sync/arbeit/vpn/client-config.ovpn
       '';
       executable = true;
     };
-    #TODO change config path
   };
 }

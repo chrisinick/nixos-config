@@ -17,10 +17,11 @@
 - zram / zswap
 - doom emacs (+ obsidian like brain)
 
-## Installation
+## Installation & Setup
 
 1. Boot from nixos live iso
-2. Run the following commands:
+2. Generate new hardware config if necessary (without partitioning)
+3. Run the following commands:
 
 chris-laptop:
 
@@ -42,28 +43,38 @@ sudo nixos-install --no-update-lock-file --flake 'github:chrisinick/nixos-config
 sudo nixos-enter --root /mnt -c 'passwd chris'
 ```
 
-3. Place the nixos sops private key into /home/chris/.config/sops/age/keys.txt
-4. Set up rclone: `mkdir /home/chris/sync; rclone config`
-
-## Rclone bisync
-
-### Rclone initial sync
-
-(run with --dry-run first)
+4. Place the nixos sops private key into /mnt/home/chris/.config/sops/age/keys.txt
+5. Boot into the installed system
+6. Set up rclone (name = filen, type = filen):
 
 ```bash
+rclone config
+```
+
+7. Do an rclone initial sync (run with --dry-run first):
+
+```bash
+mkdir -p /home/chris/sync
 rclone bisync filen:sync /home/chris/sync --resync --dry-run --resilient --recover --max-lock 2m --conflict-resolve newer --create-empty-src-dirs --filters-file /home/chris/.config/rclone/filters.txt
 ```
 
-### Rclone recurring sync
+8. Enable the rclone-bisync systemd timer (manually run bisync with `filsy` which is in PATH):
 
 ```bash
-rclone bisync /home/chris/sync filen:sync --resilient --recover --max-lock 2m --conflict-resolve newer --create-empty-src-dirs --track-renames --check-access --filters-file /home/chris/.config/rclone/filters.txt
+systemctl --user enable --now rclone-bisync.timer
 ```
+
+9. See section [Must be configured manually](#must-be-configured-manually)
 
 ## Usage
 
 Use nixswitch.sh and nixbuild.sh scripts!
+
+### Rclone bisync
+
+```bash
+filsy
+```
 
 ### Collect garbage
 

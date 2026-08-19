@@ -107,6 +107,7 @@
         };
         markdownlint.settings = {
           "MD013" = false;
+          "MD029" = false;
         };
         texlab = {
           binary.path = "${pkgs.texlab}/bin/texlab";
