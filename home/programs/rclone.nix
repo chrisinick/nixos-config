@@ -41,17 +41,6 @@ in
     };
   };
 
-  # Rclone Web GUI
-  systemd.user.services."rclone-gui" = {
-    Unit.After = [ "network-online.target" ];
-    Service = {
-      ExecStart = "${pkgs.rclone}/bin/rclone gui --addr 127.0.0.1:5572 --no-open-browser";
-      Restart = "on-failure";
-      RestartSec = 5;
-    };
-    Install.WantedBy = [ "default.target" ];
-  };
-
   home.file = {
     # bisync script which is in PATH ("filsy" = filen sync)
     ".local/bin/filsy" = {

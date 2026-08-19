@@ -8,8 +8,7 @@
 
 ## TODO
 
-- plymouth
-- secure boot & disk encryption (unlock root with tpm, unlock separate home parition with systemd-homed / gdm + pam)
+- secure boot & disk encryption
 - auto hybernate from suspend
 - cosmic de
 - zram / zswap
@@ -69,10 +68,18 @@ rclone bisync filen:sync /home/chris/sync --resync --resilient --recover --max-l
 
 Use nixswitch.sh and nixbuild.sh scripts!
 
-### Rclone bisync with filen
+### Rclone
+
+bisync with filen:
 
 ```bash
 filsy
+```
+
+web gui:
+
+```bash
+rclone gui
 ```
 
 ### Collect garbage
