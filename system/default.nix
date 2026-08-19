@@ -15,13 +15,14 @@
 
   # systemd-boot EFI boot loader
   boot = {
-    loader.systemd-boot = {
-      enable = true;
-      configurationLimit = 4;
+    loader = {
+      systemd-boot = {
+        enable = true;
+        configurationLimit = 4;
+      };
+      timeout = 0;
+      efi.canTouchEfiVariables = true;
     };
-    loader.efi.canTouchEfiVariables = true;
-
-    loader.timeout = 0;
     consoleLogLevel = 3;
     initrd.verbose = false;
     kernelParams = [
@@ -29,6 +30,17 @@
       "rd.udev.log_level=3"
       "rd.systemd.show_status=auto"
     ];
+
+    # Boot theme
+    plymouth = {
+      enable = true;
+      theme = "script";
+      #themePackages = with pkgs; [
+      #  (adi1090x-plymouth-themes.override {
+      #    selected_themes = [ "rings" ];
+      #  })
+      #];
+    };
   };
 
   # Time zone
