@@ -34,12 +34,12 @@
     # Boot theme
     plymouth = {
       enable = true;
-      theme = "script";
-      #themePackages = with pkgs; [
-      #  (adi1090x-plymouth-themes.override {
-      #    selected_themes = [ "rings" ];
-      #  })
-      #];
+      theme = "darth_vader";
+      themePackages = with pkgs; [
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "darth_vader" ];
+        })
+      ];
     };
   };
 
