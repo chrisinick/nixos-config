@@ -24,11 +24,7 @@
     # Boot theme
     plymouth = {
       enable = true;
-      #plymouth.theme = "solar";
-      #extraConfig = ''
-      #  [Daemon]
-      #  DeviceScale=2
-      #'';
+      theme = "solar";
     };
     loader.timeout = 0;
     consoleLogLevel = 3;
