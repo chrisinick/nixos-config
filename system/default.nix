@@ -25,10 +25,10 @@
     plymouth = {
       enable = true;
       #plymouth.theme = "solar";
-      extraConfig = ''
-        [Daemon]
-        DeviceScale=2
-      '';
+      #extraConfig = ''
+      #  [Daemon]
+      #  DeviceScale=2
+      #'';
     };
     loader.timeout = 0;
     consoleLogLevel = 3;

@@ -63,13 +63,7 @@ rclone bisync filen:sync /home/chris/sync --resync --dry-run --resilient --recov
 rclone bisync filen:sync /home/chris/sync --resync --resilient --recover --max-lock 2m --conflict-resolve newer --create-empty-src-dirs --filters-file /home/chris/.config/rclone/filters.txt
 ```
 
-9. Enable the rclone-bisync systemd timer (manually run bisync with `filsy`):
-
-```bash
-systemctl --user enable --now rclone-bisync.timer
-```
-
-10. See section [Must be configured manually](#must-be-configured-manually)
+9. See section [Must be configured manually](#must-be-configured-manually)
 
 ## Usage
 
