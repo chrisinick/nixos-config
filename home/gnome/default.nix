@@ -1,6 +1,9 @@
 {
   ...
 }:
+let
+  wallpaper-uri = "file:///home/chris/sync/bilder/wallpapers/current/wallpaper";
+in
 {
   imports = [
     ./keybindings.nix
@@ -22,6 +25,13 @@
       "org/gnome/desktop/calendar".show-weekdate = true;
       "org/gnome/desktop/datetime".automatic-timezone = true;
       "org/gnome/mutter".center-new-windows = true;
+
+      # Wallpaper
+      "org/gnome/desktop/background" = {
+        picture-uri = wallpaper-uri;
+        picture-uri-dark = wallpaper-uri;
+      };
+      "org/gnome/desktop/screensaver".picture-uri = wallpaper-uri;
 
       # Default apps
       "org/gnome/desktop/default-applications/office/calendar".exec = "evolution -c calendar";
