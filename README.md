@@ -8,8 +8,6 @@
 
 ## TODO
 
-- rclone filen setup
-- make easyeffects laptop sepcific
 - add rollback command to readme
 - apparmor?
 - secure boot
@@ -19,28 +17,12 @@
 - zram / zswap
 - doom emacs (+ obsidian like brain)
 
-## rclone notes
-
-`~/.config/rclone`
-
-```bash
-todo: --check-access as safeguards: RCLONE_TEST files must exist in exact locations
-
-initial (dry-run verbose first!):
-
-rclone bisync filen:sync /home/chris/sync --resync --dry-run --verbose --resilient --recover --max-lock 2m --conflict-resolve newer --create-empty-src-dirs --filters-file /home/chris/rclone_filters.txt
-
-recurring:
-
-rclone bisync /home/chris/sync filen:sync --quiet --resilient --recover --max-lock 2m --conflict-resolve newer --create-empty-src-dirs --track-renames --check-access --filters-file /home/chris/rclone_filters.txt --log-file /home/chris/.local/state/rclone/rclone.log
-```
-
 ## Installation
 
 1. Boot from nixos live iso
-2. Run these commands in the console:
+2. Run the following commands:
 
-### chris-laptop
+chris-laptop:
 
 ```bash
 sudo loadkeys de
@@ -50,7 +32,7 @@ sudo nixos-install --no-update-lock-file --flake 'github:chrisinick/nixos-config
 sudo nixos-enter --root /mnt -c 'passwd chris'
 ```
 
-### chris-desktop
+chris-desktop:
 
 ```bash
 sudo loadkeys de
@@ -58,6 +40,25 @@ gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'de')]"
 sudo nix --extra-experimental-features 'nix-command flakes' run 'github:nix-community/disko/latest' -- --write-efi-boot-entries --mode destroy,format,mount --flake 'github:chrisinick/nixos-config#chris-desktop'
 sudo nixos-install --no-update-lock-file --flake 'github:chrisinick/nixos-config#chris-desktop'
 sudo nixos-enter --root /mnt -c 'passwd chris'
+```
+
+3. Place the nixos sops private key into /home/chris/.config/sops/age/keys.txt
+4. Set up rclone: `mkdir /home/chris/sync; rclone config`
+
+## Rclone bisync
+
+### Rclone initial sync
+
+(run with --dry-run first)
+
+```bash
+rclone bisync filen:sync /home/chris/sync --resync --dry-run --resilient --recover --max-lock 2m --conflict-resolve newer --create-empty-src-dirs --filters-file /home/chris/.config/rclone/filters.txt
+```
+
+### Rclone recurring sync
+
+```bash
+rclone bisync /home/chris/sync filen:sync --resilient --recover --max-lock 2m --conflict-resolve newer --create-empty-src-dirs --track-renames --check-access --filters-file /home/chris/.config/rclone/filters.txt
 ```
 
 ## Usage
@@ -80,6 +81,12 @@ nix flake update
 
 ```bash
 sudo nixos-rebuild switch --flake .
+```
+
+### Rollback
+
+```bash
+sudo nixos-rebuild switch --rollback
 ```
 
 ### Nix flake templates

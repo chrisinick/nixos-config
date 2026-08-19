@@ -10,6 +10,7 @@
     hunspellDicts.en_US
     hunspellDicts.de_DE
     wl-clipboard
+    sops
     easyeffects
 
     # Theme

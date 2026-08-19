@@ -99,6 +99,9 @@
   # Home Manager
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
+    sharedModules = [
+      inputs.sops-nix.homeManagerModules.sops
+    ];
     users = {
       chris.imports = [ ../home ];
     };
