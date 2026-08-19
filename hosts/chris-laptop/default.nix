@@ -36,4 +36,7 @@
 
   # Touchpad support
   services.libinput.enable = true;
+
+  # Sound profile
+  home-manager.users.chris.imports = [ ./easyeffects.nix ];
 }

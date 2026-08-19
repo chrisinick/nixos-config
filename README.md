@@ -24,13 +24,15 @@
 `~/.config/rclone`
 
 ```bash
---track-renames to recognize this as a rename instead of deleting/re-uploading everything
+todo: --check-access as safeguards: RCLONE_TEST files must exist in exact locations
 
---check-access as safeguards: RCLONE_TEST files must exist in exact locations
+initial (dry-run verbose first!):
 
---resilient --recover --max-lock 2m --conflict-resolve newer
+rclone bisync filen:sync /home/chris/sync --resync --dry-run --verbose --resilient --recover --max-lock 2m --conflict-resolve newer --create-empty-src-dirs --filters-file /home/chris/rclone_filters.txt
 
---create-empty-src-dirs look up later
+recurring:
+
+rclone bisync /home/chris/sync filen:sync --quiet --resilient --recover --max-lock 2m --conflict-resolve newer --create-empty-src-dirs --track-renames --check-access --filters-file /home/chris/rclone_filters.txt --log-file /home/chris/.local/state/rclone/rclone.log
 ```
 
 ## Installation
