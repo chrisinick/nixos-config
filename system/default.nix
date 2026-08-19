@@ -24,8 +24,12 @@
     # Boot theme
     plymouth = {
       enable = true;
-      theme = "matrix";
-      themePackages = [ pkgs.plymouth-matrix-theme ];
+      theme = "lone";
+      themePackages = with pkgs; [
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "lone" ];
+        })
+      ];
     };
     loader.timeout = 0;
     consoleLogLevel = 3;
