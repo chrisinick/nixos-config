@@ -30,17 +30,7 @@
       "rd.udev.log_level=3"
       "rd.systemd.show_status=auto"
     ];
-
-    # Boot theme
-    plymouth = {
-      enable = true;
-      #theme = "darth_vader";
-      #themePackages = with pkgs; [
-      #  (adi1090x-plymouth-themes.override {
-      #    selected_themes = [ "darth_vader" ];
-      #  })
-      #];
-    };
+    plymouth.enable = true;
   };
 
   # Time zone
