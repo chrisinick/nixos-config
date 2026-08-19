@@ -25,7 +25,16 @@
     plymouth = {
       enable = true;
       theme = "square_hud";
-      themePackages = with pkgs; [ adi1090x-plymouth-themes ];
+      themePackages = with pkgs; [
+        # By default we would install all themes
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "square_hud" ];
+        })
+      ];
+      extraConfig = ''
+        [Daemon]
+        DeviceScale=1
+      '';
     };
     loader.timeout = 0;
     consoleLogLevel = 3;
