@@ -24,12 +24,8 @@
     # Boot theme
     plymouth = {
       enable = true;
-      theme = "dna";
-      themePackages = with pkgs; [
-        (adi1090x-plymouth-themes.override {
-          selected_themes = [ "dna" ];
-        })
-      ];
+      theme = "matrix";
+      themePackages = [ pkgs.plymouth-matrix-theme ];
     };
     loader.timeout = 0;
     consoleLogLevel = 3;
