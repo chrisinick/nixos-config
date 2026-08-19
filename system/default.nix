@@ -34,12 +34,12 @@
     # Boot theme
     plymouth = {
       enable = true;
-      theme = "darth_vader";
-      themePackages = with pkgs; [
-        (adi1090x-plymouth-themes.override {
-          selected_themes = [ "darth_vader" ];
-        })
-      ];
+      #theme = "darth_vader";
+      #themePackages = with pkgs; [
+      #  (adi1090x-plymouth-themes.override {
+      #    selected_themes = [ "darth_vader" ];
+      #  })
+      #];
     };
   };
 
