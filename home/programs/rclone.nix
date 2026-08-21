@@ -61,8 +61,6 @@ in
       executable = true;
     };
 
-    ".local/state/rclone/bisync.log".text = "";
-
     # Filters
     ".config/rclone/filters.txt".text = ''
       - System Volume Information/

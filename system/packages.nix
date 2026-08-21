@@ -47,6 +47,7 @@
     imagemagick
     wget
     curl
+    magic-wormhole
     glow
     fastfetch
     filen-cli
@@ -66,14 +67,14 @@
 
     # Apps
     gnome-tweaks
+    resources
     ghostty
-    localsend
-    cheese
+    warp
+    snapshot
     impression
     meld
     papers
     clapper
-    celluloid
     amberol
     gnome-sound-recorder
     newsflash
@@ -119,15 +120,15 @@
     epiphany
     evince
     geary
+    gedit
+    gnome-connections
     gnome-console
     gnome-maps
     gnome-music
-    gnome-weather
-    gedit
-    gnome-connections
     gnome-photos
+    gnome-system-monitor
     gnome-tour
-    snapshot
+    gnome-weather
     simple-scan
     totem
     yelp

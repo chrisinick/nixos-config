@@ -8,6 +8,7 @@
 
 ## TODO
 
+- tailscale setup (syncthing?)
 - secure boot & disk encryption
 - auto hybernate from suspend
 - cosmic de
