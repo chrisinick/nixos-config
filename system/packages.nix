@@ -94,7 +94,6 @@
     warp
     pinta
     rnote
-    tutanota-desktop
     discord
 
     # Gaming

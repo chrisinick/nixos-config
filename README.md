@@ -1,11 +1,5 @@
 # nixos-config
 
-- ext4, no swap (with disko)
-- systemd-boot, wayland, pipewire
-- gnome
-- fish, git, vim settings
-- ghostty, zed
-
 ## TODO
 
 - tailscale setup (syncthing?)
