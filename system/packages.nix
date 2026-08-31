@@ -124,7 +124,6 @@
     gnome-console
     gnome-maps
     gnome-music
-    gnome-photos
     gnome-system-monitor
     gnome-tour
     gnome-weather
