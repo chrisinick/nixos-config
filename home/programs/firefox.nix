@@ -55,14 +55,14 @@
       "3rdparty".Extensions = {
         "uBlock0@raymondhill.net".adminSettings = {
           userSettings.cloudStorageEnabled = false;
-          filters = [
-            "google.*##.g:has(a[href*=\"fandom.com\"])"
-            "google.*##a[href*=\"fandom.com\"]:upward(1)"
-            "duckduckgo.*##.g:has(a[href*=\"fandom.com\"])"
-            "duckduckgo.*##a[href*=\"fandom.com\"]:upward(1)"
-            "ecosia.*##.g:has(a[href*=\"fandom.com\"])"
-            "ecosia.*##a[href*=\"fandom.com\"]:upward(1)"
-          ];
+          userFilters = ''
+            google.*##.g:has(a[href*="fandom.com"])
+            google.*##a[href*="fandom.com"]:upward(1)
+            duckduckgo.*##.g:has(a[href*="fandom.com"])
+            duckduckgo.*##a[href*="fandom.com"]:upward(1)
+            ecosia.*##.g:has(a[href*="fandom.com"])
+            ecosia.*##a[href*="fandom.com"]:upward(1)
+          '';
           selectedFilterLists = [
             "user-filters"
             "ublock-filters"
