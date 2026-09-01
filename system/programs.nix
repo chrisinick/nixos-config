@@ -92,35 +92,50 @@
       # Extension configuration
       "3rdparty".Extensions = {
         "uBlock0@raymondhill.net".adminSettings = {
-          userSettings = rec {
-            uiTheme = "dark";
-            cloudStorageEnabled = lib.mkForce false;
-
-            importedLists = [
-              "https://filters.adtidy.org/extension/ublock/filters/3.txt"
-              "https://github.com/DandelionSprout/adfilt/raw/master/LegitimateURLShortener.txt"
-            ];
-
-            externalLists = lib.concatStringsSep "\n" importedLists;
-          };
-
+          userSettings.cloudStorageEnabled = false;
+          filters = [
+            "google.*##.g:has(a[href*=\"fandom.com\"])"
+            "google.*##a[href*=\"fandom.com\"]:upward(1)"
+            "duckduckgo.*##.g:has(a[href*=\"fandom.com\"])"
+            "duckduckgo.*##a[href*=\"fandom.com\"]:upward(1)"
+            "ecosia.*##.g:has(a[href*=\"fandom.com\"])"
+            "ecosia.*##a[href*=\"fandom.com\"]:upward(1)"
+          ];
           selectedFilterLists = [
-            "CZE-0"
-            "adguard-generic"
-            "adguard-annoyance"
-            "adguard-social"
-            "adguard-spyware-url"
-            "easylist"
-            "easyprivacy"
-            "https://github.com/DandelionSprout/adfilt/raw/master/LegitimateURLShortener.txt"
-            "plowe-0"
-            "ublock-abuse"
-            "ublock-badware"
+            "user-filters"
             "ublock-filters"
+            "ublock-badware"
             "ublock-privacy"
-            "ublock-quick-fixes"
             "ublock-unbreak"
+            "ublock-quick-fixes"
+            "ublock-cookies-adguard"
+            "ublock-cookies-easylist"
+            "ublock-annoyances"
+            "adguard-generic"
+            "adguard-cookies"
+            "adguard-mobile"
+            "adguard-popup-overlays"
+            "adguard-mobile-app-banners"
+            "adguard-other-annoyances"
+            "adguard-widgets"
+            "adguard-spyware-url"
+            "adguard-social"
+            "easylist"
+            "easylist-annoyances"
+            "easylist-chat"
+            "easylist-newsletters"
+            "easylist-notifications"
+            "fanboy-cookiemonster"
+            "fanboy-social"
+            "fanboy-thirdparty_social"
+            "fanboy-ai-suggestions"
+            "block-lan"
+            "easyprivacy"
             "urlhaus-1"
+            "curben-phishing"
+            "dpollock-0"
+            "plowe-0"
+            "DEU-0"
           ];
         };
       };
