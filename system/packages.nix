@@ -12,6 +12,7 @@
     hunspellDicts.de_DE
     wl-clipboard
     easyeffects
+    firefox
 
     # Theme
     adw-gtk3
