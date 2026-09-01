@@ -2,7 +2,6 @@
 
 ## TODO
 
-- fingerprint scanner
 - firefox config
 - cosmic de
 - nh
@@ -43,20 +42,26 @@ sudo nixos-enter --root /mnt -c 'passwd chris'
 sudo systemd-cryptenroll --tpm2-device=auto --tpm2-with-pin=true --tpm2-pcrlock=/var/lib/systemd/pcrlock.json /dev/disk/by-partlabel/disk-main-luks
 ```
 
-7. Set up rclone (name = filen, type = filen):
+7. Enroll fingerprint (on chris-laptop):
+
+```bash
+fprintd-enroll
+```
+
+8. Set up rclone (name = filen, type = filen):
 
 ```bash
 rclone config
 ```
 
-8. Do the initial rclone bisync run:
+9. Do the initial rclone bisync run:
 
 ```bash
 mkdir -p /home/chris/sync
 rclone bisync filen:sync /home/chris/sync --resync --resilient --recover --max-lock 2m --conflict-resolve newer --create-empty-src-dirs --filters-file /home/chris/.config/rclone/filters.txt
 ```
 
-9. See section [Must be configured manually](#must-be-configured-manually)
+10. See section [Must be configured manually](#must-be-configured-manually)
 
 ## Usage
 

@@ -16,6 +16,7 @@
 
       # Feature disabling
       DisableFirefoxStudies = true;
+      PasswordManagerEnabled = false;
       DisableMasterPasswordCreation = true;
       DisableSetDesktopBackground = true;
       DisablePocket = true;
@@ -23,6 +24,7 @@
       CrashReportsSubmit.Enabled = false;
       OfferToSaveLogins = false;
       browser.translations.automaticallyPopup = false;
+      GenerativeAI.Chatbot = false;
 
       # Extensions
       ExtensionSettings =
@@ -105,7 +107,7 @@
     profiles.default.search = {
       force = true;
       default = "ecosia";
-      privateDefault = "ddg";
+      privateDefault = "ecosia";
 
       engines = {
         "Nix Packages" = {
@@ -170,6 +172,29 @@
           definedAliases = [
             "@nw"
             "@nixwiki"
+          ];
+        };
+
+        "Home Manager Options" = {
+          urls = [
+            {
+              template = "https://home-manager-options.extranix.com";
+              params = [
+                {
+                  name = "release";
+                  value = "master";
+                }
+                {
+                  name = "query";
+                  value = "{searchTerms}";
+                }
+              ];
+            }
+          ];
+          icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+          definedAliases = [
+            "@ho"
+            "@homemanageroptions"
           ];
         };
 
