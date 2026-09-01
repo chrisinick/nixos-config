@@ -19,7 +19,7 @@
     loader = {
       systemd-boot = {
         enable = false; # due to lanzaboote
-        configurationLimit = 4;
+        configurationLimit = 6;
       };
       #timeout = 0;
       efi.canTouchEfiVariables = true;
@@ -31,6 +31,17 @@
       pkiBundle = "/var/lib/sbctl";
       autoGenerateKeys.enable = true;
       autoEnrollKeys.enable = true;
+      measuredBoot = {
+        enable = true;
+        pcrs = [
+          0
+          1
+          2
+          3
+          4
+          7
+        ];
+      };
     };
 
     consoleLogLevel = 3;
@@ -40,7 +51,7 @@
       "rd.udev.log_level=3"
       "rd.systemd.show_status=auto"
     ];
-    #plymouth.enable = true;
+    plymouth.enable = true;
   };
 
   # Time zone
