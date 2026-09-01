@@ -59,6 +59,12 @@
   services.fwupd.enable = true;
   hardware.graphics.enable = true;
 
+  # Zswap
+  boot.zswap = {
+    enable = true;
+    maxPoolPercent = 25;
+  };
+
   # Network
   services.resolved.enable = true;
 
