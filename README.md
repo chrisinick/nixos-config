@@ -2,10 +2,9 @@
 
 ## TODO
 
-- secure boot (lanzaboote) & disk encryption
-- auto hibernate from suspend
-- cosmic de
 - fingerprint scanner
+- firefox config
+- cosmic de
 - nh
 - tailscale setup + syncthing? (check tailscale on chris-router, move chris-server to nixos)
 - doom emacs (+ obsidian like brain)
@@ -36,32 +35,24 @@ sudo nixos-install --no-update-lock-file --flake 'github:chrisinick/nixos-config
 sudo nixos-enter --root /mnt -c 'passwd chris'
 ```
 
-4. Reset secure boot in bios
-5. Boot into the installed system for automatic secure boot key generation
-6. Enable secure boot in bios
-7. Boot into the installed system for automatic secure boot key enrollment
-8. Enroll policy for measured boot:
+4. Reset and enable secure boot in bios
+5. Boot into the installed system
+6. Enroll policy for measured boot:
 
 ```bash
 sudo systemd-cryptenroll --tpm2-device=auto --tpm2-with-pin=true --tpm2-pcrlock=/var/lib/systemd/pcrlock.json /dev/disk/by-partlabel/disk-main-luks
 ```
 
-8. Set up rclone (name = filen, type = filen):
+7. Set up rclone (name = filen, type = filen):
 
 ```bash
 rclone config
 ```
 
-7. Do an rclone dry-run bisync:
+8. Do the initial rclone bisync run:
 
 ```bash
 mkdir -p /home/chris/sync
-rclone bisync filen:sync /home/chris/sync --resync --dry-run --resilient --recover --max-lock 2m --conflict-resolve newer --create-empty-src-dirs --filters-file /home/chris/.config/rclone/filters.txt
-```
-
-8. Do the initial rclone bisync:
-
-```bash
 rclone bisync filen:sync /home/chris/sync --resync --resilient --recover --max-lock 2m --conflict-resolve newer --create-empty-src-dirs --filters-file /home/chris/.config/rclone/filters.txt
 ```
 

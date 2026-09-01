@@ -49,6 +49,9 @@
   # Suspend then hibernate
   systemd.services."systemd-suspend-then-hibernate".aliases = [ "systemd-suspend.service" ];
 
+  # Fingerprint scanner
+  services.fprintd.enable = true;
+
   # Touchpad support
   services.libinput.enable = true;
 
