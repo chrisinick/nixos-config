@@ -37,9 +37,8 @@ sudo nixos-install --no-update-lock-file --flake 'github:chrisinick/nixos-config
 sudo nixos-enter --root /mnt -c 'passwd chris'
 ```
 
-4. Place the nixos sops private key into /mnt/home/chris/.config/sops/age/keys.txt
-5. Boot into the installed system
-6. Set up rclone (name = filen, type = filen):
+4. Boot into the installed system
+5. Set up rclone (name = filen, type = filen):
 
 ```bash
 rclone config

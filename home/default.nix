@@ -1,5 +1,4 @@
 {
-  config,
   ...
 }:
 {
@@ -22,11 +21,6 @@
   home.sessionPath = [
     "$HOME/.local/bin"
   ];
-
-  # Secrets setup
-  sops.defaultSopsFile = ../secrets/secrets.yaml;
-  sops.defaultSopsFormat = "yaml";
-  sops.age.keyFile = "${config.home.homeDirectory}/.config/sops/age/keys.txt";
 
   home.stateVersion = "26.05";
 }

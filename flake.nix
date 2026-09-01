@@ -15,12 +15,6 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    # Secrets
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
-
     # Home dotfiles
     home-manager = {
       url = "github:nix-community/home-manager";
