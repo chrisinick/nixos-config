@@ -6,6 +6,7 @@
   # Packages installed in system profile
   environment.systemPackages = with pkgs; [
     # System
+    sbctl
     hunspell
     hunspellDicts.en_US
     hunspellDicts.de_DE
@@ -79,7 +80,7 @@
     newsflash
     #metadata-cleaner
     tor-browser
-    libreoffice-fresh
+    libreoffice
     zed-editor
     signal-desktop
     stremio-linux-shell

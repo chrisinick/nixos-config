@@ -15,6 +15,12 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
+    # Secure boot
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v1.1.0";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
     # Home dotfiles
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -28,6 +34,7 @@
       nixpkgs-unstable,
       nixpkgs-stable,
       disko,
+      lanzaboote,
       home-manager,
       ...
     }@inputs:
@@ -46,6 +53,7 @@
             specialArgs = { inherit inputs stablePkgs; };
             modules = [
               disko.nixosModules.disko
+              lanzaboote.nixosModules.lanzaboote
               home-manager.nixosModules.default
               ./hosts/${hostname}
               { networking.hostName = hostname; }

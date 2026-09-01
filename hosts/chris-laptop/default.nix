@@ -42,10 +42,12 @@
 
   # Closing the lid
   services.logind.settings.Login = {
-    HandleLidSwitch = "suspend"; # suspend-then-hibernate
+    HandleLidSwitch = "suspend-then-hibernate";
     HandleLidSwitchExternalPower = "lock";
     HandleLidSwitchDocked = "ignore";
   };
+  # Suspend then hibernate
+  systemd.services."systemd-suspend-then-hibernate".aliases = [ "systemd-suspend.service" ];
 
   # Touchpad support
   services.libinput.enable = true;

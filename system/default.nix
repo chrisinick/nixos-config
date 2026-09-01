@@ -18,12 +18,21 @@
   boot = {
     loader = {
       systemd-boot = {
-        enable = true;
+        enable = false; # due to lanzaboote
         configurationLimit = 4;
       };
-      timeout = 0;
+      #timeout = 0;
       efi.canTouchEfiVariables = true;
     };
+
+    # Secure boot
+    lanzaboote = {
+      enable = true;
+      pkiBundle = "/var/lib/sbctl";
+      autoGenerateKeys.enable = true;
+      autoEnrollKeys.enable = true;
+    };
+
     consoleLogLevel = 3;
     initrd.verbose = false;
     kernelParams = [
@@ -31,7 +40,7 @@
       "rd.udev.log_level=3"
       "rd.systemd.show_status=auto"
     ];
-    plymouth.enable = true;
+    #plymouth.enable = true;
   };
 
   # Time zone

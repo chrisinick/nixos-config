@@ -3,9 +3,8 @@
 ## TODO
 
 - secure boot (lanzaboote) & disk encryption
-- auto hybernate from suspend
+- auto hibernate from suspend
 - cosmic de
-- zram / zswap
 - fingerprint scanner
 - nh
 - tailscale setup + syncthing? (check tailscale on chris-router, move chris-server to nixos)
