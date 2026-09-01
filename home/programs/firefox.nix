@@ -19,20 +19,12 @@
 
       # Feature disabling
       DisableFirefoxStudies = true;
-      DisableFirefoxAccounts = true;
       DisableMasterPasswordCreation = true;
       DisableSetDesktopBackground = true;
       DisablePocket = true;
       DisableTelemetry = true;
       CrashReportsSubmit.Enabled = false;
-      DisableFormHistory = true;
-
-      # UI and behavior
-      DisplayMenuBar = "default-off";
-      DontCheckDefaultBrowser = false;
-      HardwareAcceleration = true;
       OfferToSaveLogins = false;
-      DefaultDownloadDirectory = "${config.home.homeDirectory}/Downloads";
 
       # Extensions
       ExtensionSettings =
@@ -172,7 +164,7 @@
           ];
         };
 
-        "Ecosia" = {
+        "ecosia" = {
           urls = [
             {
               template = "https://www.ecosia.org/search";
