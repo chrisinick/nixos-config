@@ -2,11 +2,12 @@
 
 ## TODO
 
-- secure boot & disk encryption
+- secure boot (lanzaboote) & disk encryption
 - auto hybernate from suspend
 - cosmic de
 - zram / zswap
 - fingerprint scanner
+- nh
 - tailscale setup + syncthing? (check tailscale on chris-router, move chris-server to nixos)
 - doom emacs (+ obsidian like brain)
 

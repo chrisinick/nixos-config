@@ -8,6 +8,8 @@
   ];
 
   disko.devices.disk.main.device = "/dev/disk/by-id/nvme-WD_PC_SN740_SDDPTQE-2T00_23091G802429";
+  disko.devices.lvm_vg.pool.lvs.swap.size = "64G";
+
   system.stateVersion = "26.05";
 
   # Network

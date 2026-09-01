@@ -10,6 +10,8 @@
   ];
 
   disko.devices.disk.main.device = "/dev/disk/by-id/nvme-WDC_WDS500G2B0C-00PXH0_21375R468305";
+  disko.devices.lvm_vg.pool.lvs.swap.size = "64G";
+
   system.stateVersion = "26.05";
 
   # Hardware
@@ -34,8 +36,16 @@
     powerOnBoot = false;
   };
 
-  # Battery management
+  # Power management
   services.power-profiles-daemon.enable = true;
+  services.thermald.enable = true;
+
+  # Closing the lid
+  services.logind.settings.Login = {
+    HandleLidSwitch = "suspend"; # suspend-then-hibernate
+    HandleLidSwitchExternalPower = "lock";
+    HandleLidSwitchDocked = "ignore";
+  };
 
   # Touchpad support
   services.libinput.enable = true;
