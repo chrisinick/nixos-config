@@ -19,9 +19,9 @@
     loader = {
       systemd-boot = {
         enable = false; # due to lanzaboote
-        configurationLimit = 6;
+        configurationLimit = 4;
       };
-      #timeout = 0;
+      timeout = 0;
       efi.canTouchEfiVariables = true;
     };
 
@@ -31,6 +31,7 @@
       pkiBundle = "/var/lib/sbctl";
       autoGenerateKeys.enable = true;
       autoEnrollKeys.enable = true;
+      autoEnrollKeys.autoReboot = true;
       measuredBoot = {
         enable = true;
         pcrs = [

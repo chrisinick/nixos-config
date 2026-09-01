@@ -36,8 +36,17 @@ sudo nixos-install --no-update-lock-file --flake 'github:chrisinick/nixos-config
 sudo nixos-enter --root /mnt -c 'passwd chris'
 ```
 
-4. Boot into the installed system
-5. Set up rclone (name = filen, type = filen):
+4. Reset secure boot in bios
+5. Boot into the installed system for automatic secure boot key generation
+6. Enable secure boot in bios
+7. Boot into the installed system for automatic secure boot key enrollment
+8. Enroll policy for measured boot:
+
+```bash
+sudo systemd-cryptenroll --tpm2-device=auto --tpm2-with-pin=true --tpm2-pcrlock=/var/lib/systemd/pcrlock.json /dev/disk/by-partlabel/disk-main-luks
+```
+
+8. Set up rclone (name = filen, type = filen):
 
 ```bash
 rclone config
