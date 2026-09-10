@@ -215,6 +215,24 @@
             "@ecosia"
           ];
         };
+
+        "dict.cc" = {
+          urls = [
+            {
+              template = "https://www.dict.cc";
+              params = [
+                {
+                  name = "s";
+                  value = "{searchTerms}";
+                }
+              ];
+            }
+          ];
+          definedAliases = [
+            "@di"
+            "@dictcc"
+          ];
+        };
       };
     };
   };
