@@ -261,8 +261,7 @@
         StartPage = "previous-session";
         NewTabOnRestore = true;
       };
-      #TODO uncomment
-      #NewTabPage = false;
+      NewTabPage = false;
       OverrideFirstRunPage = "";
       OverridePostUpdatePage = "";
       SkipTermsOfUse = true;
@@ -395,17 +394,17 @@
     profiles.default = {
       settings = {
         sidebar = {
-          "sidebar.revamp" = true;
-          "sidebar.verticalTabs" = true;
-          "sidebar.verticalTabs.dragToPinPromo.dismissed" = true;
-          "sidebar.main.tools" = [
+          sidebar.revamp = true;
+          sidebar.verticalTabs.enabled = true;
+          sidebar.verticalTabs.dragToPinPromo.dismissed = true;
+          sidebar.main.tools = [
             "syncedtabs"
             "history"
             "bookmarks"
           ];
         };
-        "browser.translations.automaticallyPopup" = false;
-        "browser.translations.neverTranslateLanguages" = [
+        browser.translations.automaticallyPopup = false;
+        browser.translations.neverTranslateLanguages = [
           "de"
           "en"
         ];
