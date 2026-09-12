@@ -116,10 +116,6 @@ nix flake init -t templates#full
 
 ## Must be configured manually
 
-### Remmina
-
-See notes in sync
-
 ### Warframe
 
 Restore settings from sync/backup/warframe/

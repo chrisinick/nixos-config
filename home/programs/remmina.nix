@@ -1,0 +1,130 @@
+{
+  config,
+  ...
+}:
+{
+  home.file =
+    let
+      dataDir = ".local/share/remmina";
+    in
+    {
+      # General settings
+      ".config/remmina/remmina.pref".text = ''
+        [remmina_pref]
+        datadir_path=${config.home.homeDirectory}/${dataDir}
+        disable_tray_icon=true
+        dark_theme=true
+        rdp_quality_0=6F
+        rdp_quality_1=7
+        rdp_quality_2=A5
+        rdp_quality_9=80
+        rdp_keyboard_layout=407
+      '';
+
+      # RDP connection
+      "${dataDir}/group_rdp_quanos-rdp_10-20-113-120.remmina".text = ''
+        [remmina]
+        password=
+        gateway_username=
+        smartcard_pin=
+        vc=
+        notes_text=
+        preferipv6=0
+        serialname=
+        ssh_tunnel_loopback=0
+        tls-seclevel=
+        freerdp_log_level=OFF
+        printer_overrides=
+        name=Quanos RDP
+        console=0
+        colordepth=99
+        smartcard-logon=0
+        security=
+        precommand=
+        disable_fastpath=0
+        left-handed=0
+        postcommand=
+        ssh_tunnel_command_args=
+        group=
+        server=10.20.113.120
+        ssh_tunnel_certfile=
+        glyph-cache=0
+        ssh_tunnel_enabled=0
+        disableclipboard=0
+        rdp_idle_keypress_time=No
+        rdp_idle_keypress_combo=1
+        ssh_tunnel_command=
+        monitorids=
+        cert_ignore=0
+        gateway_server=
+        audio-output=
+        protocol=RDP
+        old-license=0
+        labels=
+        parallelpath=
+        resolution_mode=2
+        assistance_mode=0
+        disconnect-prompt=0
+        pth=
+        disableautoreconnect=0
+        loadbalanceinfo=
+        clientbuild=
+        clientname=
+        multitransport=0
+        ssh_tunnel_password=
+        resolution_width=0
+        allow_empty_pass=0
+        drive=
+        serialpermissive=0
+        username=ch.nickel
+        relax-order-checks=0
+        base-cred-for-gw=0
+        profile-lock=0
+        gateway_domain=
+        network=none
+        rdp2tcp=
+        serialdriver=
+        rdp_reconnect_attempts=
+        gateway_password=
+        domain=
+        restricted-admin=0
+        force_multimon=0
+        exec=
+        multimon=0
+        serialpath=
+        enable-autostart=0
+        smartcardname=
+        usb=
+        ssh_tunnel_passphrase=
+        shareparallel=0
+        shareprinter=0
+        disablepasswordstoring=0
+        quality=2
+        span=0
+        parallelname=
+        ssh_tunnel_auth=0
+        keymap=
+        ssh_tunnel_username=
+        execpath=
+        shareserial=0
+        resolution_height=0
+        rdp_mouse_jitter=No
+        useproxyenv=0
+        sharesmartcard=0
+        freerdp_log_filters=
+        microphone=
+        timeout=
+        ssh_tunnel_privatekey=
+        gwtransp=http
+        ssh_tunnel_server=
+        ignore-tls-errors=1
+        forceipvx=0
+        dvc=
+        gateway_usage=0
+        disable-smooth-scrolling=0
+        no-suppress=0
+        websockets=0
+        sound=local
+      '';
+    };
+}
