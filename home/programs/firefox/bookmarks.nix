@@ -137,10 +137,6 @@
           name = "Filen";
           url = "https://filen.io/";
         }
-        {
-          name = "Rclone Web GUI";
-          url = "http://127.0.0.1:36125/login";
-        }
         "separator"
         {
           name = "Tuta";

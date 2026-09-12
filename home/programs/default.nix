@@ -2,8 +2,6 @@
   ...
 }:
 {
-  nixpkgs.config.allowUnfree = true;
-
   imports = [
     ./firefox
     ./freetube.nix
@@ -17,6 +15,7 @@
     ./zed-editor.nix
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   programs.discord.enable = true;
-  services.remmina.enable = true;
 }

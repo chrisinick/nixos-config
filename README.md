@@ -4,8 +4,8 @@
 
 - cosmic de
 - nh
-- tailscale setup + syncthing? (check tailscale on chris-router, move chris-server to nixos)
-- doom emacs (+ obsidian like brain)
+- tailscale setup + syncthing? (move chris-server to nixos)
+- doom emacs?
 
 ## Installation & Setup
 
@@ -60,8 +60,6 @@ mkdir -p /home/chris/sync
 rclone bisync filen:sync /home/chris/sync --resync --resilient --recover --max-lock 2m --conflict-resolve newer --create-empty-src-dirs --filters-file /home/chris/.config/rclone/filters.txt
 ```
 
-10. See section [Must be configured manually](#must-be-configured-manually)
-
 ## Usage
 
 Use nixswitch.sh and nixbuild.sh scripts!
@@ -114,14 +112,6 @@ nix flake show templates
 nix flake init -t templates#full
 ```
 
-## Must be configured manually
-
-### Warframe
-
-Restore settings from sync/backup/warframe/
-
 ## License
 
 This configuration is licensed under the [GPLv3](https://github.com/chrisinick/ideapad-mode/blob/master/LICENSE.txt) License.
-
-The nixbuild.sh script is based on [No Boilerplate's rebuild script](https://github.com/0atman/noboilerplate/blob/main/scripts/38-nixos.md#dont-use-nix-env).
