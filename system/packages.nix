@@ -42,6 +42,10 @@
     zathura
 
     # CLI
+    ripgrep
+    fd
+    bat
+    eza
     jq
     btop
     ffmpeg

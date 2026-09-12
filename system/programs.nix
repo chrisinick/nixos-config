@@ -22,6 +22,13 @@
       fish_vi_key_bindings
       ${pkgs.fastfetch}/bin/fastfetch
     '';
+    shellAliases = {
+      "grep" = "rg";
+      "find" = "fd";
+      "cat" = "bat";
+      "ls" = "eza";
+      "git graph" = "git log --oneline --graph --decorate";
+    };
   };
   programs.vim = {
     enable = true;
