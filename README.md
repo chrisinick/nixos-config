@@ -2,7 +2,7 @@
 
 ## TODO
 
-- firefox config
+- firefox declarative bookmarks
 - cosmic de
 - nh
 - tailscale setup + syncthing? (check tailscale on chris-router, move chris-server to nixos)

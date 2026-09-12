@@ -177,7 +177,7 @@
       };
 
       PopupBlocking = {
-        Default = true; # TODO check if true really means blocking
+        Default = true;
         Locked = true;
       };
 
@@ -255,11 +255,11 @@
         };
       };
 
-      # Home page
       Homepage = {
         Locked = true;
+        URL = "about:blank";
         StartPage = "previous-session";
-        NewTabOnRestore = true;
+        NewTabOnRestore = false;
       };
       NewTabPage = false;
       OverrideFirstRunPage = "";
@@ -295,7 +295,6 @@
         };
       };
 
-      # Extensions
       ExtensionUpdate = true;
       InstallAddonsPermission.Default = false;
       ExtensionSettings =
@@ -324,17 +323,8 @@
             updates_disabled = "false";
             default_area = "navbar";
           };
-
-          # Dark reader
-          "addon@darkreader.org" = {
-            install_url = moz "darkreader";
-            installation_mode = "force_installed";
-            updates_disabled = "false";
-            default_area = "menupanel";
-          };
         };
 
-      # Extension configuration
       "3rdparty".Extensions = {
         "uBlock0@raymondhill.net".adminSettings = {
           userSettings.cloudStorageEnabled = false;
@@ -385,29 +375,49 @@
         };
       };
 
-      # Bookmarks
       NoDefaultBookmarks = true;
       # TODO
-      #ManagedBookmarks = [ ];
+      ManagedBookmarks = [ ];
     };
 
     profiles.default = {
       settings = {
-        sidebar = {
-          sidebar.revamp = true;
-          sidebar.verticalTabs.enabled = true;
-          sidebar.verticalTabs.dragToPinPromo.dismissed = true;
-          sidebar.main.tools = [
-            "syncedtabs"
-            "history"
-            "bookmarks"
-          ];
+        "sidebar.verticalTabs" = true;
+        "sidebar.verticalTabs.dragToPinPromo.dismissed" = true;
+        "browser.uiCustomization.state" = {
+          "placements" = {
+            "widget-overflow-fixed-list" = [ ];
+            "unified-extensions-area" = [ ];
+            "nav-bar" = [
+              "sidebar-button"
+              "back-button"
+              "forward-button"
+              "stop-reload-button"
+              "customizableui-special-spring1"
+              "vertical-spacer"
+              "firefox-view-button"
+              "alltabs-button"
+              "urlbar-container"
+              "customizableui-special-spring2"
+              "downloads-button"
+              "reset-pbm-toolbar-button"
+              "ai-window-toggle"
+              "unified-extensions-button"
+              "ublock0_raymondhill_net-browser-action"
+              "_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action"
+            ];
+            "toolbar-menubar" = [ "menubar-items" ];
+            "TabsToolbar" = [ ];
+            "vertical-tabs" = [ "tabbrowser-tabs" ];
+            "PersonalToolbar" = [ "personal-bookmarks" ];
+          };
+          "currentVersion" = 26;
+          "newElementCount" = 4;
         };
-        browser.translations.automaticallyPopup = false;
-        browser.translations.neverTranslateLanguages = [
-          "de"
-          "en"
-        ];
+        "browser.download.autohideButton" = false;
+
+        "browser.translations.automaticallyPopup" = false;
+        "browser.translations.neverTranslateLanguages" = "de,en";
       };
 
       search = {
