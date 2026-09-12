@@ -5,7 +5,7 @@
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    ./firefox.nix
+    ./firefox
     ./freetube.nix
     ./ghostty.nix
     ./git.nix
