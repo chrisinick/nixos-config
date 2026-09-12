@@ -27,7 +27,7 @@
       "find" = "fd";
       "cat" = "bat";
       "ls" = "eza";
-      "git graph" = "git log --oneline --graph --decorate";
+      "git-graph" = "git log --oneline --graph --decorate";
     };
   };
   programs.vim = {
