@@ -116,13 +116,6 @@ nix flake init -t templates#full
 
 ## Must be configured manually
 
-### Gnome
-
-- Display settings
-- Night light
-- Keyboard shortcuts for launching apps
-- Default apps
-
 ### Remmina
 
 See notes in sync

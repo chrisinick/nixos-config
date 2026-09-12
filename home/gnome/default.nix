@@ -26,6 +26,15 @@ in
       "org/gnome/desktop/datetime".automatic-timezone = true;
       "org/gnome/mutter".center-new-windows = true;
 
+      # Night light
+      "org/gnome/settings-daemon/plugins/color" = {
+        night-light-enabled = true;
+        night-light-temperature = 4000;
+        night-light-schedule-automatic = false;
+        night-light-schedule-from = 22.0;
+        night-light-schedule-to = 6.0;
+      };
+
       # Wallpaper
       "org/gnome/desktop/background" = {
         picture-uri = wallpaper-uri;

@@ -1,4 +1,5 @@
 {
+  pkgs,
   ...
 }:
 {
@@ -42,6 +43,28 @@
       switch-to-workspace-down = [ "<Primary><Super>Down" ];
       switch-to-workspace-left = [ "<Primary><Super>Left" ];
       switch-to-workspace-right = [ "<Primary><Super>Right" ];
+    };
+    "org/gnome/settings-daemon/plugins/media-keys" = {
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/browser/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/files/"
+      ];
+    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal" = {
+      name = "Terminal";
+      command = "${pkgs.ghostty}/bin/ghostty";
+      binding = "<Super>t";
+    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/browser" = {
+      name = "Browser";
+      command = "${pkgs.firefox}/bin/firefox";
+      binding = "<Super>b";
+    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/files" = {
+      name = "Files";
+      command = "${pkgs.nautilus}/bin/nautilus";
+      binding = "<Super>f";
     };
   };
 }
