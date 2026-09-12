@@ -4,14 +4,18 @@
 }:
 {
   programs.dconf.enable = true;
+  programs.bat.enable = true;
   programs.git.enable = true;
-  fonts.fontconfig.useEmbeddedBitmaps = true; # for emojis in firefox
   programs.thunderbird.enable = true;
+
+  fonts.fontconfig.useEmbeddedBitmaps = true; # for emojis in firefox
+
   programs.bash = {
     interactiveShellInit = ''
       set -o vi
     '';
   };
+
   programs.fish = {
     enable = true;
     shellInit = ''
@@ -30,16 +34,17 @@
       "git-graph" = "git log --oneline --graph --decorate";
     };
   };
+
   programs.vim = {
     enable = true;
     defaultEditor = true;
   };
-  programs.bat.enable = true;
+
   programs.nautilus-open-any-terminal = {
     enable = true;
     terminal = "ghostty";
   };
-  programs.vscode.enable = true;
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
@@ -48,4 +53,5 @@
     extraCompatPackages = with pkgs; [ proton-ge-bin ];
     extraPackages = with pkgs; [ adwaita-icon-theme ];
   };
+  environment.sessionVariables.PROTON_ENABLE_WAYLAND = "1";
 }
