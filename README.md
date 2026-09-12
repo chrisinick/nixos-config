@@ -2,7 +2,6 @@
 
 ## TODO
 
-- firefox declarative bookmarks
 - cosmic de
 - nh
 - tailscale setup + syncthing? (check tailscale on chris-router, move chris-server to nixos)
@@ -123,11 +122,6 @@ nix flake init -t templates#full
 - Night light
 - Keyboard shortcuts for launching apps
 - Default apps
-
-### Chromium
-
-- Import bookmarks (from sync)
-- Go through the settings
 
 ### Remmina
 

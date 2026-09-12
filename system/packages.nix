@@ -61,7 +61,6 @@
     zotero
 
     # Work
-    chromium
     openvpn
     networkmanager-openvpn
     remmina
