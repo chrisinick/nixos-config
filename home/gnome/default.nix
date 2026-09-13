@@ -80,14 +80,12 @@ in
         disable-user-extensions = true;
         favorite-apps = [
           "firefox.desktop"
-          "thunderbird.desktop"
           "tutanota-desktop.desktop"
           "com.mitchellh.ghostty.desktop"
           "org.gnome.Nautilus.desktop"
           "startcenter.desktop"
           "obsidian.desktop"
           "dev.zed.Zed.desktop"
-          "code.desktop"
           "org.gnome.TextEditor.desktop"
           "signal.desktop"
           "discord.desktop"

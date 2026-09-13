@@ -10,7 +10,6 @@
     ./remmina.nix
     ./rclone.nix
     ./vim.nix
-    ./vscode.nix
     ./zathura.nix
     ./zed-editor.nix
   ];

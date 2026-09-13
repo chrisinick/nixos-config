@@ -70,6 +70,7 @@
     remmina
 
     # Apps
+    tutanota-desktop
     gnome-tweaks
     resources
     ghostty

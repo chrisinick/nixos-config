@@ -72,9 +72,6 @@
       DefaultSerialGuardSetting = 3;
 
       DisableAppUpdate = true;
-      AppAutoUpdate = false;
-      BackgroundAppUpdate = false;
-      ManualAppUpdateOnly = true;
 
       DisableTelemetry = true;
       CrashReportsSubmit.Enabled = false;
@@ -93,7 +90,6 @@
       Sync.Enabled = false;
 
       DisableMasterPasswordCreation = true;
-      PrimaryPassword = false;
       PasswordManagerEnabled = false;
       OfferToSaveLogins = false;
       MicrosoftEntraSSO = false;

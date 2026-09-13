@@ -6,7 +6,6 @@
   programs.dconf.enable = true;
   programs.bat.enable = true;
   programs.git.enable = true;
-  programs.thunderbird.enable = true;
 
   fonts.fontconfig.useEmbeddedBitmaps = true; # for emojis in firefox
 
