@@ -1,4 +1,5 @@
 {
+  lib,
   ...
 }:
 let
@@ -29,7 +30,7 @@ in
       # Night light
       "org/gnome/settings-daemon/plugins/color" = {
         night-light-enabled = true;
-        night-light-temperature = 4000;
+        night-light-temperature = lib.hm.gvariant.mkUint32 4000;
         night-light-schedule-automatic = false;
         night-light-schedule-from = 22.0;
         night-light-schedule-to = 6.0;
