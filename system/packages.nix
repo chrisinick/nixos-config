@@ -105,6 +105,10 @@
     protontricks
     heroic
     faugus-launcher
+    (prismlauncher.override {
+      #additionalPrograms = [ ffmpeg ];
+      jdks = [ jdk ];
+    })
   ];
 
   fonts.packages = with pkgs; [
