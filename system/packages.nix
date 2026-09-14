@@ -106,8 +106,8 @@
     heroic
     faugus-launcher
     (prismlauncher.override {
-      #additionalPrograms = [ ffmpeg ];
-      jdks = [ jdk ];
+      #additionalPrograms = [ ];
+      jdks = [ jdk25 ];
     })
   ];
 
