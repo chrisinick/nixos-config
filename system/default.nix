@@ -100,13 +100,6 @@
   systemd.user.services.gnomeKeyring.enable = true;
   services.gnome.games.enable = false;
 
-  # Qt
-  qt = {
-    enable = true;
-    style = "adwaita-dark";
-    platformTheme = "gnome";
-  };
-
   # X Keymap
   services.xserver.xkb = {
     layout = "de";
