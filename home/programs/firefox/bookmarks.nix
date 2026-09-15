@@ -214,6 +214,10 @@
           url = "https://cosmic-utils.org/";
         }
         {
+          name = "Cosmic Themes";
+          url = "https://cosmic-themes.org";
+        }
+        {
           name = "NixOS.org";
           url = "https://nixos.org/";
         }

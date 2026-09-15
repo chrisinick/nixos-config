@@ -14,6 +14,14 @@
     easyeffects
     firefox
 
+    # Cosmic desktop
+    adw-gtk3
+    cutecosmic
+    cosmic-viewer
+    cosmic-ext-calculator
+    cosmic-ext-applet-weather
+    cosmic-ext-applet-privacy-indicator
+
     # Nix
     nixd
     nil
@@ -64,17 +72,6 @@
     networkmanager-openvpn
     remmina
 
-    # Cosmic desktop
-    cutecosmic
-    cosmic-ext-ctl
-    cosmic-ext-tweaks
-    cosmic-viewer
-    cosmic-ext-calculator
-    cosmic-ext-applet-minimon
-    cosmic-ext-applet-weather
-    cosmic-ext-applet-privacy-indicator
-    cosmic-ext-applet-external-monitor-brightness
-
     # Gnome apps
     gnome-font-viewer
     gnome-characters
@@ -86,7 +83,7 @@
     tutanota-desktop
     ghostty
     warp
-    impression
+    popsicle
     meld
     newsflash
     metadata-cleaner
@@ -122,25 +119,6 @@
     fira-code-symbols
     jetbrains-mono
     commit-mono
-  ];
-
-  # Excluded packages
-  environment.gnome.excludePackages = with pkgs; [
-    eog
-    epiphany
-    evince
-    geary
-    gedit
-    gnome-connections
-    gnome-console
-    gnome-maps
-    gnome-music
-    gnome-system-monitor
-    gnome-tour
-    gnome-weather
-    simple-scan
-    totem
-    yelp
   ];
 
   services.xserver.excludePackages = with pkgs; [

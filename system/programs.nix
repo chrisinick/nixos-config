@@ -11,7 +11,14 @@
 
   programs.bash = {
     interactiveShellInit = ''
-      set -o vi
+      if [[ -z "$IN_NIX_SHELL" ]] \
+         && [[ $(</proc/$PPID/comm) != "fish" ]] \
+         && (( SHLVL <= 2 )) \
+         && command -v fish >/dev/null
+      then
+        shopt -q login_shell && LOGIN_OPTION="--login" || LOGIN_OPTION=""
+        exec fish $LOGIN_OPTION
+      fi
     '';
   };
 

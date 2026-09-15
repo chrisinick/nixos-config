@@ -5,7 +5,6 @@
   imports = [
     ./firefox
     ./freetube.nix
-    ./ghostty.nix
     ./git.nix
     ./remmina.nix
     ./rclone.nix
