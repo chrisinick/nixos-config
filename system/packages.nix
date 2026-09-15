@@ -105,10 +105,7 @@
     protontricks
     heroic
     faugus-launcher
-    (prismlauncher.override {
-      #additionalPrograms = [ ];
-      jdks = [ jdk25 ];
-    })
+    (prismlauncher.override { jdks = [ jdk25 ]; })
   ];
 
   fonts.packages = with pkgs; [

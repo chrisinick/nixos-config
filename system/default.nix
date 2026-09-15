@@ -91,14 +91,21 @@
   # Network
   services.resolved.enable = true;
 
+  # Wayland
+  programs.xwayland.enable = true;
+
   # Gnome
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
   services.displayManager.defaultSession = "gnome";
-  programs.xwayland.enable = true;
   systemd.user.services.gnomeSettingsDaemon.enable = true;
   systemd.user.services.gnomeKeyring.enable = true;
   services.gnome.games.enable = false;
+
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = "chris";
+  };
 
   # X Keymap
   services.xserver.xkb = {
