@@ -51,10 +51,10 @@ fprintd-enroll
 rclone config
 ```
 
-9. Do the initial rclone bisync run:
+9. Make directories & run initial rclone bisync:
 
 ```bash
-mkdir -p /home/chris/sync /home/chris/.local/state/rclone
+mkdir -p /home/chris/sync /home/chris/.local/state/rclone /home/chris/sgit
 rclone bisync filen:sync /home/chris/sync --resync --resilient --recover --max-lock 2m --conflict-resolve newer --create-empty-src-dirs --filters-file /home/chris/.config/rclone/filters.txt
 ```
 

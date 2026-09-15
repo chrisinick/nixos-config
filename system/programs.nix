@@ -9,18 +9,17 @@
 
   fonts.fontconfig.useEmbeddedBitmaps = true; # for emojis in firefox
 
-  programs.bash = {
-    interactiveShellInit = ''
-      if [[ -z "$IN_NIX_SHELL" ]] \
-         && [[ $(</proc/$PPID/comm) != "fish" ]] \
-         && (( SHLVL <= 2 )) \
-         && command -v fish >/dev/null
-      then
-        shopt -q login_shell && LOGIN_OPTION="--login" || LOGIN_OPTION=""
-        exec fish $LOGIN_OPTION
-      fi
-    '';
-  };
+  programs.bash.interactiveShellInit = ''
+    if [[ -t 1 ]] \
+       && [[ -z "$IN_NIX_SHELL" ]] \
+       && [[ $(</proc/$PPID/comm) != "fish" ]] \
+       && (( SHLVL <= 2 )) \
+       && command -v fish >/dev/null
+    then
+      shopt -q login_shell && LOGIN_OPTION="--login" || LOGIN_OPTION=""
+      exec fish $LOGIN_OPTION
+    fi
+  '';
 
   programs.fish = {
     enable = true;
@@ -30,7 +29,6 @@
     interactiveShellInit = ''
       set fish_greeting
       fish_vi_key_bindings
-      ${pkgs.fastfetch}/bin/fastfetch
     '';
     shellAliases = {
       "grep" = "rg";
