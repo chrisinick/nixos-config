@@ -29,5 +29,15 @@
     };
   };
 
+  dconf = {
+    enable = true;
+    settings = {
+      # Enable adw-gtk3 for cosmic
+      "org/gnome/desktop/interface" = {
+        gtk-theme = "adw-gtk3";
+      };
+    };
+  };
+
   home.stateVersion = "26.05";
 }
