@@ -64,7 +64,7 @@
       terminal.shell.program = "${pkgs.fish}/bin/fish";
       buffer_font_family = "CommitMono";
       buffer_font_size = 18;
-      ui_font_size = 20;
+      ui_font_size = 18;
       inlay_hints.enabled = true;
       format_on_save = "on";
       tab_size = 2;

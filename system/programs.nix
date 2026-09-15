@@ -50,7 +50,7 @@
     dedicatedServer.openFirewall = true;
     localNetworkGameTransfers.openFirewall = true;
     extraCompatPackages = with pkgs; [ proton-ge-bin ];
-    extraPackages = with pkgs; [ adwaita-icon-theme ];
+    extraPackages = with pkgs; [ cosmic-icons ];
   };
   environment.sessionVariables.PROTON_ENABLE_WAYLAND = "1";
 }

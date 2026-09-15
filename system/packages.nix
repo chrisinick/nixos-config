@@ -14,9 +14,6 @@
     easyeffects
     firefox
 
-    # Theme
-    adw-gtk3
-
     # Nix
     nixd
     nil
@@ -55,9 +52,7 @@
     magic-wormhole
     glow
     fastfetch
-    filen-cli
     rclone
-    sl
 
     # University
     openconnect
@@ -69,21 +64,31 @@
     networkmanager-openvpn
     remmina
 
+    # Cosmic apps
+    cosmic-ext-ctl
+    cosmic-ext-tweaks
+    cosmic-viewer
+    cosmic-ext-calculator
+    cosmic-ext-applet-minimon
+    cosmic-ext-applet-weather
+    cosmic-ext-applet-privacy-indicator
+    cosmic-ext-applet-external-monitor-brightness
+
+    # Gnome apps
+    gnome-font-viewer
+    gnome-characters
+    gnome-sound-recorder
+    gnome-podcasts
+    snapshot
+
     # Apps
     tutanota-desktop
-    gnome-tweaks
-    resources
     ghostty
     warp
-    snapshot
-    impression
+    popsicle
     meld
-    papers
-    clapper
-    amberol
-    gnome-sound-recorder
     newsflash
-    #metadata-cleaner
+    metadata-cleaner
     tor-browser
     libreoffice
     zed-editor
@@ -93,7 +98,6 @@
     foliate
     hypnotix
     komikku
-    gnome-podcasts
     shortwave
     blanket
     warp
