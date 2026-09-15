@@ -64,7 +64,8 @@
     networkmanager-openvpn
     remmina
 
-    # Cosmic apps
+    # Cosmic desktop
+    cutecosmic
     cosmic-ext-ctl
     cosmic-ext-tweaks
     cosmic-viewer
@@ -85,7 +86,7 @@
     tutanota-desktop
     ghostty
     warp
-    popsicle
+    impression
     meld
     newsflash
     metadata-cleaner

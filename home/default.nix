@@ -20,12 +20,6 @@
     "$HOME/.local/bin"
   ];
 
-  qt = {
-    enable = true;
-    platformTheme.name = "adwaita";
-    style.name = "adwaita-dark";
-  };
-
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {

@@ -210,6 +210,10 @@
           url = "https://archlinux.org/";
         }
         {
+          name = "Cosmic Utils";
+          url = "https://cosmic-utils.org/";
+        }
+        {
           name = "NixOS.org";
           url = "https://nixos.org/";
         }
