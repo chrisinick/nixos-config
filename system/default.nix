@@ -93,19 +93,13 @@
 
   # Wayland
   programs.xwayland.enable = true;
+  services.desktopManager.cosmic.xwayland.enable = true;
 
-  # Gnome
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
-  services.displayManager.defaultSession = "gnome";
-  systemd.user.services.gnomeSettingsDaemon.enable = true;
+  # Cosmic
+  services.displayManager.cosmic-greeter.enable = true;
+  services.desktopManager.cosmic.enable = true;
   systemd.user.services.gnomeKeyring.enable = true;
-  services.gnome.games.enable = false;
-
-  services.displayManager.autoLogin = {
-    enable = true;
-    user = "chris";
-  };
+  services.system76-scheduler.enable = true;
 
   # X Keymap
   services.xserver.xkb = {

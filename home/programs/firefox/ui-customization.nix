@@ -63,6 +63,7 @@
     profiles =
       let
         settings = {
+          "widget.gtk.libadwaita-colors.enabled" = false;
           "sidebar.verticalTabs" = true;
           "sidebar.verticalTabs.dragToPinPromo.dismissed" = true;
           "browser.uiCustomization.state" = {

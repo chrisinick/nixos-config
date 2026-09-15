@@ -5,7 +5,6 @@
   imports = [
     ./programs
     ./scripts
-    ./gnome
   ];
 
   home.username = "chris";
