@@ -63,7 +63,7 @@
       calls.mute_on_join = true;
       terminal.shell.program = "${pkgs.fish}/bin/fish";
       buffer_font_family = "CommitMono";
-      buffer_font_size = 18;
+      buffer_font_size = 16;
       ui_font_size = 18;
       inlay_hints.enabled = true;
       format_on_save = "on";
