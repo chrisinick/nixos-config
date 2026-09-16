@@ -3,5 +3,11 @@
         modifiers: [
             Super,
         ],
+        key: "less",
+    ): System(Launcher),
+    (
+        modifiers: [
+            Super,
+        ],
     ): System(WorkspaceOverview),
 }
