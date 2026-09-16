@@ -80,8 +80,8 @@
     snapshot
 
     # Apps
+    papers
     tutanota-desktop
-    ghostty
     warp
     popsicle
     meld

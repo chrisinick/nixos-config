@@ -46,11 +46,6 @@
     defaultEditor = true;
   };
 
-  programs.nautilus-open-any-terminal = {
-    enable = true;
-    terminal = "ghostty";
-  };
-
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
