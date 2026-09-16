@@ -174,15 +174,9 @@
       SanitizeOnShutdown.Locked = true;
     };
 
-    profiles =
-      let
-        settings = {
-          "browser.translations.automaticallyPopup" = false;
-          "browser.translations.neverTranslateLanguages" = "de,en";
-        };
-      in
-      {
-        default.settings = settings;
-      };
+    profiles.default.settings = {
+      "browser.translations.automaticallyPopup" = false;
+      "browser.translations.neverTranslateLanguages" = "de,en";
+    };
   };
 }
