@@ -3,6 +3,7 @@
 }:
 {
   imports = [
+    ./cosmic
     ./programs
     ./scripts
   ];
