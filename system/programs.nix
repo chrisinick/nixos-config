@@ -33,7 +33,7 @@
     shellAliases = {
       "grep" = "rg";
       "find" = "fd";
-      "cat" = "bat";
+      "cat" = "bat --paging=never";
       "ls" = "eza";
       "git-graph" = "git log --oneline --graph --decorate";
     };

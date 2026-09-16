@@ -99,7 +99,7 @@
   services.displayManager.cosmic-greeter.enable = true;
   services.desktopManager.cosmic.enable = true;
   systemd.user.services.gnomeKeyring.enable = true;
-  services.system76-scheduler.enable = true;
+  #services.system76-scheduler.enable = true;
 
   # X Keymap
   services.xserver.xkb = {
