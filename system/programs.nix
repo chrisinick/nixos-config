@@ -18,6 +18,8 @@
     then
       shopt -q login_shell && LOGIN_OPTION="--login" || LOGIN_OPTION=""
       exec fish $LOGIN_OPTION
+    else
+      set -o vi
     fi
   '';
 

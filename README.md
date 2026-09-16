@@ -2,7 +2,6 @@
 
 ## TODO
 
-- cosmic de
 - nh
 
 ## Installation & Setup
