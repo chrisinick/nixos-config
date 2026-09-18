@@ -18,9 +18,6 @@
     adw-gtk3
     cutecosmic
     cosmic-viewer
-    cosmic-ext-calculator
-    cosmic-ext-applet-weather
-    cosmic-ext-applet-privacy-indicator
 
     # Nix
     nixd
