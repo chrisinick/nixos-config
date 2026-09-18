@@ -3,7 +3,7 @@
 }:
 {
   programs.firefox.policies = {
-    ExtensionUpdate = true;
+    ExtensionUpdate = false;
     InstallAddonsPermission.Default = false;
 
     ExtensionSettings =
@@ -13,14 +13,14 @@
       {
         "*" = {
           installation_mode = "blocked";
-          updates_disabled = false;
+          updates_disabled = true;
         };
 
         # Ublock origin
         "uBlock0@raymondhill.net" = {
           install_url = moz "ublock-origin";
           installation_mode = "force_installed";
-          updates_disabled = false;
+          updates_disabled = true;
           default_area = "navbar";
           private_browsing = true;
         };
@@ -29,7 +29,7 @@
         "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
           install_url = moz "bitwarden-password-manager";
           installation_mode = "force_installed";
-          updates_disabled = false;
+          updates_disabled = true;
           default_area = "navbar";
         };
       };
