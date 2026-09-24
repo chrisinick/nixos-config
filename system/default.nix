@@ -80,7 +80,10 @@
 
   # Hardware settings
   services.fwupd.enable = true;
-  hardware.graphics.enable = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
 
   # Zswap
   boot.zswap = {
