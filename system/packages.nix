@@ -78,6 +78,8 @@
 
     # Apps
     papers
+    celluloid
+    clapper
     tutanota-desktop
     warp
     popsicle
