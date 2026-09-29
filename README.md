@@ -2,6 +2,7 @@
 
 ## TODO
 
+- manage github personal access token (~/.config/nix/nix.conf) with sops-nix
 - nh
 
 ## Installation & Setup
