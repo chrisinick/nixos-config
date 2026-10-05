@@ -63,7 +63,7 @@
     # University
     openconnect
     networkmanager-openconnect
-    zotero
+    #zotero
 
     # Work
     openvpn
