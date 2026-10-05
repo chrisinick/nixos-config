@@ -167,11 +167,13 @@
   };
 
   # Nix settings
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs-unstable}" ];
+  nix.settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    nix-path = [ "nixpkgs=${inputs.nixpkgs-unstable}" ];
+  };
 
   # Maintenance automation
   nix = {

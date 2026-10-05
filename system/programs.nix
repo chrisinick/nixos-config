@@ -33,8 +33,6 @@
       fish_vi_key_bindings
     '';
     shellAliases = {
-      "grep" = "rg";
-      "find" = "fd";
       "cat" = "bat --paging=never";
       "ls" = "eza";
       "git-graph" = "git log --oneline --graph --decorate";
