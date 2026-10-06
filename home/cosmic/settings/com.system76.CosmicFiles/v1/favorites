@@ -6,7 +6,7 @@
     Pictures,
     Videos,
     Path("/home/chris/sync/studium"),
-    Path("/home/chris/sync/sgit"),
+    Path("/home/chris/sgit"),
     Path("/home/chris/sync"),
     Path("/home/chris/nixos-config"),
 ]

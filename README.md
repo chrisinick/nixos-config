@@ -3,6 +3,8 @@
 ## TODO
 
 - manage github personal access token (~/.config/nix/nix.conf) with sops-nix
+- set up eduroam with iwd (sops-nix for credentials)
+- rclone bisync systemd timer: do not run without internet connection
 - nh
 
 ## Installation & Setup

@@ -33,10 +33,18 @@
       fish_vi_key_bindings
     '';
     shellAliases = {
+      "grep" = "rg";
+      "find" = "fd";
       "cat" = "bat --paging=never";
       "ls" = "eza";
       "git-graph" = "git log --oneline --graph --decorate";
     };
+  };
+
+  programs.direnv.enable = true;
+  services.angrr = {
+    enable = true;
+    period = "14d";
   };
 
   programs.vim = {

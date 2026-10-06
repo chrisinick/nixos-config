@@ -40,7 +40,7 @@
     userSettings = {
       cli_default_open_behavior = "existing_window";
       colorize_brackets = true;
-      cursor_animation.enabled = true;
+      #cursor_animation.enabled = true;
       cursor_blink = false;
       project_panel.dock = "left";
       outline_panel.dock = "left";

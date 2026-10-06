@@ -14,7 +14,7 @@ in
   systemd.user.timers."rclone-bisync" = {
     Timer = {
       OnBootSec = "1m";
-      OnUnitActiveSec = "15m";
+      OnUnitInactiveSec = "15m";
       Unit = "rclone-bisync.service";
     };
     Install.WantedBy = [ "timers.target" ];
