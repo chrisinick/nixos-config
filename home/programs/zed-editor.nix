@@ -67,7 +67,6 @@
       ui_font_size = 18;
       inlay_hints.enabled = true;
       format_on_save = "on";
-      tab_size = 2;
       preferred_line_length = 100;
       vim_mode = true;
       vim = {
@@ -81,6 +80,7 @@
       minimap.show = "never";
       languages = {
         Nix = {
+          tab_size = 2;
           language_servers = [
             "nil"
             "!nixd"
