@@ -15,7 +15,6 @@
           [remmina_pref]
           datadir_path=${config.home.homeDirectory}/${dataDir}
           disable_tray_icon=true
-          dark_theme=true
           rdp_quality_0=6F
           rdp_quality_1=7
           rdp_quality_2=A5

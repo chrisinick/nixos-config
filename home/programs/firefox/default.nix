@@ -175,6 +175,7 @@
     };
 
     profiles.default.settings = {
+      "browser.link.open_newwindow.restriction" = 0;
       "browser.translations.automaticallyPopup" = false;
       "browser.translations.neverTranslateLanguages" = "de,en";
     };
