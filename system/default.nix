@@ -57,8 +57,12 @@
     plymouth.enable = true;
   };
 
-  # Time zone
+  # Time
   time.timeZone = "Europe/Berlin";
+  services.ntpd-rs = {
+    enable = true;
+    settings.observability.log-level = "warn";
+  };
 
   # Internationalization
   i18n.defaultLocale = "de_DE.UTF-8";
@@ -93,6 +97,9 @@
 
   # Network
   services.resolved.enable = true;
+
+  # sudo-rs
+  security.sudo-rs.enable = true;
 
   # Wayland
   programs.xwayland.enable = true;

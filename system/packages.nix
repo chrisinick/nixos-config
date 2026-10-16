@@ -13,7 +13,6 @@
     wl-clipboard
     easyeffects
     firefox
-    yt-dlp
 
     # Cosmic desktop
     adw-gtk3
@@ -51,6 +50,7 @@
     eza
     jq
     btop
+    powertop
     ffmpeg
     imagemagick
     wget
@@ -59,6 +59,7 @@
     glow
     fastfetch
     rclone
+    yt-dlp
 
     # University
     openconnect
@@ -81,7 +82,6 @@
     papers
     celluloid
     tutanota-desktop
-    warp
     popsicle
     meld
     newsflash

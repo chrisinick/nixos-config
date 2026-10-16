@@ -62,7 +62,7 @@ in
     };
 
     # Filters
-    ".config/rclone/filters.txt".text = ''
+    "${filtersPath}".text = ''
       - System Volume Information/
       - .Spotlight-V100/
       - .Trashes/

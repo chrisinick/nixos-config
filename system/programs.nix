@@ -51,6 +51,7 @@
     enable = true;
     defaultEditor = true;
   };
+  programs.nano.enable = false;
 
   programs.steam = {
     enable = true;
