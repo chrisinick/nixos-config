@@ -41,7 +41,10 @@
     };
   };
 
-  programs.direnv.enable = true;
+  programs.direnv = {
+    enable = true;
+    silent = true;
+  };
   services.angrr = {
     enable = true;
     period = "14d";
