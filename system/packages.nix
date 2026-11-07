@@ -13,7 +13,6 @@
     wl-clipboard
     easyeffects
     firefox
-    ungoogled-chromium
 
     # Cosmic desktop
     adw-gtk3

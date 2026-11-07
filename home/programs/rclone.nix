@@ -13,16 +13,20 @@ in
   # Automatic sync
   systemd.user.timers."rclone-bisync" = {
     Timer = {
-      OnBootSec = "1m";
+      OnBootSec = "2m";
       OnUnitInactiveSec = "15m";
       Unit = "rclone-bisync.service";
     };
     Install.WantedBy = [ "timers.target" ];
   };
   systemd.user.services."rclone-bisync" = {
-    Unit.After = [ "network-online.target" ];
+    Unit = {
+      After = [ "network-online.target" ];
+      Wants = [ "network-online.target" ];
+    };
     Service = {
       Type = "oneshot";
+      ExecCondition = "${pkgs.curl}/bin/curl -fsS --max-time 5 https://www.quad9.net/ -o /dev/null";
       ExecStart = ''
         ${pkgs.rclone}/bin/rclone bisync \
         filen:sync \

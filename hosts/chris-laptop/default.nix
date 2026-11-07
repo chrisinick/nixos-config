@@ -17,16 +17,21 @@
   # Hardware
   hardware.framework.enableKmod = true;
 
-  # Network
-  networking.wireless.iwd.enable = true;
-  networking.wireless.iwd.settings = {
-    Network.EnableIPv6 = true;
-    Settings.AutoConnect = true;
-    Settings.AddressRandomization = "enabled";
-  };
+  # iwd
+  #networking.wireless.iwd.enable = true;
+  #networking.wireless.iwd.settings = {
+  #  Network.EnableIPv6 = true;
+  #  Settings.AutoConnect = true;
+  #  Settings.AddressRandomization = "enabled";
+  #};
+
+  # wpa_supplicant
+  networking.wireless.enable = true;
+
+  # Networkmanager
   networking.networkmanager.enable = true;
   networking.networkmanager.wifi = {
-    backend = "iwd";
+    #backend = "iwd";
     powersave = true;
   };
 

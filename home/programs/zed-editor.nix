@@ -76,7 +76,10 @@
       };
       load_direnv = "shell_hook";
       base_keymap = "VSCode";
-      diagnostics.inline.enabled = true;
+      diagnostics.inline = {
+        enabled = true;
+        max_severity = "error";
+      };
       minimap.show = "never";
       languages = {
         Nix = {
