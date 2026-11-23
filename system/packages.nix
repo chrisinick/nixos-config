@@ -18,6 +18,7 @@
     adw-gtk3
     cutecosmic
     cosmic-viewer
+    cosmic-store
 
     # Nix
     nixd

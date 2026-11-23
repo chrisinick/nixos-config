@@ -92,6 +92,7 @@
         };
       };
       lsp = {
+        nil.settings.nix.autoArchive = true;
         rust-analyzer = {
           binary.path = "${pkgs.rust-analyzer}/bin/rust-analyzer";
           initialization_options.check.command = "clippy";
