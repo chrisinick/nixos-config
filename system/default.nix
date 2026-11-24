@@ -33,8 +33,6 @@
       autoEnrollKeys = {
         enable = true;
         autoReboot = true;
-        includeMicrosoftKeys = true;
-        includeFirmwareBuiltinKeys = true;
       };
       measuredBoot = {
         enable = true;
